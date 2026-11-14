@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="nb"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Fem reiseforslag</title>
+<style>
+:root { --bg: #f5efe4; --blekk: #26211b; --dempet: #6f6455; --kort: #fffaf1; --linje: #e2d7c4; --aksent: #a4461f }
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #17140f; --blekk: #f1e9da; --dempet: #b0a48f; --kort: #221d16; --linje: #3a3226; --aksent: #e9905f }
+}
+* { box-sizing: border-box }
+body { margin: 0; background: var(--bg); color: var(--blekk); font: 17px/1.5 Georgia, 'Iowan Old Style', 'Noto Serif', serif }
+header { max-width: 1120px; margin: 0 auto; padding: 72px 24px 28px }
+header p.over { font: 600 13px/1 system-ui, sans-serif; letter-spacing: .16em; text-transform: uppercase; color: var(--aksent); margin: 0 0 14px }
+h1 { font-size: clamp(38px, 7vw, 68px); line-height: 1.02; margin: 0 0 18px; font-weight: 500; letter-spacing: -.01em; text-wrap: balance }
+header p.ingress { max-width: 62ch; margin: 0; color: var(--dempet); font-size: 19px }
+main { max-width: 1120px; margin: 0 auto; padding: 12px 24px 56px; display: grid; gap: 22px; grid-template-columns: repeat(6, 1fr) }
+.kort { grid-column: span 3; display: flex; flex-direction: column; background: var(--kort); border: 1px solid var(--linje);
+  border-radius: 14px; overflow: hidden; color: inherit; text-decoration: none; transition: transform .18s ease, box-shadow .18s ease }
+.kort:nth-child(n+3) { grid-column: span 2 }
+.kort:hover, .kort:focus-visible { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(0,0,0,.16); outline: none }
+.kort:focus-visible { border-color: var(--aksent) }
+.kort img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; display: block }
+.kort:nth-child(n+3) img { aspect-ratio: 4 / 3 }
+.inn { padding: 20px 22px 22px; display: flex; flex-direction: column; flex: 1 }
+.under { font: 600 12px/1.2 system-ui, sans-serif; letter-spacing: .13em; text-transform: uppercase; color: var(--aksent); margin: 0 0 8px }
+h2 { font-size: 30px; line-height: 1.1; margin: 0 0 10px; font-weight: 500 }
+.tekst { margin: 0 0 16px; color: var(--dempet) }
+ul { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-wrap: wrap; gap: 6px }
+li { font: 13px/1 system-ui, sans-serif; padding: 7px 10px; border: 1px solid var(--linje); border-radius: 999px; white-space: nowrap }
+.poeng { font: 14px/1.4 system-ui, sans-serif; margin: auto 0 14px; padding-top: 14px; border-top: 1px solid var(--linje); color: var(--dempet) }
+.poeng strong { display: block; font-size: 19px; color: var(--blekk); font-variant-numeric: tabular-nums }
+.les { font: 600 14px/1 system-ui, sans-serif; color: var(--aksent) }
+footer { max-width: 1120px; margin: 0 auto; padding: 0 24px 56px; color: var(--dempet); font: 14px/1.5 system-ui, sans-serif }
+@media (max-width: 900px) { .kort, .kort:nth-child(n+3) { grid-column: span 6 } .kort:nth-child(n+3) img { aspect-ratio: 16 / 10 } header { padding-top: 44px } }
+@media (prefers-reduced-motion: reduce) { .kort { transition: none } }
+</style></head><body>
+<header>
+  <p class="over">Reiseforslag 2027</p>
+  <h1>Fem turer vi kan velge mellom</h1>
+  <p class="ingress">Alle er lagt opp med EuroBonus-poeng og kuponger. Trykk på en tur for å bla gjennom hele forslaget med bilder, dagsplan og kostnader.</p>
+</header>
+<main>
+    <a class="kort" href="jordan/">
+      <img src="jordan/bilder/petra.jpg" alt="" loading="lazy">
+      <div class="inn">
+        <p class="under">Petra, Wadi Rum og Dødehavet</p>
+        <h2>Jordan</h2>
+        <p class="tekst">Elleve dager fra romerske søyler til den rosa klippebyen, verdens laveste punkt og en natt under stjernene i ørkenen.</p>
+        <ul><li>3 reisende</li><li>11 dager</li><li>Økonomi fra Trondheim</li></ul>
+        <p class="poeng"><strong>90 000 poeng</strong> for tre, med to kuponger</p>
+        <span class="les">Se hele forslaget →</span>
+      </div>
+    </a>
+    <a class="kort" href="uganda/">
+      <img src="uganda/bilder/forside.jpg" alt="" loading="lazy">
+      <div class="inn">
+        <p class="under">Gorillaer og safari</p>
+        <h2>Uganda</h2>
+        <p class="tekst">En time på noen meters hold fra en gorillafamilie i tåkeskogen, og rundt den to uker med sjimpanser, løver i trærne og Nilen.</p>
+        <ul><li>3 reisende</li><li>14 dager</li><li>Business</li></ul>
+        <p class="poeng"><strong>195 000 poeng</strong> for tre, med to kuponger. Resten rundt 31 000 kr per person</p>
+        <span class="les">Se hele forslaget →</span>
+      </div>
+    </a>
+    <a class="kort" href="oman/">
+      <img src="oman/bilder/jebelshams.jpg" alt="" loading="lazy">
+      <div class="inn">
+        <p class="under">Fjell, sanddyner og skilpaddestrender</p>
+        <h2>Oman via Dubai</h2>
+        <p class="tekst">Fjorten dager fra skyskrapere og krydderbasarer til skilpaddestrender, sanddyner og fjell med utsikt tusen meter rett ned.</p>
+        <ul><li>3 reisende</li><li>14 dager</li><li>Business til Dubai</li></ul>
+        <p class="poeng"><strong>195 000 poeng</strong> for tre, med to kuponger</p>
+        <span class="les">Se hele forslaget →</span>
+      </div>
+    </a>
+    <a class="kort" href="dubai/">
+      <img src="dubai/bilder/forside.jpg" alt="" loading="lazy">
+      <div class="inn">
+        <p class="under">By, ørken og strand</p>
+        <h2>Dubai</h2>
+        <p class="tekst">Skyskrapere, ørken, gamleby og strand. To uker med by, sand, fjell og en avstikker til Abu Dhabi.</p>
+        <ul><li>3 reisende</li><li>14 dager</li><li>Business fra Trondheim</li></ul>
+        <p class="poeng"><strong>195 000 poeng</strong> for tre, med to kuponger. Resten rundt 16 100 kr per person</p>
+        <span class="les">Se hele forslaget →</span>
+      </div>
+    </a>
+    <a class="kort" href="kina/">
+      <img src="kina/bilder/mur.jpg" alt="" loading="lazy">
+      <div class="inn">
+        <p class="under">Åtte dager, plukk selv</p>
+        <h2>Kina</h2>
+        <p class="tekst">Byene, naturen og maten som byggeklosser: Shanghai, Beijing, Xi'an, pandaer, karstfjell og mer. Direkte fly til Shanghai.</p>
+        <ul><li>2 reisende</li><li>8 hele dager</li><li>Business, direkte</li></ul>
+        <p class="poeng"><strong>180 000 poeng</strong> for to, med én kupong. Med en tredje i økonomi: 225 000</p>
+        <span class="les">Se hele forslaget →</span>
+      </div>
+    </a>
+</main>
+<footer>Poengene er regnet tur og retur med kuponger. Skatter og avgifter på billettene kommer i tillegg. Ledige seter endrer seg, så de må sjekkes på nytt før bestilling.</footer>
+</body></html>

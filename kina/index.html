@@ -1,0 +1,303 @@
+<!doctype html><html lang="nb"><head><meta charset="utf-8"><title>Kina i åtte dager</title><style>
+@page { size: 210mm 297mm; margin: 0 }
+* { box-sizing: border-box }
+body { margin: 0; font-family: 'Noto Sans','DejaVu Sans',sans-serif; color: #2a2623; font-size: 10.2pt; line-height: 1.4 }
+.side { width: 210mm; height: 297mm; overflow: hidden; position: relative; page-break-after: always; break-after: page; background: #faf6ef }
+.hero { height: 100mm; position: relative; background: #000 }
+.hero img { width: 100%; height: 100%; object-fit: cover; display: block }
+.heroTekst { position: absolute; left: 0; right: 0; bottom: 0; padding: 22mm 14mm 8mm; background: linear-gradient(transparent, rgba(0,0,0,.78)); color: #fff }
+.heroTekst small { letter-spacing: .12em; text-transform: uppercase; opacity: .85 }
+.heroTekst h1 { margin: 1mm 0 1mm; font-size: 26pt; line-height: 1.1 }
+.heroTekst p { margin: 0; font-size: 10.5pt; max-width: 150mm }
+.tags { padding: 5mm 14mm 0; display: flex; gap: 3mm; flex-wrap: wrap }
+.tag { background: #b3261e; color: #fff; padding: 1.3mm 3.5mm; border-radius: 10mm; font-size: 8.6pt }
+.tag b { opacity: .8; font-weight: 600; margin-right: 1mm }
+.kol { padding: 4mm 14mm 0; display: grid; grid-template-columns: 1.25fr 1fr; gap: 8mm }
+h2 { color: #b3261e; font-size: 11.5pt; margin: 3mm 0 1.5mm }
+ul { margin: 0; padding-left: 4.5mm }
+li { margin-bottom: 1.5mm }
+p { margin: 0 0 2mm }
+.små { position: absolute; left: 14mm; right: 14mm; bottom: 10mm; display: flex; gap: 4mm }
+.liten { flex: 1; min-width: 0 }
+.liten img { width: 100%; height: 40mm; object-fit: cover; display: block; border-radius: 1.5mm }
+.liten span { font-size: 8pt; color: #6b625b; display: block; margin-top: 1mm }
+.forside .bakgrunn { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover }
+.forside .dekk { position: absolute; inset: 0; background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.75)) }
+.forsideTekst { position: absolute; left: 18mm; right: 18mm; bottom: 30mm; color: #fff }
+.forsideTekst small { letter-spacing: .18em; opacity: .9 }
+.forsideTekst h1 { font-size: 46pt; line-height: 1.02; margin: 4mm 0 5mm }
+.forsideTekst p { max-width: 130mm; font-size: 12.5pt }
+.tekstside { padding: 16mm 16mm }
+.tekstside h1 { color: #b3261e; font-size: 22pt; margin: 0 0 3mm }
+.ingress { font-size: 11pt }
+.advarsel { background: #fff3d6; border-left: 1.5mm solid #e0a100; padding: 2mm 3mm }
+.tab { border-collapse: collapse; width: 100%; margin: 1mm 0 4mm; font-size: 9.2pt }
+.tab th { text-align: left; background: #b3261e; color: #fff; padding: 1.5mm 2.5mm }
+.tab td { border-bottom: .3mm solid #d9cfc2; padding: 1.4mm 2.5mm }
+.liten2 { color: #6b625b; font-size: 8.5pt }
+.rute { background: #fff; border: .3mm solid #e4d9cb; border-radius: 2mm; padding: 2mm 5mm; margin-bottom: 3mm }
+.rute h2 { margin: 1mm 0 1mm }
+.steg { font-size: 10.5pt }
+.plukk td:last-child { width: 18mm; font-size: 13pt }
+.kr { font-size: 7.6pt }
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<style>
+@media screen {
+  html { background: #16130f }
+  body { background: #16130f !important; padding: 56px 0 24px !important }
+  .lysbilde { margin: 0 auto 14px; box-shadow: 0 6px 30px rgba(0,0,0,.45) }
+  #topp { position: fixed; inset: 0 0 auto 0; height: 44px; z-index: 1000; display: flex; align-items: center; gap: 14px;
+    padding: 0 16px; background: rgba(22,19,15,.94); color: #f3ead9; font: 15px/1 system-ui, sans-serif }
+  #topp a { color: #f3ead9; text-decoration: none; padding: 8px 12px; border: 1px solid rgba(243,234,217,.35); border-radius: 999px }
+  #topp a:hover, #topp a:focus-visible { background: rgba(243,234,217,.14) }
+  #topp span { opacity: .75; white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
+}
+@media print { #topp { display: none } }
+</style>
+<script>
+addEventListener('DOMContentLoaded', () => {
+  const sider = [...document.querySelectorAll('body > section, body > .side, body > .forside')];
+  sider.forEach(s => s.classList.add('lysbilde'));
+  const grunn = sider[0].offsetWidth;
+  const tilpass = () => {
+    const z = Math.min(1, document.documentElement.clientWidth / grunn);
+    sider.forEach(s => s.style.zoom = z);
+  };
+  if (!matchMedia('print').matches) { tilpass(); addEventListener('resize', tilpass); }
+  addEventListener('beforeprint', () => sider.forEach(s => s.style.zoom = ''));
+  addEventListener('afterprint', tilpass);
+});
+</script>
+</head><body><nav id="topp"><a href="../">← Alle turene</a><span>Kina: Åtte dager, plukk selv</span></nav>
+<section class="side forside">
+  <img class="bakgrunn" src="bilder/mur.jpg" alt="Den kinesiske mur">
+  <div class="dekk"></div>
+  <div class="forsideTekst">
+    <small>OKTOBER 2027</small>
+    <h1>Kina<br>i åtte dager</h1>
+    <p>Et reiseforslag til to, med plukk selv: byene, naturen og maten. Direkte business til Shanghai med EuroBonus.</p>
+  </div>
+</section>
+<section class="side tekstside">
+  <h1>Slik leser dere dette</h1>
+  <p class="ingress">Åtte hele dager er ikke nok til hele Kina. Derfor er forslaget bygd som byggeklosser: 8 steder, hver med
+  hvor mange dager de trenger og hvordan dere kommer dit. Velg tre eller fire, og bruk de ferdige rutene bakerst som mal.</p>
+  <h2>Flyene (funnet med lagrede søk i AwardFares, EuroBonus, business, to personer)</h2>
+  <table class="tab">
+    <tr><th>Reise</th><th>Dato</th><th>Fly</th><th>Seter og pris</th></tr>
+    <tr><td>Ut: Amsterdam til Shanghai</td><td>13. til 21. oktober</td><td>MU772, direkte, 11 timer</td><td>5 til 9 seter, 108 000 poeng per person</td></tr>
+    <tr><td>Hjem: Shanghai til Frankfurt</td><td>22. til 30. oktober</td><td>MU219, direkte</td><td>9 seter, 108 000 poeng per person</td></tr>
+  </table>
+  <p>Eksempel: ut 13. oktober og hjem 23. oktober gir åtte hele dager i Kina. Ut 18. oktober og hjem 27. oktober går også.
+  Flyene i Kina (for eksempel Chengdu til Guilin) og tog kommer i tillegg og er ikke bonusreiser.</p>
+  <p class="advarsel">Ikke sjekket ennå: om SAS lar oss bestille inn og ut fra ulike byer på samme billett, og tilbringeren fra Trondheim.</p>
+  <h2>De åtte stedene</h2>
+  <table class="tab">
+    <tr><th>Sted</th><th>Dager</th><th>Best for</th></tr>
+    <tr><td>Shanghai</td><td>1 til 2</td><td>Skyline, mat, ankomst og avreise</td></tr>
+    <tr><td>Beijing</td><td>2 til 3</td><td>Den forbudte by, Den kinesiske mur</td></tr>
+    <tr><td>Xi'an</td><td>2</td><td>Terrakottahæren, bymuren, gatemat</td></tr>
+    <tr><td>Chengdu</td><td>2 til 3</td><td>Pandaer, Sichuan mat, Leshan Buddha</td></tr>
+    <tr><td>Guilin og Yangshuo</td><td>2</td><td>Elvecruise, karstfjell, rismarker</td></tr>
+    <tr><td>Zhangjiajie</td><td>2 til 3</td><td>Fjellsøylene, glassbroen</td></tr>
+    <tr><td>Dali og Lijiang (Yunnan)</td><td>3 til 5</td><td>Gamlebyer, innsjø, fjell</td></tr>
+    <tr><td>Hangzhou og Suzhou</td><td>1 til 2</td><td>Hager og vann, dagstur fra Shanghai</td></tr>
+  </table>
+  <p class="liten2">De ferdige rutene står på side 11.</p>
+</section>
+<section class="side">
+  <div class="hero"><img loading="lazy" class="" src="bilder/bund.jpg" alt="Shanghai"><div class="heroTekst"><small>1 · Shanghai</small><h1>Shanghai</h1><p>Fremtidsbyen ved elven. Her lander og drar dere, så det blir minst en natt uansett.</p></div></div>
+  <div class="tags"><span class="tag"><b>Dager</b> 1 til 2</span><span class="tag"><b>Vær</b> 18 til 25 grader</span><span class="tag"><b>Best for</b> skyline og mat</span></div>
+  <div class="kol">
+    <div>
+      <h2>Dette kan dere gjøre</h2>
+      <ul><li>Bund ved kvelden: promenaden mot Pudong med skyline i lys. Gratis og det beste første inntrykket.</li><li>Yu Garden og basaren rundt: hager, paviljonger og dumplings (xiaolongbao).</li><li>Det gamle franske kvarteret: trær, kafeer og små butikker. Bra til rolig formiddag.</li><li>Shanghai Tower eller Oriental Pearl: utsikt fra over 300 meter.</li><li>Magnettoget fra flyplassen (Maglev) går 430 km/t og tar 8 minutter til Pudong.</li></ul>
+    </div>
+    <div>
+      <h2>Tips</h2>
+      <ul><li>Første kvelden etter 11 timer fly: ta det rolig, Bund og en middag er nok.</li><li>Bestill utsiktspunkter på nett, det er ofte kø.</li><li>Hjem går fra Shanghai, så sov her siste natt og bruk god tid til flyplassen.</li></ul>
+      <h2>Slik kommer dere dit</h2>
+      <p>Direkte fly fra Amsterdam (MU772). Fra flyplassen Pudong tar Maglev eller taxi dere til sentrum på 30 til 60 minutter.</p>
+    </div>
+  </div>
+  <div class="små"><div class="liten"><img loading="lazy" class="" src="bilder/yugarden.jpg" alt="Yu Garden, gammel kinesisk hage midt i byen"><span>Yu Garden, gammel kinesisk hage midt i byen</span></div></div>
+</section>
+<section class="side">
+  <div class="hero"><img loading="lazy" class="" src="bilder/forbidden.jpg" alt="Beijing"><div class="heroTekst"><small>2 · Beijing</small><h1>Beijing</h1><p>Keiserbyen. Her er de største tingene i Kina, så ikke skynd dere.</p></div></div>
+  <div class="tags"><span class="tag"><b>Dager</b> 2 til 3</span><span class="tag"><b>Vær</b> 10 til 20 grader, klart</span><span class="tag"><b>Best for</b> historie</span></div>
+  <div class="kol">
+    <div>
+      <h2>Dette kan dere gjøre</h2>
+      <ul><li>Den forbudte by og Tiananmen: bestill billett på nett, begrenset antall per dag.</li><li>Den kinesiske mur ved Mutianyu: gondol opp, tobogan ned, mindre folk enn Badaling. Sett av en halv til hel dag.</li><li>Himmelens tempel tidlig om morgenen: da trener folk tai chi i parken.</li><li>Sommerpalasset: kunstig innsjø og lange gallerier, fin kombinert med lunsj.</li><li>Hutong i kveldslys: sykkeltur eller bare vandring, spis Peking-and på kveld.</li></ul>
+    </div>
+    <div>
+      <h2>Tips</h2>
+      <ul><li>Nasjonaldagsuka (1. til 7. oktober) er full av folk. Etter 8. oktober er det mye rolig.</li><li>Passet trengs som billett mange steder.</li><li>Den kinesiske mur: gå tidlig på dagen, da er det færrest folk.</li></ul>
+      <h2>Slik kommer dere dit</h2>
+      <p>Hurtigtog fra Shanghai tar 4,5 til 5 timer. Fly tar 2 timer, men flyplassene ligger langt fra sentrum.</p>
+    </div>
+  </div>
+  <div class="små"><div class="liten"><img loading="lazy" class="" src="bilder/mur.jpg" alt="Den kinesiske mur"><span>Den kinesiske mur</span></div><div class="liten"><img loading="lazy" class="" src="bilder/himmel.jpg" alt="Himmelens tempel"><span>Himmelens tempel</span></div><div class="liten"><img loading="lazy" class="" src="bilder/hutong.jpg" alt="Hutong, de gamle smugene"><span>Hutong, de gamle smugene</span></div></div>
+</section>
+<section class="side">
+  <div class="hero"><img loading="lazy" class="" src="bilder/terrakotta.jpg" alt="Xi&#x27;an"><div class="heroTekst"><small>3 · Xi'an</small><h1>Xi'an</h1><p>Der Silkeveien begynner. Terrakottahæren er hovedgrunnen, men byen er også en av de beste for mat.</p></div></div>
+  <div class="tags"><span class="tag"><b>Dager</b> 2</span><span class="tag"><b>Vær</b> 12 til 22 grader</span><span class="tag"><b>Best for</b> historie og mat</span></div>
+  <div class="kol">
+    <div>
+      <h2>Dette kan dere gjøre</h2>
+      <ul><li>Terrakottahæren: tusenvis av soldater i leire fra 200 år før Kristus. Sett av en halv dag, helst tidlig.</li><li>Bymuren: 14 km rundt gamlebyen. Lei sykkel og kjør hele runden på en time eller to.</li><li>Det muslimske kvarteret: lammespyd, nudler og roujiamo (kinesisk burger).</li><li>Den store villgåspagoden og vannfontenene om kvelden.</li><li>Tang-dynastiets show: kveldsunderholdning med musikk og dans, for dem som vil.</li></ul>
+    </div>
+    <div>
+      <h2>Tips</h2>
+      <ul><li>Terrakotta ligger 40 km utenfor byen. Bestill drosje eller buss med guide.</li><li>Gatematen er billig og god, men vær forsiktig første dag hvis magen er skjør.</li><li>Kveldene er livligst ved Klokketårnet og i matgatene.</li></ul>
+      <h2>Slik kommer dere dit</h2>
+      <p>Hurtigtog fra Beijing tar 4,5 timer, fra Shanghai 6 til 7 timer. Fly til Shanghai tar 2 timer.</p>
+    </div>
+  </div>
+  <div class="små"><div class="liten"><img loading="lazy" class="" src="bilder/xianmur.jpg" alt="Bymuren, kan sykles"><span>Bymuren, kan sykles</span></div><div class="liten"><img loading="lazy" class="" src="bilder/pagode.jpg" alt="Den store villgåspagoden"><span>Den store villgåspagoden</span></div></div>
+</section>
+<section class="side">
+  <div class="hero"><img loading="lazy" class="" src="bilder/panda.jpg" alt="Chengdu"><div class="heroTekst"><small>4 · Chengdu</small><h1>Chengdu</h1><p>Pandaenes by, og landets beste mat. Rolig tempo, te og hot pot.</p></div></div>
+  <div class="tags"><span class="tag"><b>Dager</b> 2 til 3</span><span class="tag"><b>Vær</b> 15 til 22 grader</span><span class="tag"><b>Best for</b> dyr og mat</span></div>
+  <div class="kol">
+    <div>
+      <h2>Dette kan dere gjøre</h2>
+      <ul><li>Pandaenes forskningsbase: gå tidlig, da er pandaene våkne og spiser bambus.</li><li>Leshan Giant Buddha: 71 meter høy, skåret i fjellsiden. Dagstur eller en halv dag.</li><li>Sichuan hot pot: sterkt, prikkende og vanedannende. Be om mild versjon første gang.</li><li>Kuanzhai-smugene og Jinli: gamle gater med te, snacks og butikker.</li><li>Te i parken: sitt i en bambusstol og se folk spille mahjong, en klassisk opplevelse.</li></ul>
+    </div>
+    <div>
+      <h2>Tips</h2>
+      <ul><li>Pandabasen åpner tidlig, 7:30. Bestill billett på nett.</li><li>Sichuan er skarpt. Si «wei la» (mild) hvis dere vil ha lavere styrke.</li><li>Gode flyforbindelser til Guilin, Zhangjiajie og Lijiang.</li></ul>
+      <h2>Slik kommer dere dit</h2>
+      <p>Hurtigtog fra Xi'an tar 3,5 til 4 timer. Direkte fly fra Shanghai og Beijing tar 2,5 til 3 timer.</p>
+    </div>
+  </div>
+  <div class="små"><div class="liten"><img loading="lazy" class="" src="bilder/leshan.jpg" alt="Leshan Giant Buddha"><span>Leshan Giant Buddha</span></div><div class="liten"><img loading="lazy" class="" src="bilder/sichuanmat.jpg" alt="Hot pot, Sichuan"><span>Hot pot, Sichuan</span></div></div>
+</section>
+<section class="side">
+  <div class="hero"><img loading="lazy" class="" src="bilder/liriver.jpg" alt="Guilin og Yangshuo"><div class="heroTekst"><small>5 · Guilin og Yangshuo</small><h1>Guilin og Yangshuo</h1><p>Landskapet fra de kinesiske malerier: spisse fjell, elv og rismarker.</p></div></div>
+  <div class="tags"><span class="tag"><b>Dager</b> 2</span><span class="tag"><b>Vær</b> 18 til 26 grader</span><span class="tag"><b>Best for</b> natur og ro</span></div>
+  <div class="kol">
+    <div>
+      <h2>Dette kan dere gjøre</h2>
+      <ul><li>Cruise på Li-elven fra Guilin til Yangshuo: 4 timer mellom karstfjell. Det mest kjente i området.</li><li>Sykkel i Yangshuo: lei sykkel og ta rolige veier mellom rismarker og vannbøfler.</li><li>Bambusflåte på Yulong-elven: kortere og roligere, gode bilder.</li><li>Longji-terrassene (Longsheng): store rismarker i fjellsidene, best like før innhøsting.</li><li>Kveldsmat i Yangshuo, med utendørs scene og lys på fjellene.</li></ul>
+    </div>
+    <div>
+      <h2>Tips</h2>
+      <ul><li>Elvecruise kan bestilles via hotellet. Velg en liten båt hvis mulig.</li><li>Yangshuo er en liten by og lett å gå i. Overnatt der, ikke i Guilin.</li><li>Regn og tåke kan komme, men gir fine stemninger.</li></ul>
+      <h2>Slik kommer dere dit</h2>
+      <p>Fly fra Chengdu, Beijing eller Shanghai til Guilin (2 til 3 timer). Fra Guilin til Yangshuo tar bil eller elvebåt 1 til 4 timer.</p>
+    </div>
+  </div>
+  <div class="små"><div class="liten"><img loading="lazy" class="" src="bilder/longji.jpg" alt="Longji, terrassene ved Longsheng"><span>Longji, terrassene ved Longsheng</span></div></div>
+</section>
+<section class="side">
+  <div class="hero"><img loading="lazy" class="" src="bilder/zhangjiajie.jpg" alt="Zhangjiajie"><div class="heroTekst"><small>6 · Zhangjiajie</small><h1>Zhangjiajie</h1><p>Fjellene som inspirerte «Avatar». Stein som stikker rett opp i tåken.</p></div></div>
+  <div class="tags"><span class="tag"><b>Dager</b> 2 til 3</span><span class="tag"><b>Vær</b> 12 til 22 grader</span><span class="tag"><b>Best for</b> natur og utsikt</span></div>
+  <div class="kol">
+    <div>
+      <h2>Dette kan dere gjøre</h2>
+      <ul><li>Nasjonalparken Wulingyuan: steinsøyler, stier og apene som bor der.</li><li>Tianmen-fjellet: lang gondol opp og en glassvei langs fjellsiden, høyt oppe.</li><li>Glassbroen i Grand Canyon: en av verdens lengste og høyeste, for dem som tør.</li><li>Bailong-heisen: utendørs heis på 326 meter, den høyeste i verden.</li><li>Gamlebyen Fenghuang (Phoenix) ligger noen timer unna og er verdt en dag.</li></ul>
+    </div>
+    <div>
+      <h2>Tips</h2>
+      <ul><li>Billettene er dyre og kødannelsen kan bli lang. Kjøp på nett og gå tidlig.</li><li>Ta med regnjakke, tåken kommer fort.</li><li>Overnatt nær parken, så sparer dere tid om morgenen.</li></ul>
+      <h2>Slik kommer dere dit</h2>
+      <p>Direkte fly fra Shanghai og Beijing tar 2,5 til 3 timer. Ellers via Changsha med hurtigtog eller fly.</p>
+    </div>
+  </div>
+  <div class="små"><div class="liten"><img loading="lazy" class="" src="bilder/glassbridge.jpg" alt="Glassbroen i Grand Canyon"><span>Glassbroen i Grand Canyon</span></div></div>
+</section>
+<section class="side">
+  <div class="hero"><img loading="lazy" class="" src="bilder/lijiang.jpg" alt="Dali og Lijiang"><div class="heroTekst"><small>7 · Dali og Lijiang (Yunnan)</small><h1>Dali og Lijiang</h1><p>Fjell, innsjøer og gamlebyer. Roligere og mer avslappet enn de store byene.</p></div></div>
+  <div class="tags"><span class="tag"><b>Dager</b> 3 til 5</span><span class="tag"><b>Vær</b> 10 til 22 grader</span><span class="tag"><b>Best for</b> natur og kultur</span></div>
+  <div class="kol">
+    <div>
+      <h2>Dette kan dere gjøre</h2>
+      <ul><li>Lijiangs gamleby: kanaler og steinlagte gater (UNESCO). Best tidlig og sent, da turistene er borte.</li><li>Dali ved Erhai-sjøen: lei sykkel eller elsykkel rundt innsjøen, med de tre pagodene i bakgrunnen.</li><li>Tiger Leaping Gorge: en av verdens dypeste kløfter, enten som dagstur eller en to dagers vandring.</li><li>Jade Dragon Snow Mountain: kabelbane opp mot snødekte topper, men høyden kan merkes.</li><li>Lokal mat fra Yunnan: soppgryter, Dali-ost og dumplings.</li></ul>
+    </div>
+    <div>
+      <h2>Tips</h2>
+      <ul><li>Lijiang ligger høyt (2400 meter). Ta det rolig første dagen.</li><li>Kveldene er kjølige, ta med ullgenser.</li><li>Kunming er knutepunkt. Se etter direkte fly til Lijiang.</li></ul>
+      <h2>Slik kommer dere dit</h2>
+      <p>Fly via Kunming fra Shanghai, 4 til 6 timer totalt. Mellom Dali og Lijiang går tog (2 timer).</p>
+    </div>
+  </div>
+  <div class="små"><div class="liten"><img loading="lazy" class="" src="bilder/dali.jpg" alt="Dali og Erhai-sjøen"><span>Dali og Erhai-sjøen</span></div><div class="liten"><img loading="lazy" class="" src="bilder/tiger.jpg" alt="Tiger Leaping Gorge"><span>Tiger Leaping Gorge</span></div></div>
+</section>
+<section class="side">
+  <div class="hero"><img loading="lazy" class="" src="bilder/westlake.jpg" alt="Hangzhou og Suzhou"><div class="heroTekst"><small>8 · Hangzhou og Suzhou</small><h1>Hangzhou og Suzhou</h1><p>Hager, kanaler og te. To rolige dagsturer fra Shanghai.</p></div></div>
+  <div class="tags"><span class="tag"><b>Dager</b> 1 til 2</span><span class="tag"><b>Vær</b> 18 til 25 grader</span><span class="tag"><b>Best for</b> ro og vann</span></div>
+  <div class="kol">
+    <div>
+      <h2>Dette kan dere gjøre</h2>
+      <ul><li>Vestsjøen i Hangzhou: gå, lei sykkel eller ta båt. Pagoder og paviljonger rundt sjøen.</li><li>Longjing-tehagene: teplantasjer i åsene, med smaking og kopper fersk te.</li><li>Suzhous klassiske hager: små, vakkert tegnede hager fra 1500-tallet (UNESCO).</li><li>Zhouzhuang og Tongli: vannbyer med kanaler og broer, 1 time fra Shanghai.</li><li>Silkemuseet i Suzhou for dem som liker håndverk.</li></ul>
+    </div>
+    <div>
+      <h2>Tips</h2>
+      <ul><li>Begge byene kan gjøres som dagstur med tog fra Shanghai.</li><li>Suzhou og Hangzhou på samme dag er mulig, men blir lang dag.</li><li>Vestsjøen er travel i helger. Ta en ukedag hvis dere kan.</li></ul>
+      <h2>Slik kommer dere dit</h2>
+      <p>Hurtigtog fra Shanghai: Suzhou 30 minutter, Hangzhou 1 time, Zhouzhuang 1 time med buss fra Kunshan.</p>
+    </div>
+  </div>
+  <div class="små"><div class="liten"><img loading="lazy" class="" src="bilder/suzhou.jpg" alt="Suzhous klassiske hager"><span>Suzhous klassiske hager</span></div><div class="liten"><img loading="lazy" class="" src="bilder/zhouzhuang.jpg" alt="Zhouzhuang, vannbyen"><span>Zhouzhuang, vannbyen</span></div></div>
+</section>
+<section class="side tekstside">
+  <h1>Fire ferdige ruter</h1>
+  <p class="ingress">Alle starter og slutter i Shanghai, og gir åtte hele dager. Tallene er antall dager på stedet.</p>
+
+  <div class="rute"><h2>A. Klassikeren</h2>
+    <p class="steg"><b>Shanghai 2</b> → <b>Beijing 3</b> → <b>Xi'an 2</b> → <b>Shanghai 1</b></p>
+    <p>Det trygge: Den kinesiske mur, Den forbudte by og terrakottahæren. To hurtigtog og ett fly. Passer første gang i Kina.</p></div>
+
+  <div class="rute"><h2>B. Klassikeren med natur</h2>
+    <p class="steg"><b>Shanghai 1</b> → <b>Beijing 2</b> → <b>Xi'an 2</b> → <b>Guilin og Yangshuo 2</b> → <b>Shanghai 1</b></p>
+    <p>Historie og elvelandskap. Tre reisedager med fly og tog, men full variasjon. Mitt forslag til «ultimat».</p></div>
+
+  <div class="rute"><h2>C. Mat og fjell</h2>
+    <p class="steg"><b>Shanghai 1</b> → <b>Chengdu 3</b> → <b>Zhangjiajie 3</b> → <b>Shanghai 1</b></p>
+    <p>Pandaer, hot pot og Avatar-fjellene. Færre byer og mer natur. Krever to fly mellom stedene.</p></div>
+
+  <div class="rute"><h2>D. Rolig og vakkert</h2>
+    <p class="steg"><b>Shanghai 2</b> (med Suzhou eller Hangzhou) → <b>Dali 3</b> → <b>Lijiang 2</b> → <b>Shanghai 1</b></p>
+    <p>Roligst, med fjell og gamlebyer. En lang reisedag til Yunnan, ellers korte avstander.</p></div>
+
+  <h2>Plukk selv</h2>
+  <table class="tab plukk">
+    <tr><th>Sted</th><th>Dager</th><th>Vil vi?</th></tr>
+    <tr><td>Shanghai</td><td>1 til 2</td><td>☐</td></tr>
+    <tr><td>Beijing</td><td>2 til 3</td><td>☐</td></tr>
+    <tr><td>Xi'an</td><td>2</td><td>☐</td></tr>
+    <tr><td>Chengdu</td><td>2 til 3</td><td>☐</td></tr>
+    <tr><td>Guilin og Yangshuo</td><td>2</td><td>☐</td></tr>
+    <tr><td>Zhangjiajie</td><td>2 til 3</td><td>☐</td></tr>
+    <tr><td>Dali og Lijiang</td><td>3 til 5</td><td>☐</td></tr>
+    <tr><td>Hangzhou og Suzhou</td><td>1 til 2</td><td>☐</td></tr>
+  </table>
+  <p>Regel: høyst fire steder på åtte dager, ellers blir dere mest transport.</p>
+</section>
+<section class="side tekstside">
+  <h1>Praktisk</h1>
+  <h2>Vær i oktober</h2>
+  <p>Tørt og mildt i store deler av landet: Beijing og Xi'an 10 til 22 grader, Shanghai og Hangzhou 18 til 25, Guilin 18 til 26, Yunnan 10 til 22.
+  Ta lag, og en regnjakke hvis dere skal til Zhangjiajie eller Guilin.</p>
+  <h2>Visum</h2>
+  <p>Sjekk reglene for norske borgere før dere bestiller. Visumfritt opphold har vært gitt i en periode,
+  men det er ikke bekreftet for oktober 2027. Sjekk kinesisk ambassade eller UD sine reiseråd.</p>
+  <h2>Betaling</h2>
+  <p>Mange steder tar bare Alipay eller WeChat Pay. Sett opp en av dem med utenlandsk kort før avreise, og ha litt kontanter og kort som reserve.</p>
+  <h2>Internett</h2>
+  <p>Google, Gmail og mange vestlige apper er blokkert. Ta med eSIM eller VPN installert hjemmefra, og last ned offline kart.</p>
+  <h2>Tog og fly</h2>
+  <p>Bestill hurtigtog på Trip.com eller 12306, 1 til 2 uker før. Passet brukes som billett. Innenriksfly kan kjøpes på Trip.com.</p>
+  <h2>Når bestille</h2>
+  <p>Bestill bonusbillettene først, så innenriksfly, tog og hotell. Nasjonaldagsuka (1. til 7. oktober) bør unngås.</p>
+  <h2>Mat og helse</h2>
+  <p>Drikk flaskevann, og ha med tabletter mot mageproblemer. Kinesisk mat varierer sterkt fra by til by, så prøv lokale retter.</p>
+</section>
+<section class="side tekstside">
+  <h1>Bildekreditt</h1>
+  <p>Alle bilder er hentet fra Wikimedia Commons under fri lisens. Fotograf og lisens står under.</p>
+  <table class="tab kr"><tr><th>Fil</th><th>Fotograf</th><th>Lisens</th></tr><tr><td>Great Wall of China July 2006.JPG</td><td>Velatrix</td><td>CC0</td></tr><tr><td>Shanghai - Yu Garden - 0035.jpg</td><td>Stefan Fussan</td><td>CC BY-SA 3.0</td></tr><tr><td>Pudong Shanghai November 2017 HDR panorama.jpg</td><td>King of Hearts</td><td>CC BY-SA 4.0</td></tr><tr><td>Temple of Heaven, Beijing, China - 010 edit.jpg</td><td>Maros M r a z (Maros)</td><td>CC BY-SA 3.0</td></tr><tr><td>Datianshuijing Hutong (20210529190652).jpg</td><td>N509FZ</td><td>CC BY-SA 4.0</td></tr><tr><td>Hall of Supreme Harmony 2010.jpg</td><td>Marcin Białek</td><td>CC BY-SA 4.0</td></tr><tr><td>Xi&#x27;an city walls (89479).jpg</td><td>Ideophagous</td><td>CC BY-SA 4.0</td></tr><tr><td>Giant Wild Goose Pagoda, Xi&#x27;an, May, 2018-1.jpg</td><td>Alexey Komarov</td><td>CC BY-SA 4.0</td></tr><tr><td>Terracotta Army - Pit 1, Xi&#x27;an, China (14148051222).jpg</td><td>Joe Hart from Southampton, United Kingdom</td><td>CC BY 2.0</td></tr><tr><td>Leshan Giant Buddha, 20161102.jpg</td><td>王计</td><td>CC BY 2.5</td></tr><tr><td>Chengdu Hot Pot Yuanyangguo style 2019.jpg</td><td>Breaknet2025</td><td>CC BY 4.0</td></tr><tr><td>Chengdu Sichuan China Panda-breeding-and-research-center-02.jpg</td><td>CEphoto, Uwe Aranas</td><td>CC BY-SA 3.0</td></tr><tr><td>Longji Rice Terraces 003.jpg</td><td>Rutger van der Maar</td><td>CC BY 2.0</td></tr><tr><td>1 li jiang guilin yangshuo 2011.jpg</td><td>chensiyuan</td><td>CC BY-SA 4.0</td></tr><tr><td>ZhangjiajieGlassByHighestBridges.jpg</td><td>HighestBridges</td><td>CC BY-SA 4.0</td></tr><tr><td>Piliers de grès des monts Tianzi, Zhangjiajie (2026).jpg</td><td>ICOLEF / visualtravelguide.com</td><td>CC BY-SA 4.0</td></tr><tr><td>20260223 Dali Chongsheng Temple Pagoda and Erhai Lake 01.jpg</td><td>Ngguls</td><td>CC BY-SA 4.0</td></tr><tr><td>Yunnan China Tiger-Leaping-Gorge-05.jpg</td><td>CEphoto, Uwe Aranas</td><td>CC BY-SA 3.0</td></tr><tr><td>1 lijiang old town night.jpg</td><td>chensiyuan</td><td>CC BY-SA 4.0</td></tr><tr><td>Suzhou Garden Museum 1.JPG</td><td>Pvt pauline</td><td>CC BY-SA 3.0</td></tr><tr><td>Zhouzhuang water town.jpg</td><td>Mattias Hill</td><td>CC BY-SA 4.0</td></tr><tr><td>20260424 West Lake and Hangzhou Skyline.jpg</td><td>Windmemories</td><td>CC BY-SA 4.0</td></tr></table>
+</section></body></html>

@@ -1,0 +1,408 @@
+<!doctype html><html lang="nb"><head><meta charset="utf-8"><title>Dubai, 14 dager</title><style>
+@page { size: 1280px 720px; margin: 0 }
+* { box-sizing: border-box }
+html, body { margin: 0; padding: 0 }
+body { font-family: 'Noto Sans','DejaVu Sans',sans-serif; color: #1d2733; font-size: 17px; line-height: 1.42; -webkit-print-color-adjust: exact; print-color-adjust: exact }
+.side { width: 1280px; height: 720px; overflow: hidden; position: relative; page-break-after: always; break-after: page; background: #f6f1e7 }
+.side:last-child { page-break-after: auto; break-after: auto }
+img { display: block; object-fit: cover }
+.full { position: absolute; inset: 0; width: 100%; height: 100% }
+.dekk { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,14,26,.20) 0%, rgba(6,14,26,.25) 40%, rgba(6,14,26,.88) 100%) }
+.forside .tekst { position: absolute; left: 70px; right: 70px; bottom: 58px; color: #fff }
+.merke { letter-spacing: .22em; text-transform: uppercase; font-size: 15px; font-weight: 600; color: #f0c878 }
+.forside h1 { font-size: 112px; line-height: .98; margin: 10px 0 18px; font-weight: 800; letter-spacing: -.02em }
+.forside p { font-size: 24px; max-width: 900px; margin: 0 }
+.piller { display: flex; gap: 10px; margin-top: 24px; flex-wrap: wrap }
+.pille { background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.4); border-radius: 30px; padding: 6px 18px; font-size: 16px }
+
+.delt { display: grid; grid-template-columns: 560px 1fr; height: 100% }
+.delt.snu { grid-template-columns: 1fr 560px }
+.panel { padding: 44px 46px 40px; position: relative }
+.panel .merke, .heltekst .merke { color: #a8742a }
+h2 { font-size: 43px; line-height: 1.05; margin: 8px 0 14px; font-weight: 800; letter-spacing: -.01em; color: #16283c }
+.ingress { font-size: 18.5px; margin: 0 0 14px }
+ul { margin: 0; padding-left: 20px }
+li { margin-bottom: 8px }
+li b, td b { color: #8a5a17 }
+.mosaikk { display: grid; height: 720px; gap: 6px; background: #f6f1e7 }
+.mosaikk img { width: 100%; height: 100%; min-height: 0; min-width: 0 }
+.m3 { grid-template-columns: 1fr 1fr; grid-template-rows: 1.35fr 1fr }
+.m3 img:first-child { grid-column: 1 / 3 }
+.m3h { grid-template-columns: 1fr 1.25fr; grid-template-rows: 1fr 1fr }
+.m3h img:first-child { grid-row: 1 / 3 }
+.m2 { grid-template-rows: 1.3fr 1fr }
+.m4 { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr }
+.dag { display: inline-block; background: #16283c; color: #f0c878; border-radius: 30px; padding: 4px 16px; font-size: 15px; font-weight: 600; margin-bottom: 4px }
+.fakta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px }
+.fakta span { background: #e9dfc9; border-radius: 8px; padding: 6px 12px; font-size: 15px }
+.fakta b { color: #8a5a17 }
+.sitat { position: absolute; left: 46px; right: 46px; bottom: 30px; font-size: 15px; color: #6a6557; border-top: 1px solid #d9cdb3; padding-top: 10px }
+
+.heltekst { padding: 44px 60px }
+.grunner { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px }
+.grunn { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 10px rgba(20,30,50,.10) }
+.grunn img { width: 100%; height: 146px }
+.grunn div { padding: 10px 16px 12px; font-size: 15px; line-height: 1.35 }
+.grunn h3 { margin: 0 0 4px; font-size: 19px; color: #8a5a17 }
+
+.tab { border-collapse: collapse; width: 100%; font-size: 15px; margin-top: 10px }
+.tab th { text-align: left; background: #16283c; color: #f0c878; padding: 6px 12px; font-weight: 600 }
+.tab td { border-bottom: 1px solid #ded3bb; padding: 4.5px 12px; vertical-align: top }
+.tab td:first-child { white-space: nowrap; font-weight: 700; color: #8a5a17 }
+.tab td:nth-child(2) { white-space: nowrap; font-weight: 600 }
+.tab tr.fly td { background: #ece2cc }
+.kost td:nth-child(2) { white-space: normal; font-weight: 400 }
+.kost td:nth-child(n+3) { white-space: nowrap }
+.tre { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 22px }
+.fire { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 16px }
+.kort { background: #fff; border-radius: 14px; padding: 22px 24px; box-shadow: 0 2px 10px rgba(20,30,50,.10); font-size: 17px; line-height: 1.45 }
+.kort h3 { margin: 0 0 6px; font-size: 21px; color: #8a5a17 }
+.kort .tid { font-size: 28px; font-weight: 800; letter-spacing: -.01em; margin: 4px 0 4px; color: #16283c }
+.kort small { color: #6a6557; font-size: 14.5px }
+.kort ul { padding-left: 18px } .kort li { margin-bottom: 5px }
+.rute { display: flex; align-items: center; gap: 14px; margin: 18px 0 4px; font-size: 22px; font-weight: 800; color: #16283c }
+.rute span { background: #16283c; color: #fff; border-radius: 10px; padding: 8px 16px }
+.rute i { font-style: normal; color: #a8742a; font-size: 15px; font-weight: 600 }
+.fot { position: absolute; left: 60px; right: 60px; bottom: 24px; font-size: 13.5px; color: #6a6557 }
+.kr { font-size: 11px; line-height: 1.35; columns: 2; column-gap: 30px; color: #55504a; margin-top: 12px }
+.slutt .tekst { position: absolute; left: 70px; right: 70px; bottom: 64px; color: #fff }
+.slutt h1 { font-size: 76px; line-height: 1; margin: 8px 0 14px; font-weight: 800 }
+.slutt p { font-size: 22px; max-width: 900px; margin: 0 0 8px }
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<style>
+@media screen {
+  html { background: #16130f }
+  body { background: #16130f !important; padding: 56px 0 24px !important }
+  .lysbilde { margin: 0 auto 14px; box-shadow: 0 6px 30px rgba(0,0,0,.45) }
+  #topp { position: fixed; inset: 0 0 auto 0; height: 44px; z-index: 1000; display: flex; align-items: center; gap: 14px;
+    padding: 0 16px; background: rgba(22,19,15,.94); color: #f3ead9; font: 15px/1 system-ui, sans-serif }
+  #topp a { color: #f3ead9; text-decoration: none; padding: 8px 12px; border: 1px solid rgba(243,234,217,.35); border-radius: 999px }
+  #topp a:hover, #topp a:focus-visible { background: rgba(243,234,217,.14) }
+  #topp span { opacity: .75; white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
+}
+@media print { #topp { display: none } }
+</style>
+<script>
+addEventListener('DOMContentLoaded', () => {
+  const sider = [...document.querySelectorAll('body > section, body > .side, body > .forside')];
+  sider.forEach(s => s.classList.add('lysbilde'));
+  const grunn = sider[0].offsetWidth;
+  const tilpass = () => {
+    const z = Math.min(1, document.documentElement.clientWidth / grunn);
+    sider.forEach(s => s.style.zoom = z);
+  };
+  if (!matchMedia('print').matches) { tilpass(); addEventListener('resize', tilpass); }
+  addEventListener('beforeprint', () => sider.forEach(s => s.style.zoom = ''));
+  addEventListener('afterprint', tilpass);
+});
+</script>
+</head><body><nav id="topp"><a href="../">← Alle turene</a><span>Dubai: By, ørken og strand</span></nav>
+
+<!-- 1 -->
+<section class="side forside">
+  <img class="full" src="bilder/forside.jpg" alt="Dubai om kvelden">
+  <div class="dekk"></div>
+  <div class="tekst">
+    <div class="merke">Ferieforslag, 14 dager</div>
+    <h1>Dubai</h1>
+    <p>Skyskrapere, ørken, gamleby og strand. Business fra Trondheim via Amsterdam, og to uker med by, sand, fjell og en avstikker til Abu Dhabi.</p>
+    <div class="piller"><span class="pille">3 reisende</span><span class="pille">14 dager, 13 netter</span><span class="pille">Business fra Trondheim</span><span class="pille">Dubai, ørkenen, Abu Dhabi, Hatta</span><span class="pille">Best november til mars</span></div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="side heltekst">
+  <div class="merke">Hvorfor Dubai</div>
+  <h2>Seks grunner til å bruke to uker her</h2>
+  <div class="grunner">
+    <div class="grunn"><img loading="lazy" src="bilder/burjfontene.jpg" alt=""><div><h3>Byen som ikke ligner noe annet</h3>Verdens høyeste tårn, fontener som danser til musikk, og et kjøpesenter med haier i akvariet.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/orken.jpg" alt=""><div><h3>Ørkenen rett utenfor</h3>Tre kvarter fra sentrum ligger røde sanddyner, oryx og stjernehimmel. En natt der ute er et høydepunkt.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/moske.jpg" alt=""><div><h3>Abu Dhabi på kjøpet</h3>Den hvite Sheikh Zayed-moskeen og Louvre Abu Dhabi ligger halvannen time unna med bil.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/palm.jpg" alt=""><div><h3>Sol og 25 grader i vann</h3>Lange sandstrender, badeland i verdensklasse og strandhotell der alle finner sitt.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/krydder.jpg" alt=""><div><h3>Det gamle Dubai</h3>Krydder, gull og trebåter over Creek for én dirham. Byen slik den var før oljen.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/hatta.jpg" alt=""><div><h3>Fjell og turkist vann</h3>Hatta og Hajarfjellene gir kajakk, sykkel og stillhet som motvekt til storbyen.</div></div>
+  </div>
+  <div class="fot">Enkelt, trygt og lettvint: alt fungerer, alle snakker engelsk, og du kommer langt på kort tid.</div>
+</section>
+
+<!-- 3 -->
+<section class="side"><div class="delt">
+  <div class="panel">
+    <div class="merke">Flyet</div>
+    <h2>Business hele veien fra Trondheim</h2>
+    <p class="ingress">KLM tar oss fra Værnes til Amsterdam og videre direkte til Dubai, på én billett med EuroBonus-poeng.</p>
+    <div class="rute"><span>TRD</span><i>ca. 2 t 15</i><span>AMS</span><i>ca. 6 t 45</i><span>DXB</span></div>
+    <ul style="margin-top:14px">
+      <li><b>To etapper</b> hver vei, godt innenfor regelen om maks fire etapper og 24 timer mellomlanding.</li>
+      <li><b>Flat seng</b> på langstrekket, lounge på Schiphol og to kolli bagasje per person.</li>
+      <li><b>Poeng for tre:</b> 195 000 med kuponger. To reiser på én kupong for 130 000, og den tredje på egen kupong for 65 000. Avgifter kommer i tillegg.</li>
+      <li><b>Reserve:</b> Air France via Paris når KLM er fullt.</li>
+    </ul>
+    <div class="sitat">Ledige seter leter vi etter senere. KLM og Air France er selskapene som slipper flest businessseter til Dubai.</div>
+  </div>
+  <div class="mosaikk m3"><img loading="lazy" src="bilder/klmfly.jpg" alt="KLM"><img loading="lazy" src="bilder/klmsete.jpg" alt="Businesssete"><img loading="lazy" src="bilder/klmmat.jpg" alt="Mat om bord"></div>
+</div></section>
+
+<!-- 4 -->
+<section class="side heltekst">
+  <div class="merke">Ruta</div>
+  <h2 style="margin-bottom:6px">14 dager i ett blikk</h2>
+  <table class="tab">
+    <tr><th>Dag</th><th>Sted</th><th>Hva skjer</th><th>Natt</th></tr>
+    <tr class="fly"><td>1</td><td>Trondheim til Dubai</td><td>Business via Amsterdam, framme om kvelden</td><td>Downtown</td></tr>
+    <tr><td>2</td><td>Downtown</td><td>Dubai Mall og akvariet, Burj Khalifa i solnedgang, fonteneshow</td><td>Downtown</td></tr>
+    <tr><td>3</td><td>Gamle Dubai</td><td>Al Fahidi, abra over Creek, krydder og gull, middag i Al Seef</td><td>Downtown</td></tr>
+    <tr><td>4</td><td>Framtidsbyen</td><td>Museum of the Future, Dubai Frame, kveld i Global Village eller Miracle Garden</td><td>Downtown</td></tr>
+    <tr><td>5</td><td>Ørkenen</td><td>Hent leiebil, ørkenhotell, safari, kameler og middag under stjernene</td><td>Ørkenen</td></tr>
+    <tr><td>6</td><td>Til Abu Dhabi</td><td>Soloppgang i sanden, kjør til Abu Dhabi, Louvre Abu Dhabi på ettermiddagen</td><td>Abu Dhabi</td></tr>
+    <tr><td>7</td><td>Abu Dhabi</td><td>Yas Island med Ferrari World eller Warner Bros., moskeen i kveldslys</td><td>Abu Dhabi</td></tr>
+    <tr><td>8</td><td>Til stranda</td><td>Qasr Al Watan om morgenen, kjør til Palm Jumeirah, første bad</td><td>Stranda</td></tr>
+    <tr><td>9</td><td>Palm Jumeirah</td><td>Aquaventure badeland og akvariet Lost Chambers, utsikt fra The View</td><td>Stranda</td></tr>
+    <tr><td>10</td><td>Jumeirah</td><td>Stranddag, Burj Al Arab, Madinat Jumeirah og Kite Beach</td><td>Stranda</td></tr>
+    <tr><td>11</td><td>Hatta</td><td>Dagstur til fjellene: kajakk på demningen, gamlebyen, sykkel</td><td>Stranda</td></tr>
+    <tr><td>12</td><td>Marina</td><td>Dubai Marina, JBR og Ain Dubai, dhow-cruise med middag</td><td>Stranda</td></tr>
+    <tr><td>13</td><td>Fri dag</td><td>Strand, spa eller shopping, avskjedsmiddag med utsikt</td><td>Stranda</td></tr>
+    <tr class="fly"><td>14</td><td>Dubai til Trondheim</td><td>Business via Amsterdam, hjemme samme dag</td><td></td></tr>
+  </table>
+  <div class="fot">Tre baser i stedet for ett hotell: 4 netter i byen, 1 i ørkenen, 2 i Abu Dhabi og 6 ved stranda. Leiebil dag 5 til 8 og dag 11.</div>
+</section>
+
+<!-- 5 -->
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m3h"><img loading="lazy" src="bilder/burj.jpg" alt="Burj Khalifa"><img loading="lazy" src="bilder/fontene.jpg" alt="Fontenen"><img loading="lazy" src="bilder/akvarium.jpg" alt="Akvariet"></div>
+  <div class="panel">
+    <span class="dag">Dag 1 og 2</span>
+    <h2>Downtown: tårnet, fontenen og haiene</h2>
+    <p class="ingress">Vi lander om kvelden og sover ut. Første hele dag tar vi det som ligger rett utenfor døra.</p>
+    <ul>
+      <li><b>Burj Khalifa</b>, 828 meter. Bestill utsikten «At the Top» til en time før solnedgang, så får vi både dagslys og lysene.</li>
+      <li><b>Dubai Fountain</b> spiller hver halvtime om kvelden. Best sett fra broen ved Souk Al Bahar eller fra en restaurant ved vannet.</li>
+      <li><b>Dubai Mall</b> med det enorme akvariet, skøytebane og 1 200 butikker.</li>
+      <li><b>Kvelden:</b> middag med utsikt mot fontenen.</li>
+    </ul>
+    <div class="fakta"><span><b>Bo:</b> Downtown eller ved Creek</span><span><b>Bestill:</b> Burj Khalifa i god tid</span></div>
+  </div>
+</div></section>
+
+<!-- 6 -->
+<section class="side"><div class="delt">
+  <div class="panel">
+    <span class="dag">Dag 3</span>
+    <h2>Gamle Dubai ved Creek</h2>
+    <p class="ingress">Her startet byen, som en handelshavn for perler og krydder. Fortsatt det mest levende strøket.</p>
+    <ul>
+      <li><b>Al Fahidi:</b> trange smug, vindtårn, kaffemuseet og gallerier. Frokost på Arabian Tea House.</li>
+      <li><b>Abra over Creek:</b> den åpne trebåten koster én dirham og er byens beste reise.</li>
+      <li><b>Krydder og gull i Deira:</b> safran, røkelse, dadler, og vinduer fulle av gull. Prut med et smil.</li>
+      <li><b>Al Shindagha-museet</b> forteller historien før oljen.</li>
+      <li><b>Kvelden:</b> gå langs vannet i Al Seef og spis emiratisk på Al Fanar.</li>
+    </ul>
+    <div class="sitat">Tips: en emiratisk lunsj hos kultursenteret SMCCU i Al Fahidi, der du kan spørre om alt.</div>
+  </div>
+  <div class="mosaikk m4"><img loading="lazy" src="bilder/abra.jpg" alt="Abra"><img loading="lazy" src="bilder/fahidi.jpg" alt="Al Fahidi"><img loading="lazy" src="bilder/krydder.jpg" alt="Krydder"><img loading="lazy" src="bilder/gullsouk.jpg" alt="Gullsouken"></div>
+</div></section>
+
+<!-- 7 -->
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m3"><img loading="lazy" src="bilder/museum.jpg" alt="Museum of the Future"><img loading="lazy" src="bilder/ramme.jpg" alt="Dubai Frame"><img loading="lazy" src="bilder/blomster.jpg" alt="Miracle Garden"></div>
+  <div class="panel">
+    <span class="dag">Dag 4</span>
+    <h2>Framtidsbyen</h2>
+    <p class="ingress">Dagen for det bare Dubai finner på å bygge.</p>
+    <ul>
+      <li><b>Museum of the Future:</b> ringen dekket av arabisk kalligrafi, med en reise til år 2071 inni. Billetter blir utsolgt, bestill tidlig.</li>
+      <li><b>Dubai Frame:</b> bilderammen på 150 meter, med glassgulv og det gamle Dubai på den ene siden og det nye på den andre.</li>
+      <li><b>Metroen</b> er førerløs og går på bro gjennom byen. Sett dere helt foran.</li>
+      <li><b>Kvelden:</b> Global Village med mat og boder fra hele verden, eller Miracle Garden med 150 millioner blomster. Begge er åpne fra oktober til mai.</li>
+    </ul>
+    <div class="fakta"><span><b>Varmt?</b> Ski Dubai har ekte snø og pingviner</span></div>
+  </div>
+</div></section>
+
+<!-- 8 -->
+<section class="side"><div class="delt">
+  <div class="panel">
+    <span class="dag">Dag 5 og 6</span>
+    <h2>En natt i ørkenen</h2>
+    <p class="ingress">Vi henter leiebil og kjører tre kvarter ut av byen. Der tar sanden over.</p>
+    <ul>
+      <li><b>Ørkenhotell:</b> Al Maha ligger inne i naturreservatet med eget basseng på hver suite. Bab Al Shams er rimeligere og passer godt for familier.</li>
+      <li><b>Safari:</b> velg en rolig tur i reservatet med gamle Land Rovere framfor dynekjøring i kolonne.</li>
+      <li><b>Kameler, falker og oryx</b> i solnedgangen, og middag i beduinleir under stjernene.</li>
+      <li><b>Soloppgang:</b> stå opp tidlig. De som vil, tar varmluftsballong over dynene.</li>
+    </ul>
+    <div class="fakta"><span><b>Kjøring:</b> ca. 45 min fra Downtown</span><span><b>Kveldene er kjølige:</b> ta med genser</span></div>
+  </div>
+  <div class="mosaikk m4"><img loading="lazy" src="bilder/orken.jpg" alt="Dyner"><img loading="lazy" src="bilder/kamel.jpg" alt="Kameler"><img loading="lazy" src="bilder/oryx.jpg" alt="Oryx"><img loading="lazy" src="bilder/safari.jpg" alt="Safari"></div>
+</div></section>
+
+<!-- 9 -->
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m3"><img loading="lazy" src="bilder/moske.jpg" alt="Sheikh Zayed-moskeen"><img loading="lazy" src="bilder/louvre.jpg" alt="Louvre Abu Dhabi"><img loading="lazy" src="bilder/moskekveld.jpg" alt="Buegangene"></div>
+  <div class="panel">
+    <span class="dag">Dag 6 til 8</span>
+    <h2>Abu Dhabi</h2>
+    <p class="ingress">Hovedstaden er roligere og grønnere, og har de to flotteste byggene i landet.</p>
+    <ul>
+      <li><b>Sheikh Zayed-moskeen:</b> 82 kupler i hvit marmor. Gratis, men registrer besøket på nett. Kom en time før solnedgang.</li>
+      <li><b>Louvre Abu Dhabi:</b> Jean Nouvels kuppel slipper lyset ned som gjennom palmeblader. Museet ligger på Saadiyat, der også det nye nasjonalmuseet ligger.</li>
+      <li><b>Yas Island:</b> Ferrari World med verdens raskeste berg-og-dal-bane, Warner Bros. World og badeland.</li>
+      <li><b>Qasr Al Watan:</b> presidentpalasset, åpent for besøk.</li>
+    </ul>
+    <div class="fakta"><span><b>Kjøring:</b> ca. 1 t 30 fra Dubai</span><span><b>Klær i moskeen:</b> dekk armer og bein, sjal for kvinner</span></div>
+  </div>
+</div></section>
+
+<!-- 10 -->
+<section class="side"><div class="delt">
+  <div class="panel">
+    <span class="dag">Dag 8 til 10</span>
+    <h2>Palmen og stranda</h2>
+    <p class="ingress">Siste base er ved sjøen. Seks netter på samme hotell, så ingen trenger å pakke mer.</p>
+    <ul>
+      <li><b>Aquaventure</b> på Atlantis er et av verdens største badeland. Sett av en hel dag, og ta med akvariet Lost Chambers.</li>
+      <li><b>The View at The Palm:</b> se palmeformen fra 240 meters høyde.</li>
+      <li><b>Burj Al Arab:</b> seilet på egen øy. Omvisning inne, eller ettermiddagste i toppetasjen.</li>
+      <li><b>Madinat Jumeirah:</b> kanaler, småbåter og souk, med Burj Al Arab som bakgrunn.</li>
+      <li><b>Kite Beach:</b> byens triveligste offentlige strand, med matvogner og drager på himmelen.</li>
+    </ul>
+    <div class="fakta"><span><b>Bo:</b> Palm Jumeirah, Jumeirah eller JBR</span><span><b>Sjøen:</b> 22 til 26 grader om vinteren</span></div>
+  </div>
+  <div class="mosaikk m4"><img loading="lazy" src="bilder/atlantis.jpg" alt="Atlantis"><img loading="lazy" src="bilder/madinat.jpg" alt="Madinat Jumeirah"><img loading="lazy" src="bilder/burjalarab.jpg" alt="Burj Al Arab"><img loading="lazy" src="bilder/kitebeach.jpg" alt="Kite Beach"></div>
+</div></section>
+
+<!-- 11 -->
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m3"><img loading="lazy" src="bilder/hatta.jpg" alt="Hatta"><img loading="lazy" src="bilder/kajakk.jpg" alt="Kajakk"><img loading="lazy" src="bilder/jebeljais.jpg" alt="Jebel Jais"></div>
+  <div class="panel">
+    <span class="dag">Dag 11</span>
+    <h2>Hatta og fjellene</h2>
+    <p class="ingress">En dag helt uten glass og stål. Hajarfjellene reiser seg rødbrune rundt en turkis innsjø.</p>
+    <ul>
+      <li><b>Kajakk eller tråbåt</b> på Hatta-demningen, stille vann mellom fjellveggene.</li>
+      <li><b>Hatta Heritage Village:</b> gammel fjellandsby med fort og vakttårn.</li>
+      <li><b>Sykkel og fotturer:</b> merkede løyper for alle nivåer, og Hatta Wadi Hub med klatring og zipline i sesongen.</li>
+      <li><b>Lunsj</b> på en lokal kafé, og hjem til solnedgang på stranda.</li>
+    </ul>
+    <div class="fakta"><span><b>Kjøring:</b> ca. 1 t 30 hver vei</span><span><b>Start tidlig</b></span></div>
+    <div class="sitat">Alternativ: Jebel Jais i Ras Al Khaimah, landets høyeste fjell (1 934 m) med verdens lengste zipline. To timer hver vei.</div>
+  </div>
+</div></section>
+
+<!-- 12 -->
+<section class="side"><div class="delt">
+  <div class="panel">
+    <span class="dag">Dag 12 og 13</span>
+    <h2>Marina og de siste dagene</h2>
+    <p class="ingress">To rolige dager til slutt, med plass til det hver enkelt har mest lyst på.</p>
+    <ul>
+      <li><b>Dubai Marina:</b> gå promenaden mellom tårnene, og ta en dhow-cruise med middag når lysene tennes.</li>
+      <li><b>JBR og Bluewaters:</b> strandliv, kafeer og Ain Dubai, verdens høyeste pariserhjul på 250 meter.</li>
+      <li><b>For de modige:</b> fallskjermhopp over Palmen, jetski eller zipline over marinaen.</li>
+      <li><b>Dag 13 er fri:</b> strand, spa, golf eller siste runde shopping.</li>
+      <li><b>Avskjedsmiddag</b> med utsikt, før hjemreisen neste dag.</li>
+    </ul>
+    <div class="fakta"><span><b>Transport:</b> trikk og taxi, ingen bil trengs</span></div>
+  </div>
+  <div class="mosaikk m3"><img loading="lazy" src="bilder/marina.jpg" alt="Dubai Marina"><img loading="lazy" src="bilder/jbr.jpg" alt="JBR"><img loading="lazy" src="bilder/ain.jpg" alt="Ain Dubai"></div>
+</div></section>
+
+<!-- 13 -->
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m3"><img loading="lazy" src="bilder/machboos.jpg" alt="Machboos"><img loading="lazy" src="bilder/mezze.jpg" alt="Mezze"><img loading="lazy" src="bilder/kaffe.jpg" alt="Arabisk kaffe"></div>
+  <div class="panel">
+    <div class="merke">Maten</div>
+    <h2>Hele verden på ett fat</h2>
+    <p class="ingress">Ni av ti innbyggere kommer fra et annet land, og det merkes på kjøkkenet.</p>
+    <ul>
+      <li><b>Emiratisk:</b> machboos (krydret ris med kjøtt eller fisk) og luqaimat, små søte boller med daddelsirup.</li>
+      <li><b>Levantinsk:</b> mezze, grillspyd og ferskt brød. Shawarma fra gata for rundt 25 kroner.</li>
+      <li><b>Indisk og pakistansk:</b> billig og veldig godt. Ravi i Satwa er en institusjon.</li>
+      <li><b>Persisk:</b> Al Ustad Special Kabab i gamlebyen har servert kebab siden 1978.</li>
+      <li><b>Arabisk kaffe med dadler</b> og karak, søt krydderte, overalt.</li>
+      <li><b>Brunsj i helga</b> er en lokal tradisjon på de store hotellene.</li>
+    </ul>
+    <div class="fakta"><span><b>Alkohol:</b> serveres på hoteller og restauranter med bevilling</span></div>
+  </div>
+</div></section>
+
+<!-- 14 -->
+<section class="side heltekst">
+  <div class="merke">Overnatting</div>
+  <h2>Fire baser, fire stemninger</h2>
+  <div class="fire">
+    <div class="kort"><small>Dag 1 til 5, fire netter</small><h3>Byen</h3>Downtown ved Burj Khalifa, eller ved Creek for mer sjel og lavere pris.<ul style="margin-top:8px"><li>Gangavstand til tårnet og fontenen</li><li>Metro til gamlebyen</li></ul></div>
+    <div class="kort"><small>Dag 5 til 6, én natt</small><h3>Ørkenen</h3>Hotell blant dynene, med basseng, safari og middag ute.<ul style="margin-top:8px"><li>Al Maha: det eksklusive valget</li><li>Bab Al Shams: familievennlig</li></ul></div>
+    <div class="kort"><small>Dag 6 til 8, to netter</small><h3>Abu Dhabi</h3>Saadiyat for strand og museer, Yas Island for fornøyelsesparker.<ul style="margin-top:8px"><li>Kort vei til moskeen fra begge</li><li>Roligere enn Dubai</li></ul></div>
+    <div class="kort"><small>Dag 8 til 14, seks netter</small><h3>Stranda</h3>Palm Jumeirah, Jumeirah eller JBR. Egen strand og basseng.<ul style="margin-top:8px"><li>Palm: resortfølelse</li><li>JBR: liv og gangavstand til alt</li></ul></div>
+  </div>
+  <div class="tre">
+    <div class="kort"><h3>Leiebil dag 5 til 8 og dag 11</h3>Brede, gode veier og enkel kjøring. I selve Dubai er metro og taxi både billigere og raskere.</div>
+    <div class="kort"><h3>Vil dere ha det enklere?</h3>Dropp bilen: bestill ørkenturen med henting, og ta Abu Dhabi som dagstur med sjåfør. Da holder det med to hotell.</div>
+    <div class="kort"><h3>Bestill tidlig</h3>Burj Khalifa i solnedgang, Museum of the Future, ørkenhotellet og moskeen (gratis, men med registrering).</div>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="side heltekst">
+  <div class="merke">Praktisk</div>
+  <h2>Greit å vite</h2>
+  <div class="tre">
+    <div class="kort"><h3>Når</h3><div class="tid">November til mars</div>24 til 30 grader om dagen og behagelige kvelder. April og oktober er varme, men fine. Fra mai til september er det over 40 grader, og da blir det mest innendørs.</div>
+    <div class="kort"><h3>Ramadan</h3><div class="tid">Ca. 8. feb. til 9. mars 2027</div>Datoene flytter seg rundt elleve dager tidligere hvert år. Alt er åpent, men dagene er roligere og kveldene festligere.</div>
+    <div class="kort"><h3>Innreise</h3><div class="tid">Visum ved ankomst</div>Norske pass får gratis visum på flyplassen. Passet bør være gyldig minst seks måneder etter innreise.</div>
+  </div>
+  <div class="tre">
+    <div class="kort"><h3>Penger og tid</h3>Dirham (AED), én dirham er rundt 2,60 kroner. Kort virker overalt. Dubai ligger tre timer foran Norge om vinteren og to om sommeren.</div>
+    <div class="kort"><h3>Komme seg rundt</h3>Metro med Nol-kort, og rimelig taxi via appen Careem. Fra flyplassen til Downtown tar det et kvarter.</div>
+    <div class="kort"><h3>Skikk og bruk</h3>Vanlige sommerklær i byen, badetøy bare på strand og ved basseng. Dekk skuldre og knær i moskeer og gamlebyen. Helga er lørdag og søndag.</div>
+  </div>
+  <div class="fot">Tider, åpningstider og priser er omtrentlige og sjekkes når datoene er satt.</div>
+</section>
+
+<!-- kostnad -->
+<section class="side heltekst">
+  <div class="merke">Hva koster det</div>
+  <h2 style="margin-bottom:6px">Billigste totalpris for tre</h2>
+  <table class="tab kost">
+    <tr><th>Post</th><th>Slik holder vi det nede</th><th style="text-align:right">Dirham</th><th style="text-align:right">Kroner</th></tr>
+    <tr class="fly"><td>Fly, business</td><td>195 000 poeng med to kuponger. Avgifter anslått til 2 000 kr per person</td><td></td><td style="text-align:right"><b>6 000</b></td></tr>
+    <tr><td>Hotell i byen</td><td>4 netter, ett familierom på rimelig hotell ved Creek eller Downtown, 400 per natt</td><td style="text-align:right">1 600</td><td style="text-align:right"><b>4 200</b></td></tr>
+    <tr><td>Natt i ørkenen</td><td>Safari med overnatting i leir i stedet for ørkenhotell, 350 per person</td><td style="text-align:right">1 050</td><td style="text-align:right"><b>2 700</b></td></tr>
+    <tr><td>Hotell i Abu Dhabi</td><td>2 netter, ett familierom, 350 per natt</td><td style="text-align:right">700</td><td style="text-align:right"><b>1 800</b></td></tr>
+    <tr><td>Hotell ved stranda</td><td>6 netter, ett familierom i Marina eller JBR med gangavstand til stranda, 550 per natt</td><td style="text-align:right">3 300</td><td style="text-align:right"><b>8 600</b></td></tr>
+    <tr><td>Leiebil</td><td>5 dager med liten bil, bensin og bompenger</td><td style="text-align:right">900</td><td style="text-align:right"><b>2 300</b></td></tr>
+    <tr><td>Metro og taxi</td><td>Resten av dagene, og til og fra flyplassen</td><td style="text-align:right">700</td><td style="text-align:right"><b>1 800</b></td></tr>
+    <tr><td>Inngangspenger</td><td>Burj Khalifa, Museum of the Future, Dubai Frame, Louvre, Qasr Al Watan, Aquaventure, kajakk, Global Village og dhow-cruise, 1 050 per person</td><td style="text-align:right">3 150</td><td style="text-align:right"><b>8 200</b></td></tr>
+    <tr><td>Mat</td><td>Gatekjøkken og enkle restauranter, 120 per person per dag</td><td style="text-align:right">4 900</td><td style="text-align:right"><b>12 700</b></td></tr>
+    <tr class="fly"><td>Sum for tre</td><td>Rundt 16 100 kr per person, pluss 195 000 poeng</td><td style="text-align:right">16 300</td><td style="text-align:right"><b style="font-size:19px">48 300</b></td></tr>
+  </table>
+  <div class="tre" style="margin-top:16px">
+    <div class="kort" style="padding:14px 20px;font-size:15px"><h3 style="font-size:18px">Ikke med i summen</h3>Ferrari World (ca. 900 kr per person), varmluftsballong, shopping og reiseforsikring.</div>
+    <div class="kort" style="padding:14px 20px;font-size:15px"><h3 style="font-size:18px">Vil dere bo bedre?</h3>Ørkenhotell og strandresort på Palmen legger fort 30 000 til 60 000 kr på summen.</div>
+    <div class="kort" style="padding:14px 20px;font-size:15px"><h3 style="font-size:18px">Kurs</h3>Norges Bank 13. november 2026: én dollar er 9,56 kr. Dirham er låst til dollar, så én dirham er 2,60 kr.</div>
+  </div>
+  <div class="fot">Alle beløp er anslag for høysesong, ikke hentede priser. Hotell og flyavgifter er de mest usikre postene og sjekkes når datoene er satt.</div>
+</section>
+
+<!-- 16 -->
+<section class="side heltekst">
+  <div class="merke">Bilder</div>
+  <h2 style="font-size:30px">Bildekreditt</h2>
+  <div style="font-size:14px">Alle bilder er hentet fra Wikimedia Commons. Filnavn, fotograf og lisens:</div>
+  <div class="kr"><div>Dubai skyline unsplash.jpg, Robert Bock, CC0</div><div>Dubai Sunset (5614220391).jpg, the_dead_pixel, CC BY 2.0</div><div>Burj Khalifa.jpg, Donaldytong, CC-BY-SA-3.0</div><div>Dubai Fountain 7.JPG, Nealt, CC BY-SA 3.0</div><div>Dubai Fountain (11387138185).jpg, Cory M. Grenier, CC BY-SA 2.0</div><div>The Dubai Mall Aquarium and underwater Zoo (Ank Kumar, Infosys) 04.jpg, Ank Kumar, CC BY-SA 4.0</div><div>UAE Dubai Abra img3 asv2018-01.jpg, A.Savin, FAL</div><div>Camello y campamento, Al Bastakiya, Dubai, 2009-11-23, DD 8878.jpg, Diego Delso, CC BY-SA 4.0</div><div>Spice souk @ Deira @ Dubai (15696929358).jpg, Guilhem Vellut from Annecy, France, CC BY 2.0</div><div>The Gold Souk - Dubai - 2000 - panoramio.jpg, Jens Cederskjold, CC BY 3.0</div><div>Museum of the future, Dubai.jpeg, Lyonerov, CC-BY-SA-4.0</div><div>The Dubai Frame.jpg, Eduard Marmet, CC-BY-SA-2.0</div><div>VAE-dubai-miracle-05.jpg, Balou46, CC BY-SA 4.0</div><div>Sunset in desert.jpg, Stzeman, CC BY-SA 3.0</div><div>People riding camels on Dubai Dunes.jpg, iMahesh, CC BY-SA 4.0</div><div>Desert Safari - Dubai.JPG, :en:Siddeshindia (talk | contribs), CC BY-SA 3.0</div><div>Arabian oryx (oryx leucoryx).jpg, Charles J. Sharp, CC BY-SA 3.0</div><div>Front of Sheikh Zayed Mosque.jpg, FritzDaCat, CC-BY-SA-3.0</div><div>Walkways of Holy Sheikh Zayed Grand Mosque.jpg, Hari K Kava, CC-BY-SA-4.0</div><div>LouvreAD platforms.jpg, Boubloub, CC BY-SA 4.0</div><div>Picturesque view in Hatta Dam.jpg, Tms2007, CC BY-SA 4.0</div><div>Hatta Dam Kayaking.jpg, Chrome231, CC BY-SA 4.0</div><div>A view from the road up Jebel Jais, Ras Al Khaimah.jpg, Stevenmccombe, CC BY-SA 4.0</div><div>Atlantis, The Palm Exterior .jpg, Atlantis The Palm, CC-BY-SA-4.0</div><div>Vereinigte Arabische Emirate - Dubai - Palm Jumeirah und Dubai Marina - im Vordergrund das Hotel Atlantis - panoramio.jpg, giggel, CC BY 3.0</div><div>Madinat Jumeirah-Dubai3303.JPG, Diego Delso, CC BY-SA 4.0</div><div>Burj Al Arab, Dubai, by Joi Ito Dec2007.jpg, Joi Ito, CC-BY-2.0</div><div>Dubai Marina Night View 1.jpg, Iwona Rege, CC BY-SA 4.0</div><div>Dubai Jumeirah Beach.JPG, pe-sa, CC BY 3.0</div><div>A flurry of surf kites at Kite Beach, Jumeirah.jpg, MaryJaneB, CC BY-SA 4.0</div><div>The Ain Dubai.jpg, Roxy3115, CC BY-SA 4.0</div><div>Machboos.JPG, Miansari66, CC0</div><div>Mezze on Thanksgiving, Ehrenbach.jpg, Gerda Arendt, CC BY-SA 4.0</div><div>A dallah of Arabic coffee.jpg, Abdulla Al Muhairi, CC BY 2.0</div><div>Airbus A350-941XWB KLM Royal Dutch Airlines - PH-ZNA.jpg, Mees Jansen, CC0</div><div>KLM World Business Class Seat.jpg, GreenPanther1234, CC BY 3.0</div><div>KLM business class in-flight meal - KL808 (TPE-AMS) 03.jpg, Cbliu, CC BY-SA 4.0</div></div>
+</section>
+
+<!-- 17 -->
+<section class="side forside slutt">
+  <img loading="lazy" class="full" src="bilder/slutt.jpg" alt="Solnedgang over Dubai">
+  <div class="dekk"></div>
+  <div class="tekst">
+    <div class="merke">Neste steg</div>
+    <h1>Skal vi finne setene?</h1>
+    <p>Velg måned, så søker vi etter business fra Trondheim med EuroBonus og låser datoene. Deretter hotell, og billetter til det som blir utsolgt.</p>
+  </div>
+</section>
+</body></html>

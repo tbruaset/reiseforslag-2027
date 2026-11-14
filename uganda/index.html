@@ -1,0 +1,425 @@
+<!doctype html><html lang="nb"><head><meta charset="utf-8"><title>Uganda, gorillaer og safari</title><style>
+@page { size: 1280px 720px; margin: 0 }
+* { box-sizing: border-box }
+html, body { margin: 0; padding: 0 }
+body { font-family: 'Noto Sans','DejaVu Sans',sans-serif; color: #232a22; font-size: 17px; line-height: 1.42; -webkit-print-color-adjust: exact; print-color-adjust: exact }
+.side { width: 1280px; height: 720px; overflow: hidden; position: relative; page-break-after: always; break-after: page; background: #f4f1e6 }
+.side:last-child { page-break-after: auto; break-after: auto }
+img { display: block; object-fit: cover }
+.full { position: absolute; inset: 0; width: 100%; height: 100% }
+.dekk { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(8,16,8,.10) 0%, rgba(8,16,8,.28) 45%, rgba(8,16,8,.88) 100%) }
+.forside .tekst { position: absolute; left: 70px; right: 70px; bottom: 56px; color: #fff }
+.merke { letter-spacing: .22em; text-transform: uppercase; font-size: 15px; font-weight: 600; color: #e8c877 }
+.forside h1 { font-size: 112px; line-height: .98; margin: 10px 0 16px; font-weight: 800; letter-spacing: -.02em }
+.forside p { font-size: 24px; max-width: 900px; margin: 0 }
+.piller { display: flex; gap: 10px; margin-top: 22px; flex-wrap: wrap }
+.pille { background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.4); border-radius: 30px; padding: 6px 18px; font-size: 16px }
+
+.delt { display: grid; grid-template-columns: 570px 1fr; height: 100% }
+.delt.snu { grid-template-columns: 1fr 570px }
+.panel { padding: 42px 46px 36px; position: relative }
+.panel .merke, .heltekst .merke { color: #a8741a }
+h2 { font-size: 42px; line-height: 1.05; margin: 8px 0 12px; font-weight: 800; letter-spacing: -.01em; color: #1f3a26 }
+.ingress { font-size: 19px; margin: 0 0 12px }
+ul { margin: 0; padding-left: 20px }
+li { margin-bottom: 7px }
+li b, td b { color: #2f5d3a }
+.mosaikk { display: grid; height: 720px; gap: 6px; background: #f4f1e6 }
+.mosaikk img { width: 100%; height: 100%; min-height: 0 }
+.m1 { grid-template-rows: 1fr }
+.m2 { grid-template-rows: 1.3fr 1fr }
+.m3 { grid-template-columns: 1fr 1fr; grid-template-rows: 1.35fr 1fr }
+.m3 img:first-child { grid-column: 1 / 3 }
+.m4 { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr }
+.dag { display: inline-block; background: #2f5d3a; color: #fff; border-radius: 30px; padding: 4px 16px; font-size: 15px; font-weight: 600; margin-bottom: 4px }
+.fakta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px }
+.fakta span { background: #e2e6d0; border-radius: 8px; padding: 6px 12px; font-size: 15px }
+.fakta b { color: #2f5d3a }
+.merk { position: absolute; left: 46px; right: 46px; bottom: 28px; font-size: 14.5px; color: #66705f; border-top: 1px solid #cfd4bd; padding-top: 9px }
+
+.heltekst { padding: 42px 60px }
+.grunner { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px }
+.grunn { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 10px rgba(20,40,20,.10) }
+.grunn img { width: 100%; height: 150px }
+.grunn div { padding: 10px 16px 12px; font-size: 15px; line-height: 1.35 }
+.grunn h3 { margin: 0 0 4px; font-size: 19px; color: #2f5d3a }
+
+.tab { border-collapse: collapse; width: 100%; font-size: 15px; margin-top: 10px }
+.tab th { text-align: left; background: #2f5d3a; color: #fff; padding: 7px 12px; font-weight: 600 }
+.tab td { border-bottom: 1px solid #d6dac4; padding: 5.5px 12px; vertical-align: top }
+.tab td:first-child { white-space: nowrap; font-weight: 600; color: #2f5d3a }
+.tab tr.fly td { background: #e6ead6 }
+.tab tr.topp td { background: #f3e3b5 }
+.to { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 18px }
+.kort { background: #fff; border-radius: 14px; padding: 18px 24px; box-shadow: 0 2px 10px rgba(20,40,20,.10) }
+.kort h3 { margin: 0 0 6px; font-size: 21px; color: #2f5d3a }
+.kort .tid { font-size: 23px; font-weight: 800; letter-spacing: -.01em; margin: 4px 0 2px }
+.kort small { color: #66705f; font-size: 15px }
+.stripe { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 16px }
+.tall { font-size: 36px; font-weight: 800; color: #a8741a; line-height: 1.1 }
+.fot { position: absolute; left: 60px; right: 60px; bottom: 24px; font-size: 13.5px; color: #66705f }
+.kr { font-size: 11px; line-height: 1.35; columns: 2; column-gap: 30px; color: #4f5849; margin-top: 12px }
+.slutt .tekst { position: absolute; left: 70px; right: 70px; bottom: 64px; color: #fff }
+.slutt h1 { font-size: 72px; line-height: 1; margin: 8px 0 14px; font-weight: 800 }
+.slutt p { font-size: 23px; max-width: 860px; margin: 0 }
+.steg { counter-reset: s; list-style: none; padding: 0; margin: 14px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 16px 22px }
+.steg li { counter-increment: s; background: #fff; border-radius: 12px; padding: 20px 22px 22px 68px; position: relative; margin: 0; box-shadow: 0 2px 10px rgba(20,40,20,.08); font-size: 17px }
+.steg li::before { content: counter(s); position: absolute; left: 18px; top: 20px; width: 32px; height: 32px; border-radius: 50%; background: #2f5d3a; color: #fff; font-weight: 700; display: grid; place-items: center }
+.steg b { display: block; font-size: 21px; margin-bottom: 3px; color: #1f3a26 }
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<style>
+@media screen {
+  html { background: #16130f }
+  body { background: #16130f !important; padding: 56px 0 24px !important }
+  .lysbilde { margin: 0 auto 14px; box-shadow: 0 6px 30px rgba(0,0,0,.45) }
+  #topp { position: fixed; inset: 0 0 auto 0; height: 44px; z-index: 1000; display: flex; align-items: center; gap: 14px;
+    padding: 0 16px; background: rgba(22,19,15,.94); color: #f3ead9; font: 15px/1 system-ui, sans-serif }
+  #topp a { color: #f3ead9; text-decoration: none; padding: 8px 12px; border: 1px solid rgba(243,234,217,.35); border-radius: 999px }
+  #topp a:hover, #topp a:focus-visible { background: rgba(243,234,217,.14) }
+  #topp span { opacity: .75; white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
+}
+@media print { #topp { display: none } }
+</style>
+<script>
+addEventListener('DOMContentLoaded', () => {
+  const sider = [...document.querySelectorAll('body > section, body > .side, body > .forside')];
+  sider.forEach(s => s.classList.add('lysbilde'));
+  const grunn = sider[0].offsetWidth;
+  const tilpass = () => {
+    const z = Math.min(1, document.documentElement.clientWidth / grunn);
+    sider.forEach(s => s.style.zoom = z);
+  };
+  if (!matchMedia('print').matches) { tilpass(); addEventListener('resize', tilpass); }
+  addEventListener('beforeprint', () => sider.forEach(s => s.style.zoom = ''));
+  addEventListener('afterprint', tilpass);
+});
+</script>
+</head><body><nav id="topp"><a href="../">← Alle turene</a><span>Uganda: Gorillaer og safari</span></nav>
+
+<!-- 1 -->
+<section class="side forside">
+  <img class="full" src="bilder/forside.jpg" alt="Sølvrygg i Bwindi">
+  <div class="dekk"></div>
+  <div class="tekst">
+    <div class="merke">Reiseforslag, 14 dager, business hele veien</div>
+    <h1>Uganda</h1>
+    <p>En time på noen meters hold fra en gorillafamilie i tåkeskogen. Rundt den timen bygger vi to uker med sjimpanser, løver i trærne, Nilen som presses gjennom en sju meter bred kløft, og rolige dager ved innsjøene.</p>
+    <div class="piller"><span class="pille">Fjellgorilla</span><span class="pille">Sjimpanser</span><span class="pille">Safari</span><span class="pille">Nilen</span><span class="pille">Kratersjøer</span><span class="pille">Flat seng begge veier</span></div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="side"><div class="heltekst">
+  <div class="merke">Uganda eller Rwanda</div>
+  <h2>Anbefalingen: Uganda når vi har 14 dager</h2>
+  <p class="ingress">Begge land har fjellgorillaer og begge nås med business på samme flyrute. Forskjellen er hva som fyller resten av turen, og hva det koster.</p>
+  <table class="tab">
+    <tr><th></th><th>Uganda</th><th>Rwanda</th></tr>
+    <tr><td>Gorillatillatelse</td><td><b>7 700 kr</b> per person, altså 23 000 for tre. Kan stige til 9 600 fra 2027</td><td><b>14 400 kr</b> per person, altså 43 100 for tre</td></tr>
+    <tr><td>Gorillaskogen</td><td>Bwindi: tett, bratt regnskog, rundt halvparten av verdens fjellgorillaer</td><td>Volcanoes: åpnere bambusskog under vulkanene, ofte lettere å gå</td></tr>
+    <tr><td>Variasjon</td><td>Størst. Savanne, Nilen, sjimpanser, trelløver, gorilla og innsjøer</td><td>God, men landet er lite. 10 til 11 dager dekker det meste</td></tr>
+    <tr><td>Safari</td><td>To store parker: Murchison Falls og Queen Elizabeth</td><td>Én park: Akagera, med de fem store</td></tr>
+    <tr><td>Kjøring</td><td>Lange etapper. De to lengste kan byttes mot småfly</td><td>Korte etapper på gode veier, 3 timer fra flyplass til gorillaene</td></tr>
+    <tr><td>Lodger</td><td>Bredt utvalg fra enkelt til svært bra</td><td>Høyest nivå, flest luksuslodger, høyest pris</td></tr>
+    <tr><td>Fly fra Trondheim</td><td>Entebbe, 14 t 40 med tre etapper</td><td>Kigali, 14 t 50 med tre etapper</td></tr>
+  </table>
+  <div class="fakta"><span><b>Velg Uganda</b> for mest opplevelse per dag og per krone</span><span><b>Velg Rwanda</b> for korteste reisevei, mest komfort og en roligere tur</span><span><b>Kombinasjon:</b> inn til Kigali, ut fra Entebbe</span></div>
+</div></section>
+
+<!-- 3 -->
+<section class="side"><div class="heltekst">
+  <div class="merke">Hvorfor Uganda</div>
+  <h2>Seks grunner til at dette blir turen vi husker</h2>
+  <div class="grunner">
+    <div class="grunn"><img loading="lazy" src="bilder/gorilla.jpg" alt=""><div><h3>Gorillaene</h3>Åtte gjester per familie, én time sammen med dem. Det finnes bare drøyt tusen fjellgorillaer i verden, og ingen i dyrehager.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/sjimpanse.jpg" alt=""><div><h3>Sjimpansene</h3>Kibale har Afrikas tetteste bestand av primater. Vi følger en flokk til fots mens de roper, klatrer og spiser.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/trelove.jpg" alt=""><div><h3>Løver i trærne</h3>I Ishasha ligger løvene oppe i fikentrærne midt på dagen. Det ser man bare et par steder i Afrika.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/murchison.jpg" alt=""><div><h3>Nilen i en kløft</h3>Ved Murchison Falls presses hele elva gjennom en sju meter bred spalte og faller 43 meter.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/flodhest.jpg" alt=""><div><h3>Safari fra båt</h3>På Kazingakanalen glir vi forbi flodhester, bøfler og elefanter som drikker i vannkanten.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/bunyonyi.jpg" alt=""><div><h3>Ro til slutt</h3>Bunyonyisjøen med 29 øyer og terrasserte åser. Kano, bading og ingenting på planen.</div></div>
+  </div>
+</div></section>
+
+<!-- 4 -->
+<section class="side"><div class="heltekst">
+  <div class="merke">Hele ruta</div>
+  <h2>14 dager, dag for dag</h2>
+  <table class="tab">
+    <tr><th>Dag</th><th>Sted</th><th>Hva vi gjør</th><th>Reise</th></tr>
+    <tr class="fly"><td>1</td><td>Trondheim, Amsterdam, Nairobi</td><td>Avreise på ettermiddagen. Middag og flat seng om bord</td><td>Fly, business</td></tr>
+    <tr><td>2</td><td>Entebbe</td><td>Framme om morgenen. Rolig dag ved Victoriasjøen, botanisk hage</td><td>10 min fra flyplassen</td></tr>
+    <tr><td>3</td><td>Ziwa og Murchison Falls</td><td>Neshorn til fots på Ziwa, videre til lodge ved Nilen</td><td>Bil 5 til 6 t</td></tr>
+    <tr><td>4</td><td>Murchison Falls</td><td>Safari ved soloppgang, båt opp Nilen til fossen</td><td></td></tr>
+    <tr><td>5</td><td>Kibale</td><td>Reisedag sørover gjennom teåser og kratersjøer</td><td>Bil 7 t, eller småfly</td></tr>
+    <tr><td>6</td><td>Kibale</td><td>Sjimpanser om morgenen, sumpvandring i Bigodi etter lunsj</td><td></td></tr>
+    <tr><td>7</td><td>Queen Elizabeth</td><td>Kratersjøene, kveldssafari på savannen</td><td>Bil 2 til 3 t</td></tr>
+    <tr><td>8</td><td>Queen Elizabeth</td><td>Morgensafari, båt på Kazingakanalen</td><td></td></tr>
+    <tr><td>9</td><td>Ishasha og Bwindi</td><td>Løvene i trærne på vei sørover, inn i fjellskogen</td><td>Bil 4 til 5 t</td></tr>
+    <tr class="topp"><td>10</td><td>Bwindi</td><td><b>Gorilladagen</b></td><td>Til fots, 2 til 6 t</td></tr>
+    <tr><td>11</td><td>Bwindi</td><td>Reservedag: skogstur til fossene, landsbybesøk, eller en gorillatur til</td><td></td></tr>
+    <tr><td>12</td><td>Bunyonyisjøen</td><td>Kano mellom øyene, bading, lang lunsj</td><td>Bil 3 til 4 t</td></tr>
+    <tr><td>13</td><td>Entebbe</td><td>Småfly tilbake, dagrom på hotell, sen middag</td><td>Fly 1 t 30</td></tr>
+    <tr class="fly"><td>14</td><td>Entebbe, Nairobi, Amsterdam, Trondheim</td><td>Avreise i natt, hjemme samme kveld</td><td>Fly, business</td></tr>
+  </table>
+</div></section>
+
+<!-- 5 -->
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m1"><img loading="lazy" src="bilder/kq.jpg" alt="Kenya Airways Boeing 787"></div>
+  <div class="panel">
+    <div class="merke">Flyene</div>
+    <h2>Business hele veien fra Trondheim</h2>
+    <p class="ingress">Én billett hver vei med EuroBonus, tre etapper og ingen overnatting underveis. Kenya Airways flyr langdistansen med Dreamliner og flat seng.</p>
+    <div class="kort" style="margin-bottom:10px;padding:14px 22px"><h3>Ut</h3><div class="tid">Trondheim 17:10, Entebbe 08:50</div><small>KLM til Amsterdam, Kenya Airways til Nairobi over natta, kort hopp til Entebbe. 14 t 40.</small></div>
+    <div class="kort" style="padding:14px 22px"><h3>Hjem</h3><div class="tid">Entebbe 03:10, Trondheim 22:50</div><small>Nairobi, Amsterdam og hjem samme dag. 20 t 40.</small></div>
+    <div class="fakta"><span><b>195 000 poeng</b> for tre, tur og retur</span><span>Med to kuponger</span></div>
+    <div class="merk" style="position:static;margin-top:12px">To reiser på én kupong for 130 000 poeng, den tredje på egen kupong for 65 000. Samme rute og pris til Kigali. Turen legges der vi finner tre businessseter begge veier.</div>
+  </div>
+</div></section>
+
+<!-- 6 -->
+<section class="side"><div class="delt">
+  <div class="panel">
+    <span class="dag">Dag 2</span>
+    <h2>Entebbe: landing ved Victoriasjøen</h2>
+    <p class="ingress">Vi lander om morgenen etter en natt i flat seng. Entebbe er grønn og rolig, og hotellet ligger ti minutter fra flyplassen.</p>
+    <ul>
+      <li><b>Formiddag:</b> innsjekk, frokost og basseng. Ingen plan før lunsj.</li>
+      <li><b>Ettermiddag:</b> den botaniske hagen fra 1898 ved vannkanten, med aper og neshornfugler i trærne.</li>
+      <li><b>For de morgenfriske:</b> kano i Mabambasumpen for å se treskonebb, en forhistorisk fugl på over en meter. Kan også tas dag 13.</li>
+      <li><b>Kveld:</b> fersk tilapia ved sjøen og tidlig i seng.</li>
+    </ul>
+    <div class="fakta"><span><b>Bo:</b> Hotel No. 5 eller Protea ved sjøen</span><span><b>Mabamba:</b> 1 t unna, 2 til 3 t i kano</span></div>
+    <div class="merk">Hotellnavnene i forslaget er eksempler på nivå. Arrangøren bekrefter hva som er ledig.</div>
+  </div>
+  <div class="mosaikk m1"><img loading="lazy" src="bilder/treskonebb.jpg" alt="Treskonebb"></div>
+</div></section>
+
+<!-- 7 -->
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m3"><img loading="lazy" src="bilder/murchison.jpg" alt="Murchison Falls"><img loading="lazy" src="bilder/sjiraff.jpg" alt=""><img loading="lazy" src="bilder/neshorn.jpg" alt=""></div>
+  <div class="panel">
+    <span class="dag">Dag 3 og 4</span>
+    <h2>Murchison Falls: Nilen og savannen</h2>
+    <p class="ingress">Ugandas største nasjonalpark, delt i to av Nilen. Her får vi den klassiske safarien med vidt utsyn og mye dyr.</p>
+    <ul>
+      <li><b>Ziwa på veien:</b> vi går til fots med ranger inn til ville hvite neshorn. Eneste sted i Uganda de finnes fritt.</li>
+      <li><b>Morgensafari:</b> sjiraffer i store flokker, elefanter, bøfler, antiloper, og med hell løve og leopard.</li>
+      <li><b>Båt på Nilen:</b> tre timer oppover elva forbi flodhester og krokodiller, helt inn til foten av fossen.</li>
+      <li><b>Toppen av fossen:</b> kort gange til kanten der elva presses gjennom kløfta. Det dundrer i bakken.</li>
+    </ul>
+    <div class="fakta"><span><b>Bo:</b> Nile Safari Lodge eller Baker's Lodge</span><span><b>Netter:</b> 2</span></div>
+  </div>
+</div></section>
+
+<!-- 8 -->
+<section class="side"><div class="delt">
+  <div class="panel">
+    <span class="dag">Dag 5 og 6</span>
+    <h2>Kibale: en morgen med sjimpansene</h2>
+    <p class="ingress">Regnskogen ved Fort Portal har 13 arter primater. Sjimpansene her er vant til mennesker og lar oss komme tett på.</p>
+    <ul>
+      <li><b>Dag 5:</b> turens lengste etappe. Med småfly sparer vi en halv dag, med bil får vi teåsene og landsbyene på veien.</li>
+      <li><b>Sjimpanser:</b> vi går ut i små grupper med ranger, og er en time sammen med flokken når vi finner dem.</li>
+      <li><b>Bigodi:</b> rolig vandring på plankestier i sumpen, med røde colobusaper og den store blå turakoen.</li>
+      <li><b>Kratersjøene:</b> dusinvis av små innsjøer i gamle vulkankratre. Solnedgang fra en av kantene.</li>
+    </ul>
+    <div class="fakta"><span><b>Tillatelse:</b> 2 400 kr per person</span><span><b>Bo:</b> Kyaninga Lodge eller Ndali Lodge</span><span><b>Netter:</b> 2</span></div>
+    <div class="merk">Aldersgrensa for sjimpanser oppgis vanligvis til 12 år. Bekreftes ved bestilling.</div>
+  </div>
+  <div class="mosaikk m2"><img loading="lazy" src="bilder/sjimpanse.jpg" alt="Sjimpanse i Kibale"><img loading="lazy" src="bilder/krater.jpg" alt="Kratersjø"></div>
+</div></section>
+
+<!-- 9 -->
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m3"><img loading="lazy" src="bilder/elefant.jpg" alt="Elefanter"><img loading="lazy" src="bilder/flodhest.jpg" alt=""><img loading="lazy" src="bilder/trelove.jpg" alt=""></div>
+  <div class="panel">
+    <span class="dag">Dag 7 til 9</span>
+    <h2>Queen Elizabeth: båtsafari og løver i trærne</h2>
+    <p class="ingress">Savanne mellom to innsjøer med Rwenzorifjellene i bakgrunnen. Parken har over 600 fuglearter.</p>
+    <ul>
+      <li><b>Kazingakanalen:</b> to timer i båt langs bredden. Hundrevis av flodhester, bøfler og elefanter på få meters hold.</li>
+      <li><b>Safari på Kasenyisletta:</b> løver, hyener og store flokker ugandakob ved soloppgang.</li>
+      <li><b>Ishasha, dag 9:</b> den sørlige delen av parken, kjent for løver som hviler oppe i fikentrærne.</li>
+      <li><b>Valgfritt:</b> sjimpanser i Kyamburakløfta, eller følge forskerne som sporer løver med radio.</li>
+    </ul>
+    <div class="fakta"><span><b>Bo:</b> Mweya Safari Lodge eller Kyambura Gorge Lodge</span><span><b>Netter:</b> 2</span></div>
+  </div>
+</div></section>
+
+<!-- 10 -->
+<section class="side"><div class="delt">
+  <div class="panel">
+    <span class="dag">Dag 9 til 11</span>
+    <h2>Bwindi: timen med gorillaene</h2>
+    <p class="ingress">Den ugjennomtrengelige skogen er 25 000 år gammel og hjem for rundt halvparten av verdens fjellgorillaer. Dette er grunnen til at vi reiser.</p>
+    <ul>
+      <li><b>Familien:</b> hver gruppe på åtte gjester får tildelt én gorillafamilie, med sølvrygg, hunner og unger.</li>
+      <li><b>Timen:</b> når sporerne har funnet dem, er vi der i en time. De spiser, leker og bryr seg lite om oss.</li>
+      <li><b>Reservedagen:</b> fossene i skogen, besøk hos batwafolket, eller en gorillatur til for dem som vil.</li>
+      <li><b>Utvidet variant:</b> fire timer sammen med en familie som tilvennes mennesker, i Rushaga sør i parken.</li>
+    </ul>
+    <div class="fakta"><span><b>Tillatelse:</b> 7 700 kr per person</span><span><b>Aldersgrense:</b> 15 år</span><span><b>Bo:</b> Buhoma Lodge eller Mahogany Springs</span><span><b>Netter:</b> 3</span></div>
+  </div>
+  <div class="mosaikk m3"><img loading="lazy" src="bilder/gorillaunge.jpg" alt="Gorillaunge"><img loading="lazy" src="bilder/gorilla2.jpg" alt=""><img loading="lazy" src="bilder/bwindi.jpg" alt=""></div>
+</div></section>
+
+<!-- 11 -->
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m1"><img loading="lazy" src="bilder/gorilla.jpg" alt="Fjellgorilla"></div>
+  <div class="panel">
+    <div class="merke">Gorilladagen i praksis</div>
+    <h2>Slik foregår det</h2>
+    <ul>
+      <li><b>07:30:</b> oppmøte ved parkkontoret, gjennomgang av reglene og fordeling på familier. Si fra om vi vil ha kort eller lang tur.</li>
+      <li><b>Gåturen:</b> fra en halv time til fire timer hver vei, i bratt og gjørmete terreng uten sti. Sporerne har gått ut før oss.</li>
+      <li><b>Bærer:</b> lei en lokal bærer for rundt 200 kr. De bærer sekken, gir en hånd i bakkene, og pengene går rett til landsbyen.</li>
+      <li><b>Hos gorillaene:</b> sju til ti meters avstand, munnbind, lav stemme, ingen blits. Kommer en unge mot oss, står vi stille.</li>
+      <li><b>Syk?</b> Forkjølte slipper ikke inn. Gorillaene tåler ikke våre virus.</li>
+      <li><b>Ta med:</b> fjellsko, lange bukser, tynne hansker mot nesler, regnjakke, to liter vann og gamasjer.</li>
+    </ul>
+    <div class="fakta"><span><b>Form:</b> vanlig god turform holder</span><span><b>Høyde:</b> 1 200 til 2 600 moh.</span></div>
+    <div class="merk">Sjansen for å finne gorillaene er svært høy, siden sporerne følger hver familie daglig. En garanti finnes ikke.</div>
+  </div>
+</div></section>
+
+<!-- 12 -->
+<section class="side"><div class="delt">
+  <div class="panel">
+    <span class="dag">Dag 12 og 13</span>
+    <h2>Bunyonyisjøen og veien hjem</h2>
+    <p class="ingress">Etter gorillaene senker vi skuldrene. Sjøen ligger på nesten 2 000 meter mellom terrasserte åser, og det er kjølig og stille.</p>
+    <ul>
+      <li><b>På vannet:</b> uthulte kanoer mellom de 29 øyene. Her er det verken flodhester eller krokodiller.</li>
+      <li><b>På land:</b> lang lunsj, bok på terrassen, kort tur opp til utsikten over sjøen.</li>
+      <li><b>Dag 13:</b> småfly fra Kisoro til Entebbe på formiddagen i stedet for åtte timer i bil.</li>
+      <li><b>Siste kveld:</b> dagrom på hotellet ved Victoriasjøen, dusj, middag og litt søvn før avreise i natt.</li>
+    </ul>
+    <div class="fakta"><span><b>Bo:</b> Birdnest Resort eller Arcadia Lodge</span><span><b>Netter:</b> 1 ved sjøen</span></div>
+    <div class="merk">Velger vi bil hele veien, passerer vi ekvator og kan legge inn en natt i Lake Mburo med sebra og safari til hest.</div>
+  </div>
+  <div class="mosaikk m1"><img loading="lazy" src="bilder/bunyonyi.jpg" alt="Bunyonyisjøen"></div>
+</div></section>
+
+<!-- 13 -->
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m4"><img loading="lazy" src="bilder/gorillarw.jpg" alt="Gorilla i Rwanda"><img loading="lazy" src="bilder/virunga.jpg" alt="Vulkanene"><img loading="lazy" src="bilder/nyungwe.jpg" alt="Hengebrua i Nyungwe"><img loading="lazy" src="bilder/sebra.jpg" alt="Sebra i Akagera"></div>
+  <div class="panel">
+    <div class="merke">Alternativet</div>
+    <h2>Rwanda: kortere vei, mer komfort</h2>
+    <p class="ingress" style="font-size:17.5px;margin-bottom:6px">Et lite land med gode veier og korte avstander. Samme fly, bare til Kigali.</p>
+    <table class="tab" style="font-size:14.5px">
+      <tr><td>Dag 1 og 2</td><td>Fly ut. Kigali: marked, kaffe og minnesenteret</td></tr>
+      <tr><td>Dag 3 til 5</td><td>Akagera: safari med de fem store, båt på Ihemasjøen</td></tr>
+      <tr><td>Dag 6 til 8</td><td>Volcanoes: <b>gorilladag</b>, gullaper, tur til Dian Fosseys grav</td></tr>
+      <tr><td>Dag 9 og 10</td><td>Kivusjøen: kajakk, kaffegård, strand</td></tr>
+      <tr><td>Dag 11 og 12</td><td>Nyungwe: sjimpanser og hengebru over tretoppene</td></tr>
+      <tr><td>Dag 13 og 14</td><td>Kongepalasset i Nyanza, Kigali, fly hjem i natt</td></tr>
+    </table>
+    <div class="fakta" style="margin-top:8px"><span><b>Gorilla:</b> 14 400 kr</span><span><b>Sjimpanser:</b> 1 400 kr</span><span><b>Lengste etappe:</b> 5 t</span></div>
+    <div class="merk" style="position:static;margin-top:10px">Kombinasjonen: fly inn til Kigali, gorillaer i Volcanoes eller Bwindi (4 til 5 timer fra Kigali), nordover gjennom Uganda og hjem fra Entebbe.</div>
+  </div>
+</div></section>
+
+<!-- 14 -->
+<section class="side"><div class="heltekst">
+  <div class="merke">Totalkostnad</div>
+  <h2>Hva turen koster for tre, billigst mulig</h2>
+  <div class="to" style="grid-template-columns:1.3fr 1fr;margin-top:8px">
+    <div>
+      <table class="tab" style="margin-top:0">
+        <tr><th>Post, for tre personer</th><th style="text-align:right">Kroner</th></tr>
+        <tr><td>Gorillatillatelser, 3 x 7 700</td><td style="text-align:right">23 000</td></tr>
+        <tr><td>Sjimpansetillatelser, 3 x 2 400</td><td style="text-align:right">7 200</td></tr>
+        <tr><td>Parkavgifter, to båtturer og neshorn</td><td style="text-align:right">9 600</td></tr>
+        <tr><td>Overnatting, 11 netter på enkle lodger</td><td style="text-align:right">16 300</td></tr>
+        <tr><td>Mat og drikke</td><td style="text-align:right">6 900</td></tr>
+        <tr><td>Leiebil med firehjulstrekk i 12 dager, drivstoff</td><td style="text-align:right">10 800</td></tr>
+        <tr><td>Visum</td><td style="text-align:right">1 400</td></tr>
+        <tr><td>Tips, bærere og diverse</td><td style="text-align:right">2 400</td></tr>
+        <tr><td>Vaksiner og malariatabletter</td><td style="text-align:right">3 900</td></tr>
+        <tr><td>Skatter og avgifter på bonusbillettene</td><td style="text-align:right">12 000</td></tr>
+        <tr class="topp"><td>Sum</td><td style="text-align:right"><b>93 500</b></td></tr>
+      </table>
+    </div>
+    <div>
+      <div class="kort" style="margin-bottom:14px"><div class="tall">ca. 93 500 kr</div><b>Alt utenom poengene, for tre.</b><br><small>Rundt 31 000 kr per person.</small></div>
+      <div class="kort" style="margin-bottom:14px"><div class="tall">195 000 poeng</div><b>Business tur og retur for tre.</b><br><small>To på én kupong for 130 000, én på egen kupong for 65 000.</small></div>
+      <div class="kort"><h3>Hva billigst betyr</h3><small>Vi kjører selv hele veien uten småfly, bor på enkle lodger og gjestehus, og spiser lokalt. Sjåfør i 12 dager koster rundt 4 600 kr ekstra. Med lodgene i forslaget og to småfly havner turen på 145 000 til 260 000 kr for tre.</small></div>
+    </div>
+  </div>
+  <div class="fot">Kurs 9,57 kr per dollar, 14. november 2026. Tillatelser og parkavgifter er offisielle satser hentet via reisearrangører. Overnatting, mat, bil og skatter på billettene er mine anslag. Skatten vises ikke i AwardFares og kan avvike mye.</div>
+</div></section>
+
+<!-- 14b -->
+<section class="side"><div class="heltekst">
+  <div class="merke">Praktisk</div>
+  <h2>Når vi bør reise, og hva som må ordnes</h2>
+  <div class="to">
+    <div class="kort"><h3>Når</h3>
+      <ul><li><b>Best:</b> juni til september og midten av desember til februar. Tørrest, lettest å gå.</li><li><b>Våtest:</b> mars til mai. Oktober og november har kortere regnbyger.</li><li>Gorillaene ser vi hele året. Sesongen handler om gjørme og lys.</li></ul></div>
+    <div class="kort"><h3>Helse og papirer</h3>
+      <ul><li><b>Gulfeber:</b> vaksinasjonskort kreves ved innreise til Uganda.</li><li><b>Malaria:</b> tabletter for hele turen. Avtal med vaksinasjonskontor i god tid.</li><li><b>Visum:</b> søkes på nett før avreise, rundt 500 kr per person. Fellesvisum for Uganda, Rwanda og Kenya finnes.</li></ul></div>
+  </div>
+  <div class="to">
+    <div class="kort"><h3>Rwanda i stedet</h3><small>Tillatelsene for tre koster 47 400 kr mot 30 200 kr i Uganda, altså 17 200 kr mer. Lodger og bil ligger også høyere. Til gjengjeld er kjøreetappene korte.</small></div>
+    <div class="kort"><h3>Forsikring</h3><small>Tillatelsene refunderes som regel ikke. Sjekk at reiseforsikringen dekker avbestilling og sykdom, og at den gjelder i Uganda.</small></div>
+  </div>
+  <div class="fot">Vaksine- og visumregler må sjekkes mot FHI og ambassaden før bestilling.</div>
+</div></section>
+
+<!-- 15 -->
+<section class="side"><div class="heltekst">
+  <div class="merke">Veien videre</div>
+  <h2>Seks steg, i denne rekkefølgen</h2>
+  <ol class="steg">
+    <li><b>Velg land og variant</b>Uganda, Rwanda eller kombinasjonen. Og bil hele veien eller småfly på de lange etappene.</li>
+    <li><b>Finn flyvinduet</b>Tre businessseter ut og hjem med 12 til 13 netter imellom. Det er flyene som bestemmer datoene.</li>
+    <li><b>Hold av gorillatillatelser</b>De selges bare gjennom godkjente arrangører og er det det er færrest av. Be arrangøren reservere før vi betaler fly.</li>
+    <li><b>Bestill flyene</b>Hos SAS, ut og hjem på samme bestilling, med én kupong for to og én kupong for den tredje.</li>
+    <li><b>Lås lodger og småfly</b>Arrangøren setter sammen resten rundt gorilladagen. Be om to tilbud på ulikt nivå.</li>
+    <li><b>Vaksiner og visum</b>Gulfeber minst ti dager før avreise, malariatabletter og visum på nett.</li>
+  </ol>
+  <div class="fakta" style="margin-top:20px"><span><b>Sjekk først:</b> alle tre må ha fylt 15 år for å gå til gorillaene</span><span><b>Avbestilling:</b> tillatelsene refunderes som regel ikke, så reiseforsikring bør være på plass</span></div>
+</div></section>
+
+<!-- 16 -->
+<section class="side slutt">
+  <img loading="lazy" class="full" src="bilder/bwindi.jpg" alt="Tåke over Bwindi">
+  <div class="dekk"></div>
+  <div class="tekst">
+    <div class="merke">To uker, tre store opplevelser</div>
+    <h1>Gorillaer, sjimpanser og Nilen</h1>
+    <p>Finner vi tre seter i business begge veier, er resten av turen klar til å bestilles.</p>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="side"><div class="heltekst">
+  <div class="merke">Bildekreditering</div>
+  <h2 style="font-size:30px">Bilder fra Wikimedia Commons</h2>
+  <div class="kr"><div><b>066 Silverback mountain gorilla eating at Bwindi Impenetrable Forest N</b>, Giles Laurent, CC BY-SA 4.0</div>
+<div><b>Mountain gorilla (Gorilla beringei beringei) female eating root</b>, Charles J. Sharp, CC BY-SA 4.0</div>
+<div><b>013 Alpha male chimpanzee at Kibale forest National Park Photo by Gile</b>, Giles Laurent, CC BY-SA 4.0</div>
+<div><b>Tree-climbing lions (Panthera leo) in sycamore fig (Ficus sycomorus)</b>, Charles J. Sharp, CC BY-SA 4.0</div>
+<div><b>The Power of the Nile Before Murchison Falls 11</b>, BMKME, CC0</div>
+<div><b>Hippopotamus (Hippopotamus amphibius) 2</b>, Charles J. Sharp, CC BY-SA 4.0</div>
+<div><b>Lake Bunyonyi, Uganda</b>, flowcomm, CC BY 2.0</div>
+<div><b>Kenya Airways Boeing 787-8 5Y-KZF (23621400162)</b>, BriYYZ from Toronto, Canada, CC BY-SA 2.0</div>
+<div><b>Shoebill (Balaeniceps rex), Uganda (52949464409)</b>, flowcomm, CC BY 2.0</div>
+<div><b>Giraffe in Murchison Falls National Park Uganda 10</b>, Kateregga1, CC BY-SA 4.0</div>
+<div><b>White Rhino in Ziwa Reserve</b>, Yakov Fedorov, CC BY-SA 4.0</div>
+<div><b>Crater Lake nestled in Fort Portal 05</b>, Fiktube, CC BY-SA 4.0</div>
+<div><b>043 Elephant family at Queen Elizabeth National Park Photo by Giles La</b>, Giles Laurent, CC BY-SA 4.0</div>
+<div><b>Mountain gorilla, 2-year-old, Mubare Group, Buhoma, Bwindi Impenetrabl</b>, Charles J. Sharp, CC BY-SA 4.0</div>
+<div><b>Gorila de montaña (Gorilla beringei beringei), parque nacional de la S</b>, Diego Delso, CC BY-SA 4.0</div>
+<div><b>063 Mist rising from the Bwindi Impenetrable Forest National Park Phot</b>, Giles Laurent, CC BY-SA 4.0</div>
+<div><b>Mountain gorilla from Susa Group in Karisimbi thicket of Volcanoes Nat</b>, Emmanuelkwizera, CC BY-SA 4.0</div>
+<div><b>Volcanoes National Park Rwanda</b>, Nina R, CC BY 2.0</div>
+<div><b>Nyungwe Canopy Walk</b>, Alex Niragira, CC BY-SA 4.0</div>
+<div><b>Zebra Akagera National Park</b>, Joseph Lionceau, CC BY-SA 4.0</div><div style="margin-top:8px">Bildene er beskåret. Lisensvilkår og originaler finnes på commons.wikimedia.org under filnavnene over.</div></div>
+</div></section>
+
+</body></html>

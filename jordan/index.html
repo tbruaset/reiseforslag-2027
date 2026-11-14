@@ -1,0 +1,323 @@
+<!doctype html><html lang="nb"><head><meta charset="utf-8"><title>Jordan oktober 2027</title><style>
+@page { size: 1280px 720px; margin: 0 }
+* { box-sizing: border-box }
+html, body { margin: 0; padding: 0 }
+body { font-family: 'Noto Sans','DejaVu Sans',sans-serif; color: #2b241d; font-size: 17px; line-height: 1.42; -webkit-print-color-adjust: exact; print-color-adjust: exact }
+.side { width: 1280px; height: 720px; overflow: hidden; position: relative; page-break-after: always; break-after: page; background: #f7f0e4 }
+.side:last-child { page-break-after: auto; break-after: auto }
+img { display: block; object-fit: cover }
+.full { position: absolute; inset: 0; width: 100%; height: 100% }
+.dekk { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,10,4,.15) 0%, rgba(20,10,4,.25) 45%, rgba(20,10,4,.86) 100%) }
+.forside .tekst { position: absolute; left: 70px; right: 70px; bottom: 60px; color: #fff }
+.merke { letter-spacing: .22em; text-transform: uppercase; font-size: 15px; font-weight: 600; color: #f3c58f }
+.forside h1 { font-size: 104px; line-height: .98; margin: 10px 0 18px; font-weight: 800; letter-spacing: -.02em }
+.forside p { font-size: 24px; max-width: 880px; margin: 0 }
+.piller { display: flex; gap: 10px; margin-top: 24px; flex-wrap: wrap }
+.pille { background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.4); border-radius: 30px; padding: 6px 18px; font-size: 16px }
+
+.delt { display: grid; grid-template-columns: 560px 1fr; height: 100% }
+.delt.snu { grid-template-columns: 1fr 560px }
+.panel { padding: 46px 48px 40px; position: relative }
+.panel .merke { color: #b5532a }
+h2 { font-size: 44px; line-height: 1.05; margin: 8px 0 14px; font-weight: 800; letter-spacing: -.01em; color: #2b241d }
+.ingress { font-size: 19px; margin: 0 0 14px }
+ul { margin: 0; padding-left: 20px }
+li { margin-bottom: 8px }
+li b { color: #8d3d1c }
+.bilder { position: relative; height: 720px }
+.mosaikk { display: grid; height: 720px; gap: 6px; background: #f7f0e4 }
+.mosaikk img { width: 100%; height: 100% }
+.m3 { grid-template-columns: 1fr 1fr; grid-template-rows: 1.35fr 1fr }
+.m3 img:first-child { grid-column: 1 / 3 }
+.m2 { grid-template-rows: 1.3fr 1fr }
+.m4 { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr }
+.dag { display: inline-block; background: #b5532a; color: #fff; border-radius: 30px; padding: 4px 16px; font-size: 15px; font-weight: 600; margin-bottom: 4px }
+.fakta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px }
+.fakta span { background: #ecdfc9; border-radius: 8px; padding: 6px 12px; font-size: 15px }
+.fakta b { color: #8d3d1c }
+.sitat { position: absolute; left: 48px; right: 48px; bottom: 34px; font-size: 15px; color: #7a6a58; border-top: 1px solid #dccbb0; padding-top: 10px }
+
+.heltekst { padding: 46px 60px }
+.heltekst .merke { color: #b5532a }
+.grunner { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px }
+.grunn { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 10px rgba(60,30,10,.10) }
+.grunn img { width: 100%; height: 142px }
+.grunn div { padding: 10px 16px 12px; font-size: 15px; line-height: 1.35 }
+.grunn h3 { margin: 0 0 4px; font-size: 19px; color: #8d3d1c }
+
+.tab { border-collapse: collapse; width: 100%; font-size: 15.5px; margin-top: 12px }
+.tab th { text-align: left; background: #b5532a; color: #fff; padding: 7px 12px; font-weight: 600 }
+.tab td { border-bottom: 1px solid #e0d2ba; padding: 6px 12px; vertical-align: top }
+.tab td:first-child { white-space: nowrap; font-weight: 600; color: #8d3d1c }
+.tab tr.fly td { background: #f0e3cd }
+.fly2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 20px }
+.kort { background: #fff; border-radius: 14px; padding: 20px 24px; box-shadow: 0 2px 10px rgba(60,30,10,.10) }
+.kort h3 { margin: 0 0 6px; font-size: 22px; color: #8d3d1c }
+.kort .tid { font-size: 30px; font-weight: 800; letter-spacing: -.01em; margin: 6px 0 2px }
+.kort small { color: #7a6a58; font-size: 15px }
+.stripe { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 20px }
+.tall { font-size: 38px; font-weight: 800; color: #b5532a; line-height: 1.1 }
+.fot { position: absolute; left: 60px; right: 60px; bottom: 26px; font-size: 13.5px; color: #7a6a58 }
+.kr { font-size: 11.5px; line-height: 1.35; columns: 2; column-gap: 30px; color: #5d5043; margin-top: 12px }
+.slutt .tekst { position: absolute; left: 70px; right: 70px; bottom: 70px; color: #fff }
+.slutt h1 { font-size: 76px; line-height: 1; margin: 8px 0 14px; font-weight: 800 }
+.slutt p { font-size: 23px; max-width: 820px; margin: 0 }
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<style>
+@media screen {
+  html { background: #16130f }
+  body { background: #16130f !important; padding: 56px 0 24px !important }
+  .lysbilde { margin: 0 auto 14px; box-shadow: 0 6px 30px rgba(0,0,0,.45) }
+  #topp { position: fixed; inset: 0 0 auto 0; height: 44px; z-index: 1000; display: flex; align-items: center; gap: 14px;
+    padding: 0 16px; background: rgba(22,19,15,.94); color: #f3ead9; font: 15px/1 system-ui, sans-serif }
+  #topp a { color: #f3ead9; text-decoration: none; padding: 8px 12px; border: 1px solid rgba(243,234,217,.35); border-radius: 999px }
+  #topp a:hover, #topp a:focus-visible { background: rgba(243,234,217,.14) }
+  #topp span { opacity: .75; white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
+}
+@media print { #topp { display: none } }
+</style>
+<script>
+addEventListener('DOMContentLoaded', () => {
+  const sider = [...document.querySelectorAll('body > section, body > .side, body > .forside')];
+  sider.forEach(s => s.classList.add('lysbilde'));
+  const grunn = sider[0].offsetWidth;
+  const tilpass = () => {
+    const z = Math.min(1, document.documentElement.clientWidth / grunn);
+    sider.forEach(s => s.style.zoom = z);
+  };
+  if (!matchMedia('print').matches) { tilpass(); addEventListener('resize', tilpass); }
+  addEventListener('beforeprint', () => sider.forEach(s => s.style.zoom = ''));
+  addEventListener('afterprint', tilpass);
+});
+</script>
+</head><body><nav id="topp"><a href="../">← Alle turene</a><span>Jordan: Petra, Wadi Rum og Dødehavet</span></nav>
+
+<section class="side forside">
+  <img class="full" src="bilder/petra.jpg" alt="Skattkammeret i Petra">
+  <div class="dekk"></div>
+  <div class="tekst">
+    <div class="merke">10. til 22. oktober 2027</div>
+    <h1>Jordan</h1>
+    <p>Elleve dager fra romerske søyler til rosa klippeby, fra verdens laveste punkt til en natt under stjernene i ørkenen. Dette blir den beste turen i verden.</p>
+    <div class="piller"><span class="pille">Petra</span><span class="pille">Wadi Rum</span><span class="pille">Dødehavet</span><span class="pille">Rødehavet</span><span class="pille">Jerash</span><span class="pille">Amman</span></div>
+  </div>
+</section>
+
+<section class="side heltekst">
+  <div class="merke">Hvorfor akkurat denne turen</div>
+  <h2>Seks grunner til at ingenting slår Jordan</h2>
+  <div class="grunner">
+    <div class="grunn"><img loading="lazy" src="bilder/kloster.jpg" alt=""><div><h3>Et av verdens sju nye underverker</h3>Petra er en hel by hugget rett inn i rosa fjell for to tusen år siden. Vi har to hele dager der.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/wadirum.jpg" alt=""><div><h3>Ørkenen fra filmene</h3>Wadi Rum er landskapet i Lawrence of Arabia, The Martian og Dune. Vi sover midt i det.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/flyte.jpg" alt=""><div><h3>Bade uten å kunne synke</h3>Dødehavet ligger rundt 430 meter under havnivå og er så salt at du flyter som en kork.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/aqabakveld.jpg" alt=""><div><h3>Sommer i oktober</h3>Rundt 25 til 30 grader og sol mens det er mørkt og vått hjemme. Rødehavet holder badetemperatur.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/jerash.jpg" alt=""><div><h3>Alt ligger tett</h3>Hele landet på langs er fire timer i bil. Lite tid i sete, mye tid til opplevelser.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/mansaf.jpg" alt=""><div><h3>Maten og menneskene</h3>Mansaf, hummus, falafel og søt te overalt. Jordanere er kjent for å være svært gjestfrie.</div></div>
+  </div>
+</section>
+
+<section class="side heltekst">
+  <div class="merke">Ruten dag for dag</div>
+  <h2>Nord til sør, og hjem igjen</h2>
+  <table class="tab">
+    <tr><th>Dag</th><th>Hva skjer</th><th>Natt</th></tr>
+    <tr class="fly"><td>Søn 10.</td><td>Trondheim 12:10, via Amsterdam og Bucuresti, lander i Amman 04:25</td><td>På flyet</td></tr>
+    <tr><td>Man 11.</td><td>Amman: sove ut, så citadellet, romerteateret og middag i Rainbow Street</td><td>Amman</td></tr>
+    <tr><td>Tir 12.</td><td>Romerbyen Jerash og borgen i Ajloun</td><td>Amman</td></tr>
+    <tr><td>Ons 13.</td><td>Mosaikkene i Madaba, utsikten fra Nebo, ned til Dødehavet</td><td>Dødehavet</td></tr>
+    <tr><td>Tor 14.</td><td>Hel dag ved Dødehavet: flyte, gjørme, basseng og solnedgang</td><td>Dødehavet</td></tr>
+    <tr><td>Fre 15.</td><td>Vasse i juvet Wadi Mujib, korsfarerborgen Kerak, Kongeveien sørover</td><td>Petra</td></tr>
+    <tr><td>Lør 16.</td><td>Petra: Siq, Skattkammeret, kongegravene og offerplassen</td><td>Petra</td></tr>
+    <tr><td>Søn 17.</td><td>Petra: de 800 trinnene til Klosteret, og Lille Petra</td><td>Petra</td></tr>
+    <tr><td>Man 18.</td><td>Wadi Rum: jeep i ørkenen, solnedgang, middag fra jordovn</td><td>Ørkenleir</td></tr>
+    <tr><td>Tir 19.</td><td>Soloppgang og kamelritt, så en time til Aqaba og Rødehavet</td><td>Aqaba</td></tr>
+    <tr><td>Ons 20.</td><td>Aqaba: snorkling på korallrevene, strand og sjømat</td><td>Aqaba</td></tr>
+    <tr><td>Tor 21.</td><td>Ørkenveien tilbake til Amman, siste middag</td><td>Kort natt</td></tr>
+    <tr class="fly"><td>Fre 22.</td><td>Amman 05:25, via Bucuresti og Amsterdam, hjemme i Trondheim 16:35</td><td></td></tr>
+  </table>
+</section>
+
+<section class="side heltekst">
+  <div class="merke">Flyene</div>
+  <h2>Helt fra Trondheim, betalt med poeng</h2>
+  <p class="ingress">KLM til Amsterdam og TAROM videre via Bucuresti, bestilt med EuroBonus. Alle tre i økonomi, på samme fly og én billett.</p>
+  <div class="fly2">
+    <div class="kort"><h3>Ut, søndag 10. oktober</h3><div class="tid">Trondheim 12:10 → Amman 04:25</div><small>Bytte i Amsterdam og Bucuresti, 15 t 15 min, framme mandag morgen</small></div>
+    <div class="kort"><h3>Hjem, fredag 22. oktober</h3><div class="tid">Amman 05:25 → Trondheim 16:35</div><small>Bytte i Bucuresti og Amsterdam, 12 t 10 min, hjemme samme ettermiddag</small></div>
+  </div>
+  <div class="stripe">
+    <div class="kort"><div class="tall">60 000</div>poeng per person tur og retur i økonomi</div>
+    <div class="kort"><div class="tall">90 000</div>poeng for alle tre når de to kupongene brukes</div>
+    <div class="kort"><div class="tall">11 døgn</div>på bakken i Jordan, og ingen feriedager brukt på omveier</div>
+  </div>
+  <div class="fot">Ledige seter ble sjekket 14. november 2026: 6 i økonomi på begge avgangene. Poengprisen tur og retur er regnet ut fra enveisprisen. Skatter og avgifter kommer i tillegg.</div>
+</section>
+
+<section class="side"><div class="delt">
+  <div class="panel">
+    <span class="dag">Dag 1 · mandag 11.</span>
+    <div class="merke">Amman</div>
+    <h2>Hovedstaden på sju høyder</h2>
+    <p class="ingress">Vi lander før soloppgang, sjekker inn tidlig og sover ut. Ettermiddagen er en myk start.</p>
+    <ul>
+      <li><b>Citadellet:</b> Herkulestempelet og utsikt over hele byen.</li>
+      <li><b>Romerteateret:</b> 6 000 plasser hugget inn i åssiden, midt i sentrum.</li>
+      <li><b>Sentrum til fots:</b> krydderboder, gullsmeder og falafel i hånda.</li>
+      <li><b>Kvelden:</b> middag i Rainbow Street mens bønneropene ruller mellom åsene.</li>
+    </ul>
+    <div class="fakta"><span><b>Rundt 27°</b> på dagen</span><span><b>40 min</b> fra flyplassen</span></div>
+  </div>
+  <div class="mosaikk m3"><img loading="lazy" src="bilder/teater.jpg" alt="Romerteateret i Amman"><img loading="lazy" src="bilder/amman.jpg" alt="Citadellet"><img loading="lazy" src="bilder/mansaf.jpg" alt="Mansaf"></div>
+</div></section>
+
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m3"><img loading="lazy" src="bilder/jerash.jpg" alt="Den ovale plassen i Jerash"><img loading="lazy" src="bilder/cardo.jpg" alt="Søylegaten"><img loading="lazy" src="bilder/ajloun.jpg" alt="Ajloun"></div>
+  <div class="panel">
+    <span class="dag">Dag 2 · tirsdag 12.</span>
+    <div class="merke">Jerash og Ajloun</div>
+    <h2>Romerriket, nesten helt for oss selv</h2>
+    <p class="ingress">En time nord for Amman ligger en av de best bevarte romerske byene utenfor Italia.</p>
+    <ul>
+      <li><b>Den ovale plassen:</b> en hel ring av søyler som fortsatt står.</li>
+      <li><b>Søylegaten:</b> 800 meter brolegging med hjulspor etter vogner.</li>
+      <li><b>To teatre og Hadrians bue:</b> stå på scenen og test akustikken.</li>
+      <li><b>Ajloun:</b> borg fra 1100 tallet på en grønn ås, med utsikt mot Jordandalen.</li>
+    </ul>
+    <div class="fakta"><span><b>1 time</b> hver vei</span><span>Tilbake i Amman til middag</span></div>
+  </div>
+</div></section>
+
+<section class="side"><div class="delt">
+  <div class="panel">
+    <span class="dag">Dag 3 og 4 · onsdag 13. og torsdag 14.</span>
+    <div class="merke">Madaba, Nebo og Dødehavet</div>
+    <h2>Ned til verdens laveste punkt</h2>
+    <p class="ingress">Først to korte stopp med lang historie, så halvannet døgn uten noe program.</p>
+    <ul>
+      <li><b>Madaba:</b> gulvmosaikk fra 500 tallet, det eldste kartet over Det hellige land.</li>
+      <li><b>Nebo:</b> fjellet der Moses ifølge Bibelen så det lovede land.</li>
+      <li><b>Dødehavet:</b> flyt på ryggen med avisa, smør deg inn i svart gjørme, skyll av i bassenget.</li>
+      <li><b>Solnedgangen:</b> sola går ned bak fjellene på den andre siden av vannet.</li>
+    </ul>
+    <div class="fakta"><span><b>430 m</b> under havet</span><span><b>Rundt 32°</b></span><span>Ti ganger saltere enn havet</span></div>
+  </div>
+  <div class="mosaikk m3"><img loading="lazy" src="bilder/dodehavet.jpg" alt="Dødehavet"><img loading="lazy" src="bilder/flyte.jpg" alt="Flyte i Dødehavet"><img loading="lazy" src="bilder/madaba.jpg" alt="Madabakartet"></div>
+</div></section>
+
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m3"><img loading="lazy" src="bilder/mujib.jpg" alt="Wadi Mujib"><img loading="lazy" src="bilder/dana.jpg" alt="Dana"><img loading="lazy" src="bilder/kerak.jpg" alt="Kerak"></div>
+  <div class="panel">
+    <span class="dag">Dag 5 · fredag 15.</span>
+    <div class="merke">Wadi Mujib og Kongeveien</div>
+    <h2>Eventyrdagen</h2>
+    <p class="ingress">Dagen da vi blir våte til livet og kjører en av verdens eldste ferdselsårer.</p>
+    <ul>
+      <li><b>Wadi Mujib:</b> vass og klatre oppover elva i et trangt juv til en foss. To til tre timer.</li>
+      <li><b>Kerak:</b> korsfarerborg med mørke hvelv og ganger å utforske.</li>
+      <li><b>Kongeveien:</b> svingete utsiktsvei som har vært i bruk i 5 000 år.</li>
+      <li><b>Dana:</b> stopp ved kanten av landets største naturreservat.</li>
+    </ul>
+    <div class="fakta"><span><b>Ca. 4 timer</b> kjøring totalt</span><span>Framme i Petra til kvelden</span></div>
+    <div class="sitat">Juvturen har aldersgrense og stenger for sesongen rundt månedsskiftet, så den må sjekkes før avreise.</div>
+  </div>
+</div></section>
+
+<section class="side forside">
+  <img loading="lazy" class="full" src="bilder/siq.jpg" alt="Siq, inngangen til Petra">
+  <div class="dekk"></div>
+  <div class="tekst">
+    <div class="merke">Dag 6 og 7 · lørdag 16. og søndag 17.</div>
+    <h1 style="font-size:88px">Petra</h1>
+    <p>Du går en drøy kilometer gjennom en smal kløft med åtti meter høye vegger. Så åpner den seg, og Skattkammeret står der. Det øyeblikket er grunnen til at folk reiser hit fra hele verden.</p>
+  </div>
+</section>
+
+<section class="side"><div class="delt">
+  <div class="panel">
+    <span class="dag">Dag 6 og 7 · to hele dager</span>
+    <div class="merke">Petra</div>
+    <h2>Byen som var glemt i tusen år</h2>
+    <ul>
+      <li><b>Lørdag morgen:</b> inn porten når den åpner, gjennom Siq mens lyset er mykt og kløften er tom.</li>
+      <li><b>Skattkammeret:</b> førti meter fasade hugget ovenfra og ned i ett stykke fjell.</li>
+      <li><b>Kongegravene og offerplassen:</b> opp trappene til utsikt over hele dalen.</li>
+      <li><b>Søndag:</b> de 800 trinnene til Klosteret, som er enda større enn Skattkammeret.</li>
+      <li><b>Lille Petra:</b> en miniversjon uten folk, på vei tilbake.</li>
+      <li><b>Kvelden:</b> Petra by Night med over tusen lys i kløften, de kveldene det arrangeres.</li>
+    </ul>
+    <div class="fakta"><span><b>Rundt 25°</b></span><span>Gode sko, 15 km til fots per dag</span></div>
+  </div>
+  <div class="mosaikk m4"><img loading="lazy" src="bilder/kloster.jpg" alt="Klosteret"><img loading="lazy" src="bilder/kongegraver.jpg" alt="Kongegravene"><img loading="lazy" src="bilder/litenpetra.jpg" alt="Lille Petra"><img loading="lazy" src="bilder/petra.jpg" alt="Skattkammeret"></div>
+</div></section>
+
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m3"><img loading="lazy" src="bilder/wadirum.jpg" alt="Wadi Rum"><img loading="lazy" src="bilder/kamel.jpg" alt="Kameler i Wadi Rum"><img loading="lazy" src="bilder/leir.jpg" alt="Ørkenleir"></div>
+  <div class="panel">
+    <span class="dag">Dag 8 og 9 · mandag 18. og tirsdag 19.</span>
+    <div class="merke">Wadi Rum</div>
+    <h2>En natt på Mars</h2>
+    <p class="ingress">Rød sand, fjell som skip på rekke, og en stillhet du nesten ikke har hørt før.</p>
+    <ul>
+      <li><b>Jeep på lasteplanet:</b> sanddyner, steinbroer og kløfter med helleristninger.</li>
+      <li><b>Solnedgang:</b> te på bålet mens fjellene skifter fra oransje til lilla.</li>
+      <li><b>Zarb:</b> middag som har stått i en ovn gravd ned i sanden.</li>
+      <li><b>Natta:</b> ingen lys i mils omkrets. Melkeveien rett over teltet.</li>
+      <li><b>Morgenen:</b> soloppgang fra kamelryggen.</li>
+    </ul>
+    <div class="fakta"><span><b>2 timer</b> fra Petra</span><span>Kjølige netter, ta med genser</span></div>
+  </div>
+</div></section>
+
+<section class="side"><div class="delt">
+  <div class="panel">
+    <span class="dag">Dag 9 til 11 · tirsdag 19. til torsdag 21.</span>
+    <div class="merke">Aqaba og Rødehavet</div>
+    <h2>Badeferien til slutt</h2>
+    <p class="ingress">Etter støv og trapper avslutter vi med saltvann, basseng og ingenting vi må rekke.</p>
+    <ul>
+      <li><b>Korallrev fra stranda:</b> snorkling blant fargerike fisker noen meter ut.</li>
+      <li><b>Båttur:</b> glassbunnbåt eller snorkeltur til revene sør for byen.</li>
+      <li><b>Sjømat:</b> fersk fisk på grillen i gamlebyen.</li>
+      <li><b>Torsdag:</b> rolig frokost, så fire timer på Ørkenveien til Amman og en siste middag.</li>
+    </ul>
+    <div class="fakta"><span><b>Rundt 32°</b> i lufta</span><span><b>Rundt 26°</b> i vannet</span><span><b>1 time</b> fra Wadi Rum</span></div>
+  </div>
+  <div class="mosaikk"><img loading="lazy" src="bilder/aqabakveld.jpg" alt="Kveld ved Rødehavet"></div>
+</div></section>
+
+<section class="side heltekst">
+  <div class="merke">Praktisk</div>
+  <h2>Det som gjør turen enkel</h2>
+  <div class="stripe" style="margin-top:10px">
+    <div class="kort"><h3 style="margin:0 0 6px;color:#8d3d1c">Leiebil hele veien</h3>Gode veier, lite trafikk utenfor Amman og skilt på engelsk. Lengste etappe er fire timer.</div>
+    <div class="kort"><h3 style="margin:0 0 6px;color:#8d3d1c">Jordan Pass</h3>Kjøpes på nett før avreise. Dekker visum og inngang til Petra, Jerash, Wadi Rum og flere titalls andre steder.</div>
+    <div class="kort"><h3 style="margin:0 0 6px;color:#8d3d1c">Vær og klær</h3>Sol og 25 til 32 grader. Lette klær som dekker skuldre og knær i byene, genser til ørkennatta.</div>
+  </div>
+  <table class="tab" style="margin-top:20px">
+    <tr><th>Må gjøres</th><th>Når</th></tr>
+    <tr><td>Bestille flyene med kupongene</td><td>Snarest, mens det er ledige seter til alle tre</td></tr>
+    <tr><td>Ørkenleir i Wadi Rum og hotell i Petra</td><td>Tidlig, oktober er høysesong</td></tr>
+    <tr><td>Jordan Pass, leiebil og reiseforsikring</td><td>Noen uker før</td></tr>
+    <tr><td>Sjekke reiserådene fra UD</td><td>Ved bestilling og rett før avreise</td></tr>
+  </table>
+  <div class="fot">Temperaturer, kjøretider og åpningstider er omtrentlige og må sjekkes nærmere avreise.</div>
+</section>
+
+<section class="side forside slutt">
+  <img loading="lazy" class="full" src="bilder/kamel.jpg" alt="Kameler i Wadi Rum">
+  <div class="dekk"></div>
+  <div class="tekst">
+    <div class="merke">10. til 22. oktober 2027</div>
+    <h1>Blir du med?</h1>
+    <p>Et underverk, en ørken, to hav og elleve dager med sol. Setene finnes akkurat nå.</p>
+  </div>
+</section>
+
+<section class="side heltekst">
+  <div class="merke">Bildekilder</div>
+  <h2 style="font-size:30px">Alle bilder er hentet fra Wikimedia Commons</h2>
+  <div class="kr"><div>Al-Khazneh (The Treasury) 2, Petra, Jordan.jpg, Vyacheslav Argenberg, CC BY 4.0</div><div>Petra, Siq, Canyon, Jordan.jpg, Vyacheslav Argenberg, CC BY 4.0</div><div>The Monastery, Petra, Jordan8.jpg, Diego Delso, CC BY-SA 3.0</div><div>Royal Tombs in Petra 009.jpg, Freedom&#x27;s Falcon, CC BY-SA 4.0</div><div>Desert landscape with rocks in the middle in Wadi Rum.jpg, Trldp, CC BY-SA 4.0</div><div>Wadi Rum Traditional Desert Bedouin Camp in Jordan.jpg, Irina Alexandra S., CC BY-SA 4.0</div><div>Three Camels in Wadi Rum.jpg, Raya Sharbain, CC BY-SA 4.0</div><div>Dead Sea shores (11664426816).jpg, Jorge Láscar from Australia, CC BY 2.0</div><div>Effortlessly floating on the Dead Sea (11663842305).jpg, Jorge Láscar from Australia, CC BY 2.0</div><div>Temple of Hercules, Amman Citadel 06.jpg, Mohammad hajeer, CC BY-SA 4.0</div><div>Roman theater of Amman 01.jpg, Bernard Gagnon, CC BY-SA 4.0</div><div>Jerash, Oval Plaza (6738144433).jpg, Arian Zwegers, CC BY 2.0</div><div>Jerash Cardo Maximus 0882.jpg, Dosseman, CC BY-SA 4.0</div><div>The Madaba Map, part of a floor mosaic in the early Byzantine church of Saint George depicting the Holy Land in the 6th century AD, Madaba, Jordan (33798361303).jpg, Carole Raddato from FRANKFURT, Germany, CC BY-SA 2.0</div><div>Mount Nebo-6.JPG, Faris El-Gwely, CC BY-SA 4.0</div><div>10 Wadi Mujib Siq Trail - In the Siq - panoramio.jpg, hikinginjordan, CC BY-SA 3.0</div><div>Jordan Kerak Castle 2485.jpg, Dosseman, CC BY-SA 4.0</div><div>Dana Reserve 02.jpg, Bernard Gagnon, CC BY-SA 3.0</div><div>South Beach, Aqaba, Jordan.jpg, Gerda Arendt, CC BY-SA 4.0</div><div>Aqaba, Red Sea, sunset (6737672001).jpg, Arian Zwegers, CC BY 2.0</div><div>Jordanian Traditional Mansaf, Petra Restaurant, 2026 (01).jpg, Bahnfrend, CC BY-SA 4.0</div><div>The ruins of Ajloun Castle 10.jpg, Mohammad hajeer, CC BY-SA 4.0</div><div>Little Petra, Jordan - 49785442382.jpg, Carole Raddato, CC BY-SA 2.0</div></div>
+</section>
+</body></html>

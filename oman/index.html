@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<title>Oman via Dubai, oktober 2027</title>
+<style>
+@page { size: 1280px 720px; margin: 0 }
+* { box-sizing: border-box }
+html, body { margin: 0; padding: 0; background: #1d1a17 }
+body { font-family: "Helvetica Neue", Helvetica, Arial, "DejaVu Sans", sans-serif; color: #2b2622; -webkit-print-color-adjust: exact; print-color-adjust: exact }
+section { width: 1280px; height: 720px; position: relative; overflow: hidden; page-break-after: always; break-after: page; background: #f6f0e6 }
+section:last-child { page-break-after: auto; break-after: auto }
+h1 { font-family: Georgia, "DejaVu Serif", serif; font-weight: normal; font-size: 76px; line-height: 1.02; margin: 0 }
+h2 { font-family: Georgia, "DejaVu Serif", serif; font-weight: normal; font-size: 41px; line-height: 1.12; margin: 0 0 16px }
+h3 { font-size: 13px; letter-spacing: .16em; text-transform: uppercase; color: #a8632b; margin: 0 0 12px; font-weight: 700 }
+p { font-size: 19.5px; line-height: 1.5; margin: 0 0 14px }
+ul { margin: 0; padding: 0; list-style: none }
+li { font-size: 17px; line-height: 1.42; padding: 8px 0 8px 20px; border-top: 1px solid #dfd3c0; position: relative }
+li::before { content: ""; position: absolute; left: 2px; top: 15px; width: 7px; height: 7px; background: #a8632b; border-radius: 50% }
+b { color: #1d1a17 }
+.sidetall { position: absolute; right: 30px; bottom: 20px; font-size: 12px; color: #9a8c7a; letter-spacing: .08em }
+
+/* forside */
+.forside { background: #1d1a17 url(bilder/jebelshams.jpg) center/cover; color: #fff }
+.forside::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(20,16,12,.88) 0%, rgba(20,16,12,.55) 48%, rgba(20,16,12,.05) 100%) }
+.forside div { position: absolute; left: 70px; top: 150px; width: 640px; z-index: 2 }
+.forside h3 { color: #f0b47a }
+.forside p { color: #efe6d8; font-size: 22px; margin-top: 26px }
+
+/* bilde + tekst */
+.delt .bilde { position: absolute; top: 0; bottom: 0; width: 720px; background-size: cover; background-position: center }
+.delt .tekst { position: absolute; top: 0; bottom: 0; width: 560px; padding: 54px 50px 40px }
+.delt.v .bilde { left: 0 } .delt.v .tekst { right: 0 }
+.delt.h .bilde { right: 0 } .delt.h .tekst { left: 0 }
+.to .bilde { height: 360px; bottom: auto }
+.to .bilde.b2 { top: 360px; border-top: 4px solid #f6f0e6 }
+.bildetekst { position: absolute; left: 0; right: 0; bottom: 0; padding: 30px 16px 10px; font-size: 12px; color: #fff; background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.6)) }
+
+/* rene tekstsider */
+.side { padding: 56px 70px 40px }
+.kol { display: grid; gap: 44px }
+.kol2 { grid-template-columns: 1fr 1fr }
+.kol3 { grid-template-columns: 1fr 1fr 1fr }
+.boks { background: #fffaf2; border: 1px solid #dfd3c0; border-radius: 6px; padding: 22px 24px }
+.boks.valgt { border: 2px solid #a8632b; background: #fff6e8 }
+.boks h4 { font-family: Georgia, "DejaVu Serif", serif; font-weight: normal; font-size: 29px; margin: 0 0 10px }
+.merke { display: inline-block; background: #a8632b; color: #fff; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; padding: 3px 9px; border-radius: 3px; margin-bottom: 10px }
+table { border-collapse: collapse; width: 100% }
+td, th { font-size: 16.5px; line-height: 1.35; text-align: left; padding: 5px 10px; border-top: 1px solid #dfd3c0; vertical-align: top }
+th { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: #a8632b; border-top: 0 }
+td:first-child { width: 56px; font-weight: 700; color: #a8632b; white-space: nowrap }
+.liten p, .liten li { font-size: 17px; line-height: 1.45 }
+.liten li { padding: 8px 0 8px 20px } .liten li::before { top: 16px }
+.tall { font-family: Georgia, "DejaVu Serif", serif; font-size: 60px; color: #a8632b; line-height: 1 }
+.talltekst { font-size: 17px; color: #6b5f52; margin-top: 4px }
+.stor p { font-size: 22px; line-height: 1.5 }
+.topp { display: grid; grid-template-columns: 1fr 1fr; gap: 0 50px; margin-top: 18px }
+.topp li { font-size: 19px; padding: 11px 0 11px 46px } .topp li::before { display: none }
+.topp li i { position: absolute; left: 0; top: 8px; font-style: normal; font-family: Georgia, "DejaVu Serif", serif; font-size: 28px; color: #a8632b; line-height: 1 }
+.kreditt { position: absolute; left: 70px; right: 70px; bottom: 26px; font-size: 11.5px; line-height: 1.45; color: #8a7c6a }
+</style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<style>
+@media screen {
+  html { background: #16130f }
+  body { background: #16130f !important; padding: 56px 0 24px !important }
+  .lysbilde { margin: 0 auto 14px; box-shadow: 0 6px 30px rgba(0,0,0,.45) }
+  #topp { position: fixed; inset: 0 0 auto 0; height: 44px; z-index: 1000; display: flex; align-items: center; gap: 14px;
+    padding: 0 16px; background: rgba(22,19,15,.94); color: #f3ead9; font: 15px/1 system-ui, sans-serif }
+  #topp a { color: #f3ead9; text-decoration: none; padding: 8px 12px; border: 1px solid rgba(243,234,217,.35); border-radius: 999px }
+  #topp a:hover, #topp a:focus-visible { background: rgba(243,234,217,.14) }
+  #topp span { opacity: .75; white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
+}
+@media print { #topp { display: none } }
+</style>
+<script>
+addEventListener('DOMContentLoaded', () => {
+  const sider = [...document.querySelectorAll('body > section, body > .side, body > .forside')];
+  sider.forEach(s => s.classList.add('lysbilde'));
+  const grunn = sider[0].offsetWidth;
+  const tilpass = () => {
+    const z = Math.min(1, document.documentElement.clientWidth / grunn);
+    sider.forEach(s => s.style.zoom = z);
+  };
+  if (!matchMedia('print').matches) { tilpass(); addEventListener('resize', tilpass); }
+  addEventListener('beforeprint', () => sider.forEach(s => s.style.zoom = ''));
+  addEventListener('afterprint', tilpass);
+});
+</script>
+</head>
+<body><nav id="topp"><a href="../">← Alle turene</a><span>Oman via Dubai: Fjell, sanddyner og skilpaddestrender</span></nav>
+<section class="forside"><div>
+<h3>Reiseskildring, oktober 2027</h3>
+<h1>Oman<br>via Dubai</h1>
+<p>Fjorten dager for tre: fra skyskrapere og krydderbasarer til skilpaddestrender, sanddyner og fjell med utsikt tusen meter rett ned.</p>
+</div></section>
+
+<section class="side stor">
+<h3>Reisen i korte trekk</h3>
+<h2>Fra verdens høyeste tårn til verdens stilleste natt</h2>
+<div class="kol kol2" style="margin-top:24px">
+<div>
+<p>Turen starter i Dubai, der alt er størst og nyest, men der en trebåt fortsatt frakter folk over Creek slik den alltid har gjort. Fire netter gir tid til både basarene og skyskraperne.</p>
+<p>Så tar dere et kort fly til Muscat, og alt skifter tempo. Oman er lave hvite hus, røkelse i lufta og folk som inviterer på kaffe og dadler.</p>
+</div>
+<div>
+<p>Herfra kjører dere selv. Først langs kysten, der dere bader i et synkehull og svømmer inn i en grotte med foss. Så ut i ørkenen for en natt under stjernene.</p>
+<p>Til slutt opp i fjellene, til terrasselandsbyer, granateplehager og Omans egen Grand Canyon. Reisen dit og hjem går i business via Paris.</p>
+</div>
+</div>
+<div class="kol kol3" style="margin-top:22px">
+<div><div class="tall">4 netter</div><div class="talltekst">i Dubai, storby og basarer</div></div>
+<div><div class="tall">8 netter</div><div class="talltekst">i Oman, kyst, ørken og fjell</div></div>
+<div><div class="tall">1 natt</div><div class="talltekst">i Dubai før hjemreisen</div></div>
+</div>
+<div class="sidetall">2</div>
+</section>
+
+<section class="side">
+<h3>Høydepunkter</h3>
+<h2>Ti ting dere kan få oppleve</h2>
+<ul class="topp">
+<li><i>1</i><b>Svømme inn i en grotte med foss</b> innerst i kløfta Wadi Shab.</li>
+<li><i>2</i><b>Se en havskilpadde legge egg</b> i mørket på stranda ved Ras al Jinz.</li>
+<li><i>3</i><b>Sove i ørkenen</b> etter solnedgang fra toppen av en sanddyne.</li>
+<li><i>4</i><b>Gå på en hylle i fjellveggen</b> over Omans Grand Canyon.</li>
+<li><i>5</i><b>Snorkle med skilpadder,</b> og kanskje hvalhai, ved Daymaniyat.</li>
+<li><i>6</i><b>Bade i et turkist synkehull</b> mens småfisk napper i tærne.</li>
+<li><i>7</i><b>Spise granateple rett fra treet</b> i landsbyene på Jebel Akhdar.</li>
+<li><i>8</i><b>Prute om røkelse og sølv</b> i souqene i Mutrah og Nizwa.</li>
+<li><i>9</i><b>Stå barbeint på et av verdens største tepper</b> i Sultan Qaboos-moskeen.</li>
+<li><i>10</i><b>Se sola gå ned over Dubai</b> fra Burj Khalifa.</li>
+</ul>
+<div class="sidetall">3</div>
+</section>
+
+<section class="side">
+<h3>Dag for dag</h3>
+<h2>Ruta</h2>
+<table>
+<tr><th>Dag</th><th>Hvor</th><th>Hva dere opplever</th></tr>
+<tr><td>1</td><td>Hjemmefra til Dubai</td><td>Business via Paris, framme om kvelden</td></tr>
+<tr><td>2</td><td>Gamle Dubai</td><td>Smugene i Al Fahidi, trebåt over Creek, krydder og gull i souqene</td></tr>
+<tr><td>3</td><td>Nye Dubai</td><td>Marina eller Palmen, Burj Khalifa og fontenene i solnedgang</td></tr>
+<tr><td>4</td><td>Abu Dhabi eller ørkenen</td><td>Den hvite Sheikh Zayed-moskeen og Louvre, eller rolig dag og ørkenmiddag</td></tr>
+<tr><td>5</td><td>Fly til Muscat</td><td>Kveldstur langs havna og inn i souqen i Mutrah</td></tr>
+<tr><td>6</td><td>Muscat</td><td>Sultan Qaboos-moskeen, palasset og fortene, solnedgang på stranda</td></tr>
+<tr><td>7</td><td>Daymaniyat-øyene</td><td>Båttur og snorkling over korallrev med skilpadder</td></tr>
+<tr><td>8</td><td>Kysten til Ras al Jinz</td><td>Bad i Bimmah, svømmetur i Wadi Shab, skilpadder om natta</td></tr>
+<tr><td>9</td><td>Wahiba-ørkenen</td><td>Oasebad i Wadi Bani Khalid, sanddyner, middag og natt i leir</td></tr>
+<tr><td>10</td><td>Nizwa</td><td>Fortet, souqen og kveld i den gamle leirbyen</td></tr>
+<tr><td>11</td><td>Jebel Akhdar</td><td>Terrasselandsbyer, granateplehager og kjølig fjelluft</td></tr>
+<tr><td>12</td><td>Jebel Shams</td><td>Leirlandsbyen Misfat, fortet i Bahla, kløfta i kveldslys</td></tr>
+<tr><td>13</td><td>Tilbake til Dubai</td><td>Balcony Walk ved soloppgang, kjøretur til Muscat og kveldsfly</td></tr>
+<tr><td>14</td><td>Hjem</td><td>Business til Paris og videre nordover</td></tr>
+</table>
+<div class="sidetall">4</div>
+</section>
+<section class="delt v"><div class="bilde" style="background-image:url(bilder/creek.jpg)"><div class="bildetekst">Abra på Dubai Creek. Foto: CT Cooper</div></div><div class="tekst"><h3>Dag 1 og 2</h3><h2>Gamle Dubai ved Creek</h2><p>Dere lander sent og sover ut. Første dag går til byen slik den var før oljen: vindtårn, trange smug og gårdsrom med skygge i Al Fahidi.</p><p>En åpen trebåt, en abra, tar dere over Creek sammen med folk på vei til jobb. På den andre sida lukter det safran, tørket lime og røkelse lenge før dere ser bodene.</p><ul><li><b>Krydder- og gullsouqen:</b> sekker med krydder i alle farger, og vinduer så fulle av gull at de lyser opp gata.</li><li><b>Arabisk frokost</b> i et gammelt handelshus, med flatbrød, honning og kardemommekaffe.</li><li><b>Kveld ved vannet:</b> middag på en dhow som glir sakte forbi den opplyste byen.</li></ul></div><div class="sidetall">5</div></section>
+<section class="delt h"><div class="tekst"><h3>Dag 3 og 4</h3><h2>Det nye Dubai, og en dag til overs</h2><p>Dag tre er skyskraperbyen. Gå langs kanalene i Marina eller ta toget ut på Palmen, og vær i Downtown når sola går ned. Fra Burj Khalifa ser dere ørkenen på den ene sida og havet på den andre.</p><p>Dag fire er åpen. Abu Dhabi ligger halvannen time unna, med en moské i hvit marmor som rommer 40 000 mennesker. Eller bli ved bassenget og dra ut i ørkenen til kvelds.</p><ul><li><b>Fontenene</b> foran Burj Khalifa danser til musikk hver kveld, og er best sett fra en restaurant ved vannet.</li><li><b>Louvre Abu Dhabi:</b> kunst under en kuppel som slipper sollyset ned som regn.</li><li><b>Ørkenmiddag:</b> grillmat på tepper i sanda mens det mørkner.</li></ul></div><div class="bilde" style="background-image:url(bilder/dubai.jpg);background-position:60% center"><div class="bildetekst">Dubai sett fra lufta. Foto: Tim Reckmann</div></div><div class="sidetall" style="right:750px">6</div></section>
+<section class="delt h to"><div class="tekst"><h3>Dag 5 og 6</h3><h2>Muscat, hovedstaden uten høyhus</h2><p>Etter Dubai virker Muscat nesten stille. Byen ligger i hvite klynger mellom svarte fjell og havet, og ingenting får bygges høyt.</p><p>Første kveld går dere langs havna i Mutrah og inn i souqen, der gangene lukter røkelse og selgerne byr på dadler. Neste morgen står dere barbeint i Sultan Qaboos-moskeen, under en lysekrone på størrelse med et hus.</p><ul><li><b>Fiskemarkedet</b> i Mutrah om morgenen, med dagens fangst rett fra båtene.</li><li><b>Gamle Muscat:</b> sultanens palass i blått og gull, voktet av to portugisiske fort.</li><li><b>Solnedgang</b> på stranda i Qurum, der halve byen går tur.</li></ul></div><div class="bilde" style="background-image:url(bilder/moske.jpg)"><div class="bildetekst">Sultan Qaboos-moskeen. Foto: Riyadh Al Balushi</div></div><div class="bilde b2" style="background-image:url(bilder/mutrah.jpg)"><div class="bildetekst">Mutrah med fortet over havna. Foto: Eduard Marmet</div></div><div class="sidetall" style="right:750px">7</div></section>
+<section class="delt v"><div class="bilde" style="background-image:url(bilder/daymaniyat.jpg)"><div class="bildetekst">Daymaniyat-øyene. Foto: Wusel007</div></div><div class="tekst"><h3>Dag 7</h3><h2>Daymaniyat, ni øyer i turkis</h2><p>Tre kvarter med båt fra Muscat ligger et vernet øyrike. Vannet er så klart at dere ser korallene fra båtripa, og det holder nærmere tretti grader.</p><p>Dere hopper uti og flyter over rev der havskilpadder beiter helt uanfektet. September og oktober er månedene da hvalhaien trekker forbi. Ingen kan love den, men sjansen er aldri bedre.</p><ul><li><b>Skilpadder</b> på armlengdes avstand, ofte flere på samme svømmetur.</li><li><b>Delfiner</b> følger gjerne båten på vei ut.</li><li><b>Fargerike revfisk,</b> blekksprut og av og til en liten revhai langs bunnen.</li></ul></div><div class="sidetall">8</div></section>
+<section class="delt h to"><div class="tekst"><h3>Dag 8</h3><h2>Kystveien: synkehull og hemmelig grotte</h2><p>Dagen med mest eventyr. Først Bimmah, et hull i kalksteinen fylt med blågrønt vann. Dere går ned trappa og bader mens småfisk napper forsiktig i tærne.</p><p>Så Wadi Shab. En liten båt setter dere over elva, og stien går innover mellom palmer og loddrette fjellvegger. Innerst svømmer dere fra kulp til kulp og gjennom en smal sprekk, inn i en grotte der en foss faller ned i halvmørket.</p><ul><li><b>Sur:</b> se håndbygde dhower ta form på verftet, slik de har gjort i hundrevis av år.</li><li><b>Utsikt</b> fra fyret i Al Ayjah over lagunen og de hvite husene.</li><li><b>Kvelden:</b> ut til skilpaddestranda ved Ras al Jinz.</li></ul></div><div class="bilde" style="background-image:url(bilder/bimmah.jpg)"><div class="bildetekst">Bimmah-synkehullet. Foto: Uhooep</div></div><div class="bilde b2" style="background-image:url(bilder/wadishab.jpg)"><div class="bildetekst">Wadi Shab. Foto: Uhooep</div></div><div class="sidetall" style="right:750px">9</div></section>
+<section class="delt v"><div class="bilde" style="background-image:url(bilder/skilpadde.jpg)"><div class="bildetekst">Stranda ved Ras al Jinz. Foto: Kim Kash</div></div><div class="tekst"><h3>Natt til dag 9</h3><h2>Ras al Jinz i mørket</h2><p>Her, på Arabias østligste punkt, kommer grønne havskilpadder opp for å legge egg. Dere går i stillhet bak en guide med rødt lys, og står noen meter fra et dyr på over hundre kilo som graver seg ned i sanda.</p><p>Ved daggry kan dere se nyklekte unger streve mot vannkanten mens sola kommer opp over Det indiske hav. Dere er blant de første på hele den arabiske halvøya som ser den.</p><ul><li><b>Lyden:</b> bare bølgene og skilpaddas luffer som kaster sand.</li><li><b>Stjernehimmelen,</b> uten et eneste lys i nærheten.</li><li><b>Sporene</b> i sanda om morgenen, som etter små beltevogner.</li></ul></div><div class="sidetall">10</div></section>
+<section class="delt h"><div class="tekst"><h3>Dag 9</h3><h2>Wahiba, natt i sanddynene</h2><p>På vei innover stopper dere i Wadi Bani Khalid, en oase med dype, grønne kulper mellom palmene. Så flater landet ut, og plutselig står dynene der, oransje og opptil hundre meter høye.</p><p>Gå opp på nærmeste dyne før solnedgang og se sanda skifte fra gull til rødt. Etter middag rundt bålet er det bare stjerner og stillhet.</p><ul><li><b>Kjøretur over dynene,</b> opp bratte kammer og ned på den andre sida.</li><li><b>Kameltur eller sandbrett,</b> alt etter hvor rolig dere vil ha det.</li><li><b>Soloppgang</b> fra dynetoppen, før varmen kommer.</li><li><b>Beduinsk middag:</b> lam og ris, brød bakt i sanda og søt te.</li></ul></div><div class="bilde" style="background-image:url(bilder/wahiba.jpg)"><div class="bildetekst">Wahiba Sands. Foto: albinfo</div></div><div class="sidetall" style="right:750px">11</div></section>
+<section class="delt v"><div class="bilde" style="background-image:url(bilder/nizwa.jpg)"><div class="bildetekst">Nizwa sett fra fortet. Foto: Martin Falbisoner</div></div><div class="tekst"><h3>Dag 10</h3><h2>Nizwa, den gamle hovedstaden</h2><p>Nizwa var i århundrer senteret for det indre Oman. Fra det runde tårnet på fortet ser dere ut over palmelundene og leirhusene, mot fjellene dere skal opp i dagen etter.</p><p>Souqen ved siden av er den mest levende i landet. Smak dere gjennom dadler i titalls sorter og varm halwa rett fra gryta, og se sølvsmedene lage de krumme dolkene omanske menn bærer til fest.</p><ul><li><b>Geitemarkedet</b> fredag morgen, der dyrene leies rundt i ring mens budene ropes ut.</li><li><b>Fortets hemmeligheter:</b> fallgruver, skjulte sjakter og hull til å helle kokende daddelsirup på fienden.</li><li><b>Kveld i gamlebyen,</b> mellom restaurerte leirhus og små kaffesteder på takene.</li></ul></div><div class="sidetall">12</div></section>
+<section class="delt h"><div class="tekst"><h3>Dag 11</h3><h2>Jebel Akhdar, det grønne fjellet</h2><p>Veien slynger seg bratt opp til et platå i 2000 meters høyde, der lufta er ti til femten grader kjøligere enn ved kysten. Plutselig trenger dere genser.</p><p>Landsbyene klorer seg fast i kanten av kløfta, med terrasser der det dyrkes roser, valnøtter og granatepler. I oktober er granateplene modne, og bøndene selger dem langs veien.</p><ul><li><b>Gå mellom landsbyene</b> langs gamle vanningskanaler, gjennom hager og under valnøttrær.</li><li><b>Den forlatte landsbyen</b> i Wadi Bani Habib, med leirhus som sakte faller sammen.</li><li><b>Solnedgang fra kanten,</b> med kløfta i rødt og oransje under dere.</li></ul></div><div class="bilde" style="background-image:url(bilder/jebelakhdar.jpg)"><div class="bildetekst">Terrassehager på Jebel Akhdar. Foto: Ketan Mehta</div></div><div class="sidetall" style="right:750px">13</div></section>
+<section class="delt v"><div class="bilde" style="background-image:url(bilder/jebelshams.jpg)"><div class="bildetekst">Kløfta ved Jebel Shams. Foto: Christoph Strässler</div></div><div class="tekst"><h3>Dag 12 og 13</h3><h2>Jebel Shams og Omans Grand Canyon</h2><p>På veien stopper dere i Misfat al Abriyeen, en landsby av stein og leire der vannet renner i åpne kanaler mellom bananpalmer, og ved det enorme leirfortet i Bahla.</p><p>Så klatrer veien mot landets høyeste fjell. Ved kanten faller Wadi Ghul tusen meter rett ned. Neste morgen går dere Balcony Walk, en sti på en hylle i kløfteveggen, inn til en landsby som ble forlatt for en mannsalder siden.</p><ul><li><b>Geiter</b> som balanserer ytterst på stupkanten og gjerne vil dele nista.</li><li><b>Stjernene:</b> i 2000 meters høyde og uten lys er Melkeveien tydelig.</li><li><b>Soloppgangen,</b> når kløfta fylles med lys ovenfra og ned.</li></ul></div><div class="sidetall">14</div></section>
+<section class="side">
+<h3>Smak og lukt</h3>
+<h2>Oman rundt bordet</h2>
+<div class="kol kol3" style="margin-top:22px">
+<div class="boks"><h4>Maten</h4>
+<p style="font-size:17.5px">Shuwa er festmaten: lam marinert i krydder, pakket i bananblader og bakt i en grop i jorda i et døgn eller to. Til hverdags er det grillspyd fra boder langs veien, ris med safran, og fersk kongemakrell rett fra havet.</p></div>
+<div class="boks"><h4>Kaffe og dadler</h4>
+<p style="font-size:17.5px">Overalt blir dere budt på kahwa, lys kaffe med kardemomme, servert i små kopper sammen med dadler. Rist lett på koppen når dere har fått nok. Halwa, den seige søtsaken med rosevann og nøtter, hører til.</p></div>
+<div class="boks"><h4>Røkelse</h4>
+<p style="font-size:17.5px">Oman har levert røkelse til verden i flere tusen år. Den ulmer på glør i butikker, hoteller og hjem, og lukta følger dere gjennom hele turen. En pose røkelse og en liten leirbrenner fra souqen er det klassiske minnet.</p></div>
+</div>
+<p style="margin-top:26px">Omanere er kjent for å være rolige og gjestfrie. Bli ikke overrasket om noen stopper for å spørre hvor dere kommer fra, eller inviterer på kaffe.</p>
+<div class="sidetall">15</div>
+</section>
+
+<section class="side">
+<h3>Greit å vite</h3>
+<h2>Noen få praktiske ting</h2>
+<div class="kol kol3" style="margin-top:20px">
+<div><ul>
+<li><b>Været i oktober:</b> varmt ved kysten, midt i trettiårene. Behagelig i fjellet, og kjølig om kvelden der oppe.</li>
+<li><b>Badevannet</b> er varmt, både i havet og i wadiene.</li>
+</ul></div>
+<div><ul>
+<li><b>Klær:</b> dekk skuldre og knær utenom hotell og strand. I moskeene trengs lange ermer, og sjal over håret for kvinner.</li>
+<li><b>Badesko</b> og en vanntett pose er gull verdt i Wadi Shab.</li>
+</ul></div>
+<div><ul>
+<li><b>Innreise:</b> nordmenn kan være 14 dager i Oman uten visum. Sjekk reglene på nytt før avreise.</li>
+<li><b>Bilen</b> i Oman bør ha firehjulstrekk, til fjellveiene og ørkenen.</li>
+</ul></div>
+</div>
+<div class="kreditt">Bilder fra Wikimedia Commons: Dubai, Tim Reckmann (CC BY 2.0). Dubai Creek, CT Cooper (offentlig eiendom). Sultan Qaboos-moskeen, Riyadh Al Balushi (CC BY 2.0). Mutrah, Eduard Marmet (CC BY-SA 2.0). Wadi Shab og Bimmah, Uhooep (CC BY-SA 4.0). Wahiba Sands, albinfo (CC BY-SA 4.0). Nizwa, Martin Falbisoner (CC BY-SA 4.0). Jebel Shams, Christoph Strässler (CC BY-SA 2.0). Jebel Akhdar, Ketan Mehta (CC BY-SA 3.0). Daymaniyat, Wusel007 (CC BY-SA 4.0). Ras al Jinz, Kim Kash (CC BY-SA 2.0).</div>
+<div class="sidetall" style="bottom:8px">16</div>
+</section>
+</body></html>
