@@ -2,7 +2,7 @@
 <html lang="nb"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Fem reiseforslag</title>
+<title>Seks reiseforslag</title>
 <style>
 :root { --bg: #f5efe4; --blekk: #26211b; --dempet: #6f6455; --kort: #fffaf1; --linje: #e2d7c4; --aksent: #a4461f }
 @media (prefers-color-scheme: dark) {
@@ -15,13 +15,11 @@ header p.over { font: 600 13px/1 system-ui, sans-serif; letter-spacing: .16em; t
 h1 { font-size: clamp(38px, 7vw, 68px); line-height: 1.02; margin: 0 0 18px; font-weight: 500; letter-spacing: -.01em; text-wrap: balance }
 header p.ingress { max-width: 62ch; margin: 0; color: var(--dempet); font-size: 19px }
 main { max-width: 1120px; margin: 0 auto; padding: 12px 24px 56px; display: grid; gap: 22px; grid-template-columns: repeat(6, 1fr) }
-.kort { grid-column: span 3; display: flex; flex-direction: column; background: var(--kort); border: 1px solid var(--linje);
+.kort { grid-column: span 2; display: flex; flex-direction: column; background: var(--kort); border: 1px solid var(--linje);
   border-radius: 14px; overflow: hidden; color: inherit; text-decoration: none; transition: transform .18s ease, box-shadow .18s ease }
-.kort:nth-child(n+3) { grid-column: span 2 }
 .kort:hover, .kort:focus-visible { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(0,0,0,.16); outline: none }
 .kort:focus-visible { border-color: var(--aksent) }
-.kort img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; display: block }
-.kort:nth-child(n+3) img { aspect-ratio: 4 / 3 }
+.kort img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block }
 .inn { padding: 20px 22px 22px; display: flex; flex-direction: column; flex: 1 }
 .under { font: 600 12px/1.2 system-ui, sans-serif; letter-spacing: .13em; text-transform: uppercase; color: var(--aksent); margin: 0 0 8px }
 h2 { font-size: 30px; line-height: 1.1; margin: 0 0 10px; font-weight: 500 }
@@ -33,12 +31,13 @@ li { font: 13px/1 system-ui, sans-serif; padding: 7px 10px; border: 1px solid va
 .poeng em { display: block; font-style: normal; margin-top: 6px }
 .les { font: 600 14px/1 system-ui, sans-serif; color: var(--aksent) }
 footer { max-width: 1120px; margin: 0 auto; padding: 0 24px 56px; color: var(--dempet); font: 14px/1.5 system-ui, sans-serif }
-@media (max-width: 900px) { .kort, .kort:nth-child(n+3) { grid-column: span 6 } .kort:nth-child(n+3) img { aspect-ratio: 16 / 10 } header { padding-top: 44px } }
+@media (max-width: 1000px) { .kort { grid-column: span 3 } }
+@media (max-width: 640px) { .kort { grid-column: span 6 } .kort img { aspect-ratio: 16 / 10 } header { padding-top: 44px } }
 @media (prefers-reduced-motion: reduce) { .kort { transition: none } }
 </style></head><body>
 <header>
   <p class="over">Reiseforslag 2027</p>
-  <h1>Fem turer vi kan velge mellom</h1>
+  <h1>Seks turer vi kan velge mellom</h1>
   <p class="ingress">Alle er lagt opp med EuroBonus-poeng og CT. Trykk på en tur for å bla gjennom hele forslaget med bilder, dagsplan og kostnader.</p>
 </header>
 <main>
@@ -94,6 +93,17 @@ footer { max-width: 1120px; margin: 0 auto; padding: 0 24px 56px; color: var(--d
         <p class="tekst">Byene, naturen og maten som byggeklosser: Shanghai, Beijing, Xi'an, pandaer, karstfjell og mer. Direkte fly til Shanghai.</p>
         <ul><li>3 reisende</li><li>8 hele dager</li><li>Business, direkte</li></ul>
         <p class="poeng"><strong>15 000 til 20 000 kr</strong> <span>per person</span> <em>270 000 poeng for tre i business, med to CT</em></p>
+        <span class="les">Se hele forslaget →</span>
+      </div>
+    </a>
+    <a class="kort" href="vietnam/">
+      <img src="vietnam/bilder/forside.jpg" alt="" loading="lazy">
+      <div class="inn">
+        <p class="under">Fra Hanoi til Mekong</p>
+        <h2>Vietnam</h2>
+        <p class="tekst">Sytten dager fra nord til sør: Hanoi, fjellene i Sapa, robåt i Ninh Binh, en natt på båt i Lan Ha-bukta, Saigon og Mekongdeltaet.</p>
+        <ul><li>3 reisende</li><li>17 dager</li><li>Business via Shanghai</li></ul>
+        <p class="poeng"><strong>10 000 til 15 000 kr</strong> <span>per person</span> <em>285 000 poeng for tre, med to CT</em></p>
         <span class="les">Se hele forslaget →</span>
       </div>
     </a>

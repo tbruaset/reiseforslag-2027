@@ -1,0 +1,437 @@
+<!doctype html><html lang="nb"><head><meta charset="utf-8"><title>Vietnam, 17 dager</title><style>
+@page { size: 1280px 720px; margin: 0 }
+* { box-sizing: border-box }
+html, body { margin: 0; padding: 0 }
+body { font-family: 'Noto Sans','DejaVu Sans',sans-serif; color: #1d2733; font-size: 17px; line-height: 1.42; -webkit-print-color-adjust: exact; print-color-adjust: exact }
+.side { width: 1280px; height: 720px; overflow: hidden; position: relative; page-break-after: always; break-after: page; background: #f6f1e7 }
+.side:last-child { page-break-after: auto; break-after: auto }
+img { display: block; object-fit: cover }
+.full { position: absolute; inset: 0; width: 100%; height: 100% }
+.dekk { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,14,26,.20) 0%, rgba(6,14,26,.25) 40%, rgba(6,14,26,.88) 100%) }
+.forside .tekst { position: absolute; left: 70px; right: 70px; bottom: 58px; color: #fff }
+.merke { letter-spacing: .22em; text-transform: uppercase; font-size: 15px; font-weight: 600; color: #f0c878 }
+.forside h1 { font-size: 112px; line-height: .98; margin: 10px 0 18px; font-weight: 800; letter-spacing: -.02em }
+.forside p { font-size: 24px; max-width: 900px; margin: 0 }
+.piller { display: flex; gap: 10px; margin-top: 24px; flex-wrap: wrap }
+.pille { background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.4); border-radius: 30px; padding: 6px 18px; font-size: 16px }
+
+.delt { display: grid; grid-template-columns: 560px 1fr; height: 100% }
+.delt.snu { grid-template-columns: 1fr 560px }
+.panel { padding: 44px 46px 40px; position: relative }
+.panel .merke, .heltekst .merke { color: #a8742a }
+h2 { font-size: 43px; line-height: 1.05; margin: 8px 0 14px; font-weight: 800; letter-spacing: -.01em; color: #16283c }
+.ingress { font-size: 18.5px; margin: 0 0 14px }
+ul { margin: 0; padding-left: 20px }
+li { margin-bottom: 8px }
+li b, td b { color: #8a5a17 }
+.mosaikk { display: grid; height: 720px; gap: 6px; background: #f6f1e7 }
+.mosaikk img { width: 100%; height: 100%; min-height: 0; min-width: 0 }
+.m3 { grid-template-columns: 1fr 1fr; grid-template-rows: 1.35fr 1fr }
+.m3 img:first-child { grid-column: 1 / 3 }
+.m3h { grid-template-columns: 1fr 1.25fr; grid-template-rows: 1fr 1fr }
+.m3h img:first-child { grid-row: 1 / 3 }
+.m2 { grid-template-rows: 1.3fr 1fr }
+.m4 { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr }
+.dag { display: inline-block; background: #16283c; color: #f0c878; border-radius: 30px; padding: 4px 16px; font-size: 15px; font-weight: 600; margin-bottom: 4px }
+.fakta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px }
+.fakta span { background: #e9dfc9; border-radius: 8px; padding: 6px 12px; font-size: 15px }
+.fakta b { color: #8a5a17 }
+.sitat { position: absolute; left: 46px; right: 46px; bottom: 30px; font-size: 15px; color: #6a6557; border-top: 1px solid #d9cdb3; padding-top: 10px }
+
+.heltekst { padding: 44px 60px }
+.grunner { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px }
+.grunn { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 10px rgba(20,30,50,.10) }
+.grunn img { width: 100%; height: 146px }
+.grunn div { padding: 10px 16px 12px; font-size: 15px; line-height: 1.35 }
+.grunn h3 { margin: 0 0 4px; font-size: 19px; color: #8a5a17 }
+
+.tab { border-collapse: collapse; width: 100%; font-size: 15px; margin-top: 10px }
+.tab th { text-align: left; background: #16283c; color: #f0c878; padding: 6px 12px; font-weight: 600 }
+.tab td { border-bottom: 1px solid #ded3bb; padding: 4.5px 12px; vertical-align: top }
+.tab td:first-child { white-space: nowrap; font-weight: 700; color: #8a5a17 }
+.tab td:nth-child(2) { white-space: nowrap; font-weight: 600 }
+.tab tr.fly td { background: #ece2cc }
+.kost td:nth-child(2) { white-space: normal; font-weight: 400 }
+.kost td:nth-child(n+3) { white-space: nowrap }
+.tre { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 22px }
+.fire { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 16px }
+.kort { background: #fff; border-radius: 14px; padding: 22px 24px; box-shadow: 0 2px 10px rgba(20,30,50,.10); font-size: 17px; line-height: 1.45 }
+.kort h3 { margin: 0 0 6px; font-size: 21px; color: #8a5a17 }
+.kort .tid { font-size: 28px; font-weight: 800; letter-spacing: -.01em; margin: 4px 0 4px; color: #16283c }
+.kort small { color: #6a6557; font-size: 14.5px }
+.kort ul { padding-left: 18px } .kort li { margin-bottom: 5px }
+.rute { display: flex; align-items: center; gap: 14px; margin: 18px 0 4px; font-size: 22px; font-weight: 800; color: #16283c }
+.rute span { background: #16283c; color: #fff; border-radius: 10px; padding: 8px 16px }
+.rute i { font-style: normal; color: #a8742a; font-size: 15px; font-weight: 600 }
+.fot { position: absolute; left: 60px; right: 60px; bottom: 24px; font-size: 13.5px; color: #6a6557 }
+.kr { font-size: 11px; line-height: 1.35; columns: 2; column-gap: 30px; color: #55504a; margin-top: 12px }
+.slutt .tekst { position: absolute; left: 70px; right: 70px; bottom: 64px; color: #fff }
+.slutt h1 { font-size: 76px; line-height: 1; margin: 8px 0 14px; font-weight: 800 }
+.slutt p { font-size: 22px; max-width: 900px; margin: 0 0 8px }
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<style>
+@media screen {
+  html { background: #16130f }
+  body { background: #16130f !important; padding: 56px 0 24px !important }
+  .lysbilde { margin: 0 auto 14px; box-shadow: 0 6px 30px rgba(0,0,0,.45) }
+  #topp { position: fixed; inset: 0 0 auto 0; height: 44px; z-index: 1000; display: flex; align-items: center; gap: 14px;
+    padding: 0 16px; background: rgba(22,19,15,.94); color: #f3ead9; font: 15px/1 system-ui, sans-serif }
+  #topp a { color: #f3ead9; text-decoration: none; padding: 8px 12px; border: 1px solid rgba(243,234,217,.35); border-radius: 999px }
+  #topp a:hover, #topp a:focus-visible { background: rgba(243,234,217,.14) }
+  #topp span { opacity: .75; white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
+}
+@media screen and (max-width: 820px) {
+  body { padding: 44px 0 0 !important; font-size: 16px !important }
+  .lysbilde { width: auto !important; height: auto !important; overflow: visible !important; margin: 0 0 8px !important; box-shadow: none !important }
+  table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch }
+  #topp { font-size: 14px; gap: 10px; padding: 0 10px }
+  #topp a { white-space: nowrap }
+  [style*="grid-template-columns"] { grid-template-columns: 1fr !important }
+  [style*="right:750px"] { right: 12px !important }
+
+  .side.forside, .side.slutt { min-height: min(82vh, 680px); display: flex; align-items: flex-end }
+  .forside .tekst, .slutt .tekst { position: relative; left: auto; right: auto; bottom: auto; padding: 140px 22px 34px }
+  .forside h1 { font-size: clamp(46px, 15vw, 84px) }
+  .slutt h1 { font-size: 42px }
+  .forside p, .slutt p { font-size: 18px }
+  .merke { font-size: 13px }
+  .pille { font-size: 14px; padding: 5px 13px }
+  .delt, .delt.snu { display: flex; flex-direction: column; height: auto }
+  .delt > .mosaikk, .delt > .bilder { order: -1 }
+  .bilder { height: auto }
+  .mosaikk { height: auto; gap: 4px; grid-template-columns: 1fr 1fr !important; grid-template-rows: none !important }
+  .mosaikk img { height: auto; aspect-ratio: 4 / 3; grid-row: auto !important; grid-column: auto }
+  .mosaikk img:first-child, .mosaikk img:last-child:nth-child(even) { grid-column: 1 / -1 !important; aspect-ratio: 16 / 10 }
+  .panel { padding: 22px 20px 26px }
+  .heltekst { padding: 26px 20px 28px }
+  h2 { font-size: 29px }
+  .ingress { font-size: 17px }
+  .sitat, .merk, .fot { position: static; margin-top: 18px }
+  .grunner, .fly2, .to, .stripe, .tre, .fire, .steg { grid-template-columns: 1fr; gap: 12px }
+  .grunn img { height: 46vw }
+  .kr { columns: 1 }
+  .tab { font-size: 13.5px }
+  .tab td, .tab th { padding: 6px 5px }
+  .tab td:first-child, .tab td:nth-child(2) { white-space: normal }
+  .kost td:nth-child(3):not(:last-child), .kost th:nth-child(3):not(:last-child) { display: none }  /* dirham skjules, kroner er det som teller */
+  .rute { flex-wrap: wrap; font-size: 18px; gap: 8px }
+  .kort { padding: 16px 18px }
+  .kort .tid { font-size: 22px }
+}
+@media print { #topp { display: none } }
+</style>
+<script>
+addEventListener('DOMContentLoaded', () => {
+  const sider = [...document.querySelectorAll('body > section, body > .side, body > .forside')];
+  sider.forEach(s => s.classList.add('lysbilde'));
+  const grunn = 1280;
+  const tilpass = () => {
+    const smal = matchMedia('(max-width: 820px)').matches;  // på mobil flyter innholdet fritt i stedet
+    const z = smal ? '' : Math.min(1, document.documentElement.clientWidth / grunn);
+    sider.forEach(s => s.style.zoom = z);
+  };
+  if (!matchMedia('print').matches) { tilpass(); addEventListener('resize', tilpass); }
+  addEventListener('beforeprint', () => sider.forEach(s => s.style.zoom = ''));
+  addEventListener('afterprint', tilpass);
+});
+</script>
+</head><body><nav id="topp"><a href="../">← Alle turene</a><span>Vietnam: Fra Hanoi til Mekong</span></nav>
+
+<!-- 1 -->
+<section class="side forside">
+  <img class="full" src="bilder/forside.jpg" alt="Lan Ha-bukta sett ovenfra">
+  <div class="dekk"></div>
+  <div class="tekst">
+    <div class="merke">Ferieforslag, 7. til 23. oktober 2027</div>
+    <h1>Vietnam</h1>
+    <p>Fra nord til sør: Hanoi, fjellene i Sapa, karstlandskapet i Ninh Binh, en natt på båt i Lan Ha-bukta, Saigon og Mekongdeltaet. Business med EuroBonus-poeng.</p>
+    <div class="piller"><span class="pille">3 reisende</span><span class="pille">17 dager, 14 netter i Vietnam</span><span class="pille">Business via Shanghai</span><span class="pille">Seter funnet 14. november 2026</span></div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="side heltekst">
+  <div class="merke">Hvorfor Vietnam</div>
+  <h2>Seks grunner til å bruke to uker her</h2>
+  <div class="grunner">
+    <div class="grunn"><img loading="lazy" src="bilder/lanha.jpg" alt=""><div><h3>Bukta med to tusen øyer</h3>Kalksteinsøyer rett opp av grønt vann. Vi sover om bord og padler kajakk mellom dem.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/selger.jpg" alt=""><div><h3>Hanoi, tusen år gammel</h3>Trange gater, scootere, innsjøer og templer. En by som lever på fortauet.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/pho.jpg" alt=""><div><h3>Maten</h3>Pho, bun cha og banh mi for 20 til 40 kroner. Blant verdens beste gatekjøkken.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/sapa.jpg" alt=""><div><h3>Fjell og risterrasser</h3>Sapa ligger på 1 500 meter. Fotturer mellom landsbyer og Indokinas høyeste topp.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/trangan.jpg" alt=""><div><h3>Ninh Binh</h3>Robåt gjennom grotter og mellom klipper. «Ha Long på land», med langt færre folk.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/cairang.jpg" alt=""><div><h3>Mekongdeltaet</h3>Flytende marked ved soloppgang, kanaler under kokospalmer og frukt rett fra treet.</div></div>
+  </div>
+  <div class="fot">Trygt, vennlig og veldig rimelig. Oktober er den beste måneden i nord, og regntiden er på hell i sør.</div>
+</section>
+
+<!-- 3 -->
+<section class="side"><div class="delt">
+  <div class="panel">
+    <div class="merke">Flyet</div>
+    <h2>Business via Shanghai</h2>
+    <p class="ingress" style="margin-bottom:6px">China Eastern flyr oss inn til Hanoi i nord og hjem fra Saigon i sør, så vi slipper å reise tilbake.</p>
+    <div class="rute" style="margin-top:10px;gap:9px;font-size:19px;white-space:nowrap"><span>TRD</span><i>2 t 15</i><span>AMS</span><i>11 t</i><span>PVG</span><i>3 t 30</i><span>HAN</span></div>
+    <ul style="margin-top:12px;font-size:16px">
+      <li><b>Ut torsdag 7. oktober:</b> KLM fra Værnes 12:10, Amsterdam 20:15 med MU772, framme i Hanoi fredag 17:45. Fire ledige businessseter.</li>
+      <li><b>Hjem lørdag 23. oktober:</b> Saigon 02:35 med MU282 og MU707, København 19:00. Ni ledige businessseter.</li>
+      <li><b>Poeng for tre: 285 000</b> med kuponger. To reiser på én kupong for 190 000, den tredje på egen kupong for 95 000.</li>
+      <li><b>Tilbringer:</b> KLM Trondheim til Amsterdam har ni ledige i økonomi. København til Trondheim legger SAS ut rundt 330 dager før.</li>
+    </ul>
+    <div class="sitat">Tre etapper hver vei. Vietnam Airlines flyr direkte fra Europa, men koster det dobbelte i poeng (228 000 per vei).</div>
+  </div>
+  <div class="mosaikk m2"><img loading="lazy" src="bilder/mufly.jpg" alt="China Eastern Airbus A350 på Schiphol"><img loading="lazy" src="bilder/pudong.jpg" alt="Shanghai Pudong"></div>
+</div></section>
+
+<!-- 4 -->
+<section class="side heltekst" style="padding-top:34px">
+  <div class="merke">Ruta</div>
+  <h2 style="margin-bottom:4px;font-size:38px">17 dager i ett blikk</h2>
+  <table class="tab" style="font-size:14.5px;margin-top:6px">
+    <tr><th>Dag</th><th>Sted</th><th>Hva skjer</th><th>Natt</th></tr>
+    <tr class="fly"><td>1, tor 7.</td><td>Trondheim til Amsterdam</td><td>KLM 12:10, kveldsfly i business mot Shanghai 20:15</td><td>Fly</td></tr>
+    <tr class="fly"><td>2, fre 8.</td><td>Shanghai til Hanoi</td><td>Bytte i Shanghai, framme 17:45. Første pho i gamlebyen</td><td>Hanoi</td></tr>
+    <tr><td>3, lør 9.</td><td>Hanoi</td><td>Gamlebyen, Hoan Kiem-sjøen, Litteraturtempelet, vanndukketeater</td><td>Hanoi</td></tr>
+    <tr><td>4, søn 10.</td><td>Hanoi</td><td>Ho Chi Minh-mausoleet, togata, matvandring om kvelden</td><td>Hanoi</td></tr>
+    <tr><td>5, man 11.</td><td>Til Sapa</td><td>Buss på motorvei (ca. 6 t), landsbyen Cat Cat på ettermiddagen</td><td>Sapa</td></tr>
+    <tr><td>6, tir 12.</td><td>Sapa</td><td>Fottur i Muong Hoa-dalen med lokal guide, lunsj hos en familie</td><td>Sapa</td></tr>
+    <tr><td>7, ons 13.</td><td>Sapa</td><td>Fansipan med taubane eller en ny fottur, nattog fra Lao Cai</td><td>Nattog</td></tr>
+    <tr><td>8, tor 14.</td><td>Ninh Binh</td><td>Hanoi 05:30, videre to timer sørover. Sykkel, og Hang Mua i solnedgang</td><td>Ninh Binh</td></tr>
+    <tr><td>9, fre 15.</td><td>Ninh Binh</td><td>Robåt i Trang An, Bai Dinh-pagoden og den gamle hovedstaden Hoa Lu</td><td>Ninh Binh</td></tr>
+    <tr><td>10, lør 16.</td><td>Lan Ha-bukta</td><td>Om bord ved lunsjtid. Kajakk, bading og middag på dekk</td><td>Båt</td></tr>
+    <tr><td>11, søn 17.</td><td>Til Saigon</td><td>Soloppgang i bukta, i land kl. 11, fly fra Hai Phong (2 t)</td><td>Saigon</td></tr>
+    <tr><td>12, man 18.</td><td>Saigon</td><td>Rådhuset, postkontoret, krigsmuseet og Ben Thanh-markedet</td><td>Saigon</td></tr>
+    <tr><td>13, tir 19.</td><td>Til Mekong</td><td>Buss til Can Tho (3 t 30), robåt i kanalene, middag hos vertsfamilien</td><td>Mekong</td></tr>
+    <tr><td>14, ons 20.</td><td>Mekong</td><td>Flytende marked ved soloppgang, frukthager og sykkel langs kanalene</td><td>Mekong</td></tr>
+    <tr><td>15, tor 21.</td><td>Saigon</td><td>Tilbake til byen, kinesiske Cholon, gatemat på scooter om kvelden</td><td>Saigon</td></tr>
+    <tr><td>16, fre 22.</td><td>Saigon</td><td>Cu Chi-tunnelene, avskjedsmiddag, til flyplassen kl. 23</td><td>Fly</td></tr>
+    <tr class="fly"><td>17, lør 23.</td><td>Saigon til Trondheim</td><td>Business 02:35 via Shanghai, København 19:00, videre hjem</td><td></td></tr>
+  </table>
+</section>
+
+<!-- 5 -->
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m4"><img loading="lazy" src="bilder/hoankiem.jpg" alt="Skilpaddetårnet i Hoan Kiem"><img loading="lazy" src="bilder/gamleby.jpg" alt="Gamlebyen"><img loading="lazy" src="bilder/litteratur.jpg" alt="Litteraturtempelet"><img loading="lazy" src="bilder/togate.jpg" alt="Togata"></div>
+  <div class="panel">
+    <span class="dag">Dag 2 til 4</span>
+    <h2>Hanoi: innsjøer, smug og suppe</h2>
+    <p class="ingress">Vi lander fredag kveld og har to hele dager. Helgen er best, da er gatene rundt sjøen stengt for trafikk.</p>
+    <ul>
+      <li><b>Gamlebyen:</b> 36 gater som hver hadde sitt håndverk. Gå uten plan, og sett dere på en plastkrakk.</li>
+      <li><b>Hoan Kiem-sjøen</b> med Skilpaddetårnet og den røde broen til Ngoc Son-tempelet.</li>
+      <li><b>Litteraturtempelet</b> fra 1070, landets første universitet.</li>
+      <li><b>Ho Chi Minh-mausoleet</b> og huset på påler der han bodde. Åpent om formiddagen.</li>
+      <li><b>Togata</b> med kaffe en halv meter fra skinnene, og <b>vanndukketeater</b> ved sjøen om kvelden.</li>
+    </ul>
+    <div class="fakta"><span><b>Bo:</b> i gamlebyen, alt i gangavstand</span><span><b>Flyplassen:</b> 45 min</span></div>
+  </div>
+</div></section>
+
+<!-- 6 -->
+<section class="side"><div class="delt">
+  <div class="panel">
+    <span class="dag">Dag 5 til 7</span>
+    <h2>Sapa: fjell, terrasser og nattog</h2>
+    <p class="ingress">Helt nord mot Kina ligger Sapa på 1 500 meter, med kjølig luft og dype daler.</p>
+    <ul>
+      <li><b>Muong Hoa-dalen:</b> dagstur til fots mellom landsbyene Lao Chai og Ta Van med guide fra hmongfolket. Lunsj hjemme hos en familie.</li>
+      <li><b>Cat Cat:</b> landsby med foss og vannhjul, en kort tur fra sentrum.</li>
+      <li><b>Fansipan, 3 143 meter:</b> Indokinas høyeste topp. Taubanen tar 15 minutter, og på klare dager ligger skyene under oss.</li>
+      <li><b>Nattoget:</b> sovekupé med fire køyer fra Lao Cai kl. 21:30. Vi våkner i Hanoi og sparer en hotellnatt.</li>
+    </ul>
+    <div class="fakta"><span><b>Vær:</b> 13 til 20 grader, ta med jakke</span><span><b>Risen:</b> høstes tidlig i oktober</span></div>
+    <div class="sitat">Midt i oktober er det meste av risen høstet. Terrassene er brune og gylne, og sikten er på sitt beste.</div>
+  </div>
+  <div class="mosaikk m4"><img loading="lazy" src="bilder/sapa2.jpg" alt="Risterrasser ved Sapa"><img loading="lazy" src="bilder/hmong.jpg" alt="Hmongkvinner i Sapa"><img loading="lazy" src="bilder/fansipan.jpg" alt="Toppen av Fansipan"><img loading="lazy" src="bilder/nattog.jpg" alt="Nattoget til Lao Cai"></div>
+</div></section>
+
+<!-- 7 -->
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m3"><img loading="lazy" src="bilder/trangan2.jpg" alt="Trang An"><img loading="lazy" src="bilder/hangmua.jpg" alt="Utsikt fra Hang Mua"><img loading="lazy" src="bilder/baidinh.jpg" alt="Bai Dinh-pagoden"></div>
+  <div class="panel">
+    <span class="dag">Dag 8 og 9</span>
+    <h2>Ninh Binh: klipper, grotter og robåt</h2>
+    <p class="ingress">To timer sør for Hanoi reiser kalksteinsklippene seg rett opp av rismarkene. Stille og grønt.</p>
+    <ul>
+      <li><b>Trang An:</b> tre timer i robåt gjennom lave grotter og forbi templer. På UNESCOs verdensarvliste.</li>
+      <li><b>Hang Mua:</b> 500 trappetrinn opp til dragen på toppen, med utsikt over hele dalen. Best i solnedgang.</li>
+      <li><b>Sykkel</b> på flate småveier til Bich Dong-pagoden, bygd inn i fjellet i tre etasjer.</li>
+      <li><b>Hoa Lu:</b> hovedstaden for tusen år siden, med to små kongetempler.</li>
+      <li><b>Bai Dinh:</b> landets største pagodeanlegg, med 500 steinmunker langs veggene.</li>
+    </ul>
+    <div class="fakta"><span><b>Bo:</b> bungalow blant klippene i Tam Coc</span><span><b>Sykkel:</b> følger ofte med rommet</span></div>
+  </div>
+</div></section>
+
+<!-- 8 -->
+<section class="side"><div class="delt">
+  <div class="panel">
+    <span class="dag">Dag 10 og 11</span>
+    <h2>En natt på båt i Lan Ha-bukta</h2>
+    <p class="ingress">Lan Ha er den roligere sørlige delen av Ha Long-bukta. Samme landskap, en brøkdel av båtene.</p>
+    <ul>
+      <li><b>Om bord ved lunsjtid</b> fra Hai Phong. Egen lugar med vindu mot øyene.</li>
+      <li><b>Kajakk</b> gjennom buer i fjellet og inn i stille laguner. Bading fra båten.</li>
+      <li><b>Middag på dekk</b> mens sola går ned, og blekksprutfiske for de som vil.</li>
+      <li><b>Morgenen etter:</b> tai chi i soloppgang, en grotte eller en fiskerlandsby, og brunsj før vi går i land kl. 11.</li>
+    </ul>
+    <div class="fakta"><span><b>Alt inkludert:</b> lugar, måltider, kajakk</span><span><b>Sjøen:</b> ca. 26 grader</span></div>
+    <div class="sitat">Oktober er slutten på tyfonsesongen. Havnesjefen kan en sjelden gang holde båtene i land en dag, så cruiset bestilles med gratis ombooking.</div>
+  </div>
+  <div class="mosaikk m3"><img loading="lazy" src="bilder/lanha2.jpg" alt="Lan Ha-bukta"><img loading="lazy" src="bilder/kajakk.jpg" alt="Kajakk i bukta"><img loading="lazy" src="bilder/djunke.jpg" alt="Djunke i Ha Long-bukta"></div>
+</div></section>
+
+<!-- 9 -->
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m4"><img loading="lazy" src="bilder/radhus.jpg" alt="Rådhuset"><img loading="lazy" src="bilder/post.jpg" alt="Postkontoret"><img loading="lazy" src="bilder/notredame.jpg" alt="Notre-Dame-basilikaen"><img loading="lazy" src="bilder/benthanh.jpg" alt="Ben Thanh-markedet"></div>
+  <div class="panel">
+    <span class="dag">Dag 11 og 12</span>
+    <h2>Saigon: fransk arv og full fart</h2>
+    <p class="ingress">Ho Chi Minh-byen heter den offisielt, Saigon sier alle. Ti millioner mennesker og nesten like mange scootere.</p>
+    <ul>
+      <li><b>Kolonibyen:</b> rådhuset, operaen, Notre-Dame-basilikaen og postkontoret, alt innenfor en kort spasertur.</li>
+      <li><b>Krigsmuseet:</b> Vietnamkrigen sett fra den andre siden. Sterkt, og verdt to timer.</li>
+      <li><b>Gjenforeningspalasset</b> står som i 1975, med kartrom og bunkers i kjelleren.</li>
+      <li><b>Ben Thanh-markedet:</b> kaffe, krydder og suvenirer. Prut til halv pris.</li>
+      <li><b>Kvelden:</b> takbar med utsikt, eller øl på krakk i Bui Vien.</li>
+    </ul>
+    <div class="fakta"><span><b>Bo:</b> Distrikt 1, gangavstand til alt</span><span><b>Vær:</b> 24 til 32 grader, byger på ettermiddagen</span></div>
+  </div>
+</div></section>
+
+<!-- 10 -->
+<section class="side"><div class="delt">
+  <div class="panel">
+    <span class="dag">Dag 13 og 14</span>
+    <h2>Mekongdeltaet</h2>
+    <p class="ingress">Elva deler seg i ni armer før havet. Her går livet på vannet, og oktober er flomtid med grønne marker og full elv.</p>
+    <ul>
+      <li><b>Cai Rang:</b> flytende marked utenfor Can Tho. Vi drar ut kl. 05:30 og spiser nudelsuppe fra en båt.</li>
+      <li><b>Kanalene:</b> robåt under vannpalmer, inn til frukthager, kakaogårder og et risnudelverksted.</li>
+      <li><b>Sykkel</b> på smale stier mellom husene, over bruer av bambus.</li>
+      <li><b>Bo hos en familie:</b> enkle bungalower i hagen, hengekøye og hjemmelaget middag.</li>
+    </ul>
+    <div class="fakta"><span><b>Buss fra Saigon:</b> 3 t 30</span><span><b>Frukt i sesong:</b> pomelo, drageøye, rambutan</span></div>
+    <div class="sitat">Vil dere ha kortere vei? Ben Tre ligger to timer fra Saigon og har de samme kanalene, men ikke det store markedet.</div>
+  </div>
+  <div class="mosaikk m3"><img loading="lazy" src="bilder/cairang2.jpg" alt="Cai Rang flytende marked"><img loading="lazy" src="bilder/kanal.jpg" alt="Robåt i en kanal"><img loading="lazy" src="bilder/cairang.jpg" alt="Handel fra båt"></div>
+</div></section>
+
+<!-- 11 -->
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m4"><img loading="lazy" src="bilder/saigon.jpg" alt="Saigon om kvelden"><img loading="lazy" src="bilder/scooter.jpg" alt="Scootere i Saigon"><img loading="lazy" src="bilder/cuchi.jpg" alt="Cu Chi"><img loading="lazy" src="bilder/krigsmuseum.jpg" alt="Krigsmuseet"></div>
+  <div class="panel">
+    <span class="dag">Dag 15 og 16</span>
+    <h2>Siste dager: Cholon og Cu Chi</h2>
+    <p class="ingress">Halvannen dag til i Saigon før nattflyet hjem.</p>
+    <ul>
+      <li><b>Cholon:</b> den kinesiske bydelen med Thien Hau-pagoden, røkelsesspiraler i taket og Binh Tay-markedet.</li>
+      <li><b>Gatemat på scooter:</b> studenter kjører oss bakpå fra bod til bod i fire timer. Mange kaller det turens beste kveld.</li>
+      <li><b>Cu Chi-tunnelene:</b> 250 kilometer med ganger der geriljaen levde under jorda. Halvdagstur, og vi kan krype gjennom en bit.</li>
+      <li><b>Avskjedsmiddag</b> og en siste iskaffe. Rommet beholder vi til kl. 22.</li>
+      <li><b>Flyplassen</b> ligger 25 minutter fra sentrum. Avgang 02:35, flat seng til Shanghai.</li>
+    </ul>
+    <div class="fakta"><span><b>Shopping:</b> skreddersøm på to dager, kaffe, lakkarbeid</span></div>
+  </div>
+</div></section>
+
+<!-- 12 -->
+<section class="side"><div class="delt">
+  <div class="panel">
+    <div class="merke">Maten</div>
+    <h2>Spis på gata</h2>
+    <p class="ingress">Ferske urter, lime og chili til alt. De beste stedene har én rett og lave plastkrakker.</p>
+    <ul>
+      <li><b>Pho:</b> nudelsuppe med okse eller kylling, kokt på kraft i tolv timer. Frokost i nord.</li>
+      <li><b>Bun cha:</b> grillet svin i søt og sur saus med risnudler. Hanois lunsj.</li>
+      <li><b>Banh mi:</b> sprø baguett med paté, svin, koriander og syltede grønnsaker.</li>
+      <li><b>Ferske vårruller</b> med reker og peanøttsaus, og sprø pannekake, banh xeo, i sør.</li>
+      <li><b>Kaffe:</b> eggekaffe i Hanoi, iskaffe med søt melk i Saigon. Vietnam er verdens nest største kaffeprodusent.</li>
+      <li><b>Bia hoi:</b> ferskt fatøl for fem kroner glasset.</li>
+    </ul>
+    <div class="fakta"><span><b>Et måltid på gata:</b> 20 til 40 kr</span><span><b>Restaurant:</b> 60 til 120 kr</span></div>
+  </div>
+  <div class="mosaikk m4"><img loading="lazy" src="bilder/buncha.jpg" alt="Bun cha"><img loading="lazy" src="bilder/banhmi.jpg" alt="Banh mi"><img loading="lazy" src="bilder/varruller.jpg" alt="Ferske vårruller"><img loading="lazy" src="bilder/eggekaffe.jpg" alt="Eggekaffe"></div>
+</div></section>
+
+<!-- 13 -->
+<section class="side heltekst">
+  <div class="merke">Været</div>
+  <h2>Oktober: derfor går ruta i nord og sør</h2>
+  <div class="tre">
+    <div class="kort"><h3>Nord</h3><div class="tid">Beste måned</div>Hanoi og Ninh Binh har 22 til 29 grader, lite regn og klar luft. Sapa er kjølig og klar. Lan Ha-bukta har badetemperatur.</div>
+    <div class="kort"><h3>Midten</h3><div class="tid">Flomtid</div>Hue, Da Nang og Hoi An får mest regn i året i oktober og november, og gamlebyen i Hoi An står ofte under vann. Derfor hopper vi over.</div>
+    <div class="kort"><h3>Sør</h3><div class="tid">Regntiden på hell</div>Saigon og Mekong har 24 til 32 grader og en kraftig byge de fleste ettermiddager. Den varer en time, og resten av dagen er fin.</div>
+  </div>
+  <div class="tre">
+    <div class="kort"><h3>Vil dere ha strand?</h3>Bytt Sapa med tre netter på Phu Quoc til slutt. Tørketiden der starter i november, så sist i oktober er det fortsatt en del byger.</div>
+    <div class="kort"><h3>Vil dere ha Hoi An likevel?</h3>Bytt Sapa med tre netter der, og fly fra Hai Phong via Da Nang. Fint mellom bygene, men regn må vi regne med.</div>
+    <div class="kort"><h3>Roligere tempo?</h3>Dropp nattoget og Sapa, og legg en ekstra natt i Hanoi, Ninh Binh og på båten. Da blir det fem stopp i stedet for seks.</div>
+  </div>
+  <div class="fot">Tyfoner kan treffe kysten i nord til ut i oktober. De varsles flere dager i forveien, og ruta kan snus slik at bukta tas en annen dag.</div>
+</section>
+
+<!-- 14 -->
+<section class="side heltekst">
+  <div class="merke">Praktisk</div>
+  <h2>Greit å vite</h2>
+  <div class="tre">
+    <div class="kort"><h3>Innreise</h3><div class="tid">Visumfritt i 45 dager</div>Norske pass trenger ikke visum for opphold inntil 45 dager. Ordningen gjelder ut 14. mars 2028. Passet må være gyldig seks måneder etter innreise.</div>
+    <div class="kort"><h3>Shanghai</h3><div class="tid">Bytte i transitt</div>Vi bytter fly i Shanghai begge veier uten å hente bagasjen. Har vi lang ventetid, kan norske pass gå ut i byen uten visum på transittordningen.</div>
+    <div class="kort"><h3>Tid og penger</h3><div class="tid">Fem timer foran</div>Valutaen er dong. 100 000 dong er rundt 37 kroner. Minibanker overalt, kort på hotell, kontanter på gata.</div>
+  </div>
+  <div class="tre">
+    <div class="kort"><h3>Komme seg rundt</h3>Appen Grab gir taxi og scooter til fast pris. Mellom byene går det komfortable minibusser med liggeseter, og innenriksfly koster lite.</div>
+    <div class="kort"><h3>Helse</h3>Sjekk at hepatitt A og stivkrampe er i orden. Drikk flaskevann. Malaria er ikke et tema på denne ruta, men myggmiddel trengs i Mekong.</div>
+    <div class="kort"><h3>Bestill tidlig</h3>Flysetene først. Deretter cruiset i Lan Ha-bukta, nattoget og innenriksflyet. Hotell kan bestilles med gratis avbestilling.</div>
+  </div>
+  <div class="fot">Visumregler, rutetider og åpningstider sjekkes på nytt før bestilling.</div>
+</section>
+
+<!-- kostnad -->
+<section class="side heltekst">
+  <div class="merke">Hva koster det</div>
+  <h2 style="margin-bottom:6px">Billigste totalpris for tre</h2>
+  <table class="tab kost">
+    <tr><th>Post</th><th>Slik holder vi det nede</th><th style="text-align:right">Kroner</th></tr>
+    <tr class="fly"><td>Fly, business</td><td>285 000 poeng med to kuponger. Avgifter anslått til 2 500 kr per person</td><td style="text-align:right"><b>7 500</b></td></tr>
+    <tr class="fly"><td>Tilbringer</td><td>Trondheim til Amsterdam og København til Trondheim, kjøpt som vanlige billetter. Faller bort hvis SAS legger dem på samme poengbillett</td><td style="text-align:right"><b>7 500</b></td></tr>
+    <tr><td>Hotell</td><td>8 netter i Hanoi, Ninh Binh og Saigon. Ett familierom med frokost, 430 til 480 kr per natt, og sen utsjekk siste dag</td><td style="text-align:right"><b>3 900</b></td></tr>
+    <tr><td>Sapa</td><td>Buss opp, 2 netter på familierom og nattog ned i firemannskupé</td><td style="text-align:right"><b>2 300</b></td></tr>
+    <tr><td>Lan Ha-bukta</td><td>Cruise med én natt, lugar for tre, alle måltider og kajakk, 1 240 kr per person</td><td style="text-align:right"><b>3 700</b></td></tr>
+    <tr><td>Innenriksfly</td><td>Hai Phong til Saigon med bagasje, 670 kr per person</td><td style="text-align:right"><b>2 000</b></td></tr>
+    <tr><td>Mekong</td><td>Buss tur og retur, 2 netter hos familie med middag, båt til markedet og kanalene</td><td style="text-align:right"><b>2 300</b></td></tr>
+    <tr><td>Transport ellers</td><td>Flyplasstaxi, Grab i byene, minibuss Hanoi til Ninh Binh og videre til kaia</td><td style="text-align:right"><b>1 400</b></td></tr>
+    <tr><td>Inngang og guider</td><td>Trang An, Hang Mua, templer og museer, fotturguide i Sapa, vanndukker og Cu Chi, 860 kr per person</td><td style="text-align:right"><b>2 600</b></td></tr>
+    <tr><td>Mat</td><td>Gatekjøkken og enkle restauranter, 145 kr per person per dag i 15 dager</td><td style="text-align:right"><b>6 500</b></td></tr>
+    <tr class="fly"><td>Sum for tre</td><td>Rundt 13 200 kr per person, pluss 285 000 poeng</td><td style="text-align:right"><b style="font-size:19px">39 700</b></td></tr>
+  </table>
+  <div class="tre" style="margin-top:14px">
+    <div class="kort" style="padding:12px 20px;font-size:15px"><h3 style="font-size:18px">Ikke med i summen</h3>Taubanen til Fansipan (ca. 320 kr per person), gatemat på scooter (ca. 350 kr), shopping og reiseforsikring.</div>
+    <div class="kort" style="padding:12px 20px;font-size:15px"><h3 style="font-size:18px">Vil dere bo bedre?</h3>Fire stjerner hele veien og et bedre cruise legger rundt 12 000 til 18 000 kr på summen for tre.</div>
+    <div class="kort" style="padding:12px 20px;font-size:15px"><h3 style="font-size:18px">Kurs</h3>Norges Bank 13. november 2026: én dollar er 9,56 kr. Prisene i Vietnam er regnet fra dollar.</div>
+  </div>
+  <div class="fot">Alle beløp er anslag, ikke hentede priser. Flyavgiftene og tilbringerne er de mest usikre postene og sjekkes ved bestilling.</div>
+</section>
+
+<!-- bilder -->
+<section class="side heltekst">
+  <div class="merke">Bilder</div>
+  <h2 style="font-size:30px">Bildekreditt</h2>
+  <div style="font-size:14px">Alle bilder er hentet fra Wikimedia Commons. Filnavn, fotograf og lisens:</div>
+  <div class="kr"><div>Lan Ha Bay-Cat Ba Vietnam-Andres Larin.jpg, Saaremees, CC BY-SA 4.0</div><div>Lan Ha bay panorama ter.jpg, Velvet, CC BY-SA 4.0</div><div>View of Lan Ha Bay.jpg, Christophe95, CC BY-SA 4.0</div><div>Halong Bay junk.jpg, aschaf, CC BY 2.0</div><div>Kayaking in Ha Long Bay 2.jpg, Christophe95, CC BY-SA 4.0</div><div>Ha Long Bay Sunset, Vietnam.jpg, Mustang Joe, CC0</div><div>Hanoi - Turtle Tower (Tháp Rùa), Hoàn Kiếm Lake.jpg, P. Hughes, CC BY 4.0</div><div>Old Quarter street scene, Hanoi (1) (38464672752).jpg, Richard Mortel from Riyadh, Saudi Arabia, CC BY 2.0</div><div>Street seller of fingered citrons in Old Town of Hanoi, 20240204 1335 5772.jpg, Jakub Hałun, CC BY 4.0</div><div>Main gate of the Temple of Literature, Hanoi, Vietnam, 20240123 0929 3068.jpg, Jakub Hałun, CC BY 4.0</div><div>Hanoi Train Street (51955804948).jpg, Radek Kucharski from Warsaw, Poland, CC BY 2.0</div><div>Rice terraces in Sapa, Vietnam.jpg, Eerin25, CC0</div><div>Ray over terrace rice field in Sapa - Trung Chải..jpg, Phi Phi Hoang, CC BY 2.0</div><div>Hmong women in Sa Pa.jpg, Ekrem Canli, CC BY-SA 3.0</div><div>Fansipan Summit 3143m aerial wide temple complex sea of clouds Sa Pa Vietnam.jpg, Vivu Vietnam, CC BY-SA 4.0</div><div>VIETNAMESE RAILWAYS TULICO TOURIST CAR NIGHT SLEEPER TRAIN HANOI B STATION TO LAO CAI NORTHERN VIETNAM FEB 2012 (6869485364).jpg, calflier001, CC BY-SA 2.0</div><div>Trang An Landscape Complex, Ninh Binh Province, Vietnam, 20240202 1456 5313.jpg, Jakub Hałun, CC BY 4.0</div><div>Trang An Landscape Complex, Ninh Binh Province, Vietnam, 20240202 1447 5310.jpg, Jakub Hałun, CC BY 4.0</div><div>View from Hang Mua.jpg, Shyamal, CC BY-SA 4.0</div><div>Bai Dinh Pagoda (36519413585).jpg, Felix Nagel (using Albums) from germany, CC BY 2.0</div><div>Ho Chi Minh City Skyline (night).jpg, Jim 陳, CC BY-SA 2.0</div><div>Ho Chi Minh City, City Hall, 2020-01 CN-02.jpg, Steffen Schmitz (more photos), CC BY-SA 4.0</div><div>Basilica of Our Lady Immaculate.jpg, Maksim Sokolov (maxergon.com), CC BY-SA 4.0</div><div>Saigon Central Post Office 20190922.jpg, Suicasmo, CC BY-SA 4.0</div><div>Ben Thanh, Ciudad Ho Chi Minh, Vietnam, 2013-08-14, DD 01.JPG, Diego Delso, CC BY-SA 3.0</div><div>Ho Chi Minh City, Vietnam, Street traffic.jpg, Vyacheslav Argenberg, CC BY 4.0</div><div>Cai Rang Floating Market 1.jpg, Christophe95, CC BY-SA 4.0</div><div>Cai Rang Floating Market 5.jpg, Christophe95, CC BY-SA 4.0</div><div>Misshap on the Mekong (15881249338).jpg, Jim Bendon from Karratha, Australia, CC BY-SA 2.0</div><div>Cu Chi Tunnels Vietnam war.jpg, Andre Hospers, CC BY-SA 4.0</div><div>War Remnants Museum, HCMC, front.JPG, Prenn, CC BY-SA 3.0</div><div>Phở bò, Cầu Giấy, Hà Nội.jpg, Codename5281, CC BY-SA 3.0</div><div>Special Baguette (Bánh mì) - Banh Mi Ancient Saigon 2024-12-20.jpg, Andy Li, CC0</div><div>Bun-cha-hanoi.jpg, Valentin Orange, CC BY-SA 4.0</div><div>Summer rolls with peanut sauce.jpg, Zoe Shuttleworth, CC BY 2.0</div><div>Egg Coffee at Cafe Giảng, Hà Nội, Vietnam.jpg, travel oriented from Manila, Philippines, CC BY-SA 2.0</div><div>China Eastern Airlines Airbus A350-900 B-306Y at Schiphol 24-11-2022 (2).jpg, Robbie Klinkenberg, CC BY-SA 4.0</div><div>Terminal 1 Departures, Shanghai Pudong International Airport.jpg, Wyanhache, CC BY-SA 4.0</div></div>
+</section>
+
+<!-- slutt -->
+<section class="side forside slutt">
+  <img loading="lazy" class="full" src="bilder/slutt.jpg" alt="Solnedgang over Ha Long-bukta">
+  <div class="dekk"></div>
+  <div class="tekst">
+    <div class="merke">Neste steg</div>
+    <h1>Skal vi ta setene?</h1>
+    <p>Fire businessseter ut 7. oktober og ni hjem 23. oktober lå ledige 14. november 2026. Bestilles hos SAS med to kuponger, og tilbringeren fra Trondheim legges på samtidig.</p>
+    <p>Reserve: ut 5., 12., 13. eller 14. oktober, hjem 25. oktober.</p>
+  </div>
+</section>
+</body></html>

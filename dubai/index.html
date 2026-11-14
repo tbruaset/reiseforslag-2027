@@ -115,7 +115,7 @@ li b, td b { color: #8a5a17 }
   .tab { font-size: 13.5px }
   .tab td, .tab th { padding: 6px 5px }
   .tab td:first-child, .tab td:nth-child(2) { white-space: normal }
-  .kost td:nth-child(3), .kost th:nth-child(3) { display: none }  /* dirham skjules, kroner er det som teller */
+  .kost td:nth-child(3):not(:last-child), .kost th:nth-child(3):not(:last-child) { display: none }  /* dirham skjules, kroner er det som teller */
   .rute { flex-wrap: wrap; font-size: 18px; gap: 8px }
   .kort { padding: 16px 18px }
   .kort .tid { font-size: 22px }
