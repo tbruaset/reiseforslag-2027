@@ -1,0 +1,411 @@
+<!doctype html><html lang="nb"><head><meta charset="utf-8"><title>Egypt, 14 dager</title><style>
+@page { size: 1280px 720px; margin: 0 }
+* { box-sizing: border-box }
+html, body { margin: 0; padding: 0 }
+body { font-family: 'Noto Sans','DejaVu Sans',sans-serif; color: #1d2733; font-size: 17px; line-height: 1.42; -webkit-print-color-adjust: exact; print-color-adjust: exact }
+.side { width: 1280px; height: 720px; overflow: hidden; position: relative; page-break-after: always; break-after: page; background: #f6f1e7 }
+.side:last-child { page-break-after: auto; break-after: auto }
+img { display: block; object-fit: cover }
+.full { position: absolute; inset: 0; width: 100%; height: 100% }
+.dekk { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,14,26,.20) 0%, rgba(6,14,26,.25) 40%, rgba(6,14,26,.88) 100%) }
+.forside .tekst { position: absolute; left: 70px; right: 70px; bottom: 58px; color: #fff }
+.merke { letter-spacing: .22em; text-transform: uppercase; font-size: 15px; font-weight: 600; color: #f0c878 }
+.forside h1 { font-size: 112px; line-height: .98; margin: 10px 0 18px; font-weight: 800; letter-spacing: -.02em }
+.forside p { font-size: 24px; max-width: 900px; margin: 0 }
+.piller { display: flex; gap: 10px; margin-top: 24px; flex-wrap: wrap }
+.pille { background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.4); border-radius: 30px; padding: 6px 18px; font-size: 16px }
+
+.delt { display: grid; grid-template-columns: 560px 1fr; height: 100% }
+.delt.snu { grid-template-columns: 1fr 560px }
+.panel { padding: 44px 46px 40px; position: relative }
+.panel .merke, .heltekst .merke { color: #a8742a }
+h2 { font-size: 43px; line-height: 1.05; margin: 8px 0 14px; font-weight: 800; letter-spacing: -.01em; color: #16283c }
+.ingress { font-size: 18.5px; margin: 0 0 14px }
+ul { margin: 0; padding-left: 20px }
+li { margin-bottom: 8px }
+li b, td b { color: #8a5a17 }
+.mosaikk { display: grid; height: 720px; gap: 6px; background: #f6f1e7 }
+.mosaikk img { width: 100%; height: 100%; min-height: 0; min-width: 0 }
+.m3 { grid-template-columns: 1fr 1fr; grid-template-rows: 1.35fr 1fr }
+.m3 img:first-child { grid-column: 1 / 3 }
+.m3h { grid-template-columns: 1fr 1.25fr; grid-template-rows: 1fr 1fr }
+.m3h img:first-child { grid-row: 1 / 3 }
+.m2 { grid-template-rows: 1.3fr 1fr }
+.m4 { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr }
+.dag { display: inline-block; background: #16283c; color: #f0c878; border-radius: 30px; padding: 4px 16px; font-size: 15px; font-weight: 600; margin-bottom: 4px }
+.fakta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px }
+.fakta span { background: #e9dfc9; border-radius: 8px; padding: 6px 12px; font-size: 15px }
+.fakta b { color: #8a5a17 }
+.sitat { position: absolute; left: 46px; right: 46px; bottom: 30px; font-size: 15px; color: #6a6557; border-top: 1px solid #d9cdb3; padding-top: 10px }
+
+.heltekst { padding: 44px 60px }
+.grunner { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px }
+.grunn { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 10px rgba(20,30,50,.10) }
+.grunn img { width: 100%; height: 146px }
+.grunn div { padding: 10px 16px 12px; font-size: 15px; line-height: 1.35 }
+.grunn h3 { margin: 0 0 4px; font-size: 19px; color: #8a5a17 }
+
+.tab { border-collapse: collapse; width: 100%; font-size: 15px; margin-top: 10px }
+.tab th { text-align: left; background: #16283c; color: #f0c878; padding: 6px 12px; font-weight: 600 }
+.tab td { border-bottom: 1px solid #ded3bb; padding: 4.5px 12px; vertical-align: top }
+.tab td:first-child { white-space: nowrap; font-weight: 700; color: #8a5a17 }
+.tab td:nth-child(2) { white-space: nowrap; font-weight: 600 }
+.tab tr.fly td { background: #ece2cc }
+.kost td:nth-child(2) { white-space: normal; font-weight: 400 }
+.kost td:nth-child(n+3) { white-space: nowrap }
+.tre { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 22px }
+.fire { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 16px }
+.kort { background: #fff; border-radius: 14px; padding: 22px 24px; box-shadow: 0 2px 10px rgba(20,30,50,.10); font-size: 17px; line-height: 1.45 }
+.kort h3 { margin: 0 0 6px; font-size: 21px; color: #8a5a17 }
+.kort .tid { font-size: 28px; font-weight: 800; letter-spacing: -.01em; margin: 4px 0 4px; color: #16283c }
+.kort small { color: #6a6557; font-size: 14.5px }
+.kort ul { padding-left: 18px } .kort li { margin-bottom: 5px }
+.rute { display: flex; align-items: center; gap: 14px; margin: 18px 0 4px; font-size: 22px; font-weight: 800; color: #16283c }
+.rute span { background: #16283c; color: #fff; border-radius: 10px; padding: 8px 16px }
+.rute i { font-style: normal; color: #a8742a; font-size: 15px; font-weight: 600 }
+.fot { position: absolute; left: 60px; right: 60px; bottom: 24px; font-size: 13.5px; color: #6a6557 }
+.kr { font-size: 11px; line-height: 1.35; columns: 2; column-gap: 30px; color: #55504a; margin-top: 12px }
+.slutt .tekst { position: absolute; left: 70px; right: 70px; bottom: 64px; color: #fff }
+.slutt h1 { font-size: 76px; line-height: 1; margin: 8px 0 14px; font-weight: 800 }
+.slutt p { font-size: 22px; max-width: 900px; margin: 0 0 8px }
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<style>
+@media screen {
+  html { background: #16130f }
+  body { background: #16130f !important; padding: 56px 0 24px !important }
+  .lysbilde { margin: 0 auto 14px; box-shadow: 0 6px 30px rgba(0,0,0,.45) }
+  #topp { position: fixed; inset: 0 0 auto 0; height: 44px; z-index: 1000; display: flex; align-items: center; gap: 14px;
+    padding: 0 16px; background: rgba(22,19,15,.94); color: #f3ead9; font: 15px/1 system-ui, sans-serif }
+  #topp a { color: #f3ead9; text-decoration: none; padding: 8px 12px; border: 1px solid rgba(243,234,217,.35); border-radius: 999px }
+  #topp a:hover, #topp a:focus-visible { background: rgba(243,234,217,.14) }
+  #topp span { opacity: .75; white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
+}
+@media screen and (max-width: 820px) {
+  body { padding: 44px 0 0 !important; font-size: 16px !important }
+  .lysbilde { width: auto !important; height: auto !important; overflow: visible !important; margin: 0 0 8px !important; box-shadow: none !important }
+  table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch }
+  #topp { font-size: 14px; gap: 10px; padding: 0 10px }
+  #topp a { white-space: nowrap }
+  [style*="grid-template-columns"] { grid-template-columns: 1fr !important }
+  [style*="right:750px"] { right: 12px !important }
+
+  .side.forside, .side.slutt { min-height: min(82vh, 680px); display: flex; align-items: flex-end }
+  .forside .tekst, .slutt .tekst { position: relative; left: auto; right: auto; bottom: auto; padding: 140px 22px 34px }
+  .forside h1 { font-size: clamp(46px, 15vw, 84px) }
+  .slutt h1 { font-size: 42px }
+  .forside p, .slutt p { font-size: 18px }
+  .merke { font-size: 13px }
+  .pille { font-size: 14px; padding: 5px 13px }
+  .delt, .delt.snu { display: flex; flex-direction: column; height: auto }
+  .delt > .mosaikk, .delt > .bilder { order: -1 }
+  .bilder { height: auto }
+  .mosaikk { height: auto; gap: 4px; grid-template-columns: 1fr 1fr !important; grid-template-rows: none !important }
+  .mosaikk img { height: auto; aspect-ratio: 4 / 3; grid-row: auto !important; grid-column: auto }
+  .mosaikk img:first-child, .mosaikk img:last-child:nth-child(even) { grid-column: 1 / -1 !important; aspect-ratio: 16 / 10 }
+  .panel { padding: 22px 20px 26px }
+  .heltekst { padding: 26px 20px 28px }
+  h2 { font-size: 29px }
+  .ingress { font-size: 17px }
+  .sitat, .merk, .fot { position: static; margin-top: 18px }
+  .grunner, .fly2, .to, .stripe, .tre, .fire, .steg { grid-template-columns: 1fr; gap: 12px }
+  .grunn img { height: 46vw }
+  .kr { columns: 1 }
+  .tab { font-size: 13.5px }
+  .tab td, .tab th { padding: 6px 5px }
+  .tab td:first-child, .tab td:nth-child(2) { white-space: normal }
+  .kost td:nth-child(3):not(:last-child), .kost th:nth-child(3):not(:last-child) { display: none }  /* dirham skjules, kroner er det som teller */
+  .rute { flex-wrap: wrap; font-size: 18px; gap: 8px }
+  .kort { padding: 16px 18px }
+  .kort .tid { font-size: 22px }
+}
+@media print { #topp { display: none } }
+</style>
+<script>
+addEventListener('DOMContentLoaded', () => {
+  const sider = [...document.querySelectorAll('body > section, body > .side, body > .forside')];
+  sider.forEach(s => s.classList.add('lysbilde'));
+  const grunn = 1280;
+  const tilpass = () => {
+    const smal = matchMedia('(max-width: 820px)').matches;  // på mobil flyter innholdet fritt i stedet
+    const z = smal ? '' : Math.min(1, document.documentElement.clientWidth / grunn);
+    sider.forEach(s => s.style.zoom = z);
+  };
+  if (!matchMedia('print').matches) { tilpass(); addEventListener('resize', tilpass); }
+  addEventListener('beforeprint', () => sider.forEach(s => s.style.zoom = ''));
+  addEventListener('afterprint', tilpass);
+});
+</script>
+</head><body><nav id="topp"><a href="../">← Alle turene</a><span>Egypt: Pyramidene, Nilen og Rødehavet</span></nav>
+
+<!-- 1 -->
+<section class="side forside">
+  <img class="full" src="bilder/forside.jpg" alt="Pyramidene i Giza">
+  <div class="dekk"></div>
+  <div class="tekst">
+    <div class="merke">Ferieforslag, 15. til 28. mai 2027</div>
+    <h1>Egypt</h1>
+    <p>Pyramidene og det nye stormuseet i Giza, Abu Simbel, templene langs Nilen, Kongenes dal i Luxor og tre dager ved Rødehavet til slutt. Business med liggesete, på EuroBonus-poeng.</p>
+    <div class="piller"><span class="pille">3 reisende</span><span class="pille">14 dager, 12 netter i Egypt</span><span class="pille">Business via Paris</span><span class="pille">Seter funnet 14. november 2026</span></div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="side heltekst">
+  <div class="merke">Hvorfor Egypt</div>
+  <h2>Seks grunner til å bruke to uker her</h2>
+  <div class="grunner">
+    <div class="grunn"><img loading="lazy" src="bilder/sfinks.jpg" alt=""><div><h3>Pyramidene</h3>Det eneste av oldtidens sju underverker som fortsatt står. 4&nbsp;500 år gamle, og større enn noe bilde får fram.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/gem.jpg" alt=""><div><h3>Det nye stormuseet</h3>Grand Egyptian Museum åpnet helt i 2025. Hele Tutankhamons skatt samlet for første gang, med utsikt til pyramidene.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/grav.jpg" alt=""><div><h3>Kongenes dal</h3>Faraoenes graver hugget inn i fjellet, med farger som ser ut som de ble malt i fjor.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/abusimbel2.jpg" alt=""><div><h3>Abu Simbel</h3>Fire tjue meter høye statuer av Ramses II, flyttet stein for stein da Nilen ble demmet opp.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/aswan.jpg" alt=""><div><h3>Nilen i Aswan</h3>Granittøyer, seilbåter og nubiske landsbyer. Egypt på sitt roligste.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/rev.jpg" alt=""><div><h3>Rødehavet</h3>Korallrev blant verdens beste, rett utenfor stranda. Tre dager med snorkel og basseng til slutt.</div></div>
+  </div>
+  <div class="fot">Fire og en halv time med fly fra Paris. Det meste av det vi skal se ligger på rekke og rad langs Nilen, så ruta blir enkel.</div>
+</section>
+
+<!-- 3 -->
+<section class="side"><div class="delt">
+  <div class="panel">
+    <div class="merke">Flyet</div>
+    <h2>Business med liggesete</h2>
+    <p class="ingress" style="margin-bottom:6px">Air France flyr langdistansefly mellom Paris og Kairo, så setet blir til seng. Hele utreisen fra Værnes går på én billett.</p>
+    <div class="rute" style="margin-top:10px;gap:9px;font-size:19px;white-space:nowrap"><span>TRD</span><i>2 t 10</i><span>AMS</span><i>1 t 20</i><span>CDG</span><i>4 t 20</i><span>CAI</span></div>
+    <ul style="margin-top:12px;font-size:16px">
+      <li><b>Ut lørdag 15. mai:</b> KLM fra Værnes 12:10 via Amsterdam, Paris 20:10 med AF570 (Boeing 787), framme i Kairo 01:30. Tre ledige businessseter hele veien.</li>
+      <li><b>Hjem fredag 28. mai:</b> Kairo 03:25 med AF551 (Boeing 787) til Paris, videre via København, Værnes 14:30. Fem businessseter til Paris. Videre til Trondheim er det to i business og åtte i økonomi.</li>
+      <li><b>Poeng for tre: 195&nbsp;000</b> med to CT. To reiser på én CT for 130&nbsp;000, den tredje på egen CT for 65&nbsp;000.</li>
+      <li><b>Bare i økonomi:</b> 90&nbsp;000 poeng for tre, og da er det ledig nesten hver dag hele året.</li>
+    </ul>
+    <div class="sitat">Tre etapper hver vei. Flytypen er hentet fra AwardFares og kan bli byttet før avreise.</div>
+  </div>
+  <div class="mosaikk m2"><img loading="lazy" src="bilder/fly.jpg" alt="Air France Boeing 787"><img loading="lazy" src="bilder/cdg.jpg" alt="Flyplassen Charles de Gaulle i Paris"></div>
+</div></section>
+
+<!-- 4 -->
+<section class="side heltekst" style="padding-top:34px">
+  <div class="merke">Ruta</div>
+  <h2 style="margin-bottom:4px;font-size:38px">14 dager i ett blikk</h2>
+  <table class="tab" style="font-size:15px;margin-top:8px">
+    <tr><th>Dag</th><th>Sted</th><th>Hva skjer</th><th>Natt</th></tr>
+    <tr class="fly"><td>1, lør 15.</td><td>Trondheim til Kairo</td><td>KLM 12:10 via Amsterdam, business fra Paris 20:10, framme 01:30</td><td>Giza</td></tr>
+    <tr><td>2, søn 16.</td><td>Stormuseet</td><td>Sove ut. Grand Egyptian Museum med Tutankhamons skatt, solnedgang mot pyramidene</td><td>Giza</td></tr>
+    <tr><td>3, man 17.</td><td>Pyramidene</td><td>Giza-platået og Sfinksen når portene åpner. Saqqara og Dahshur etter lunsj</td><td>Giza</td></tr>
+    <tr><td>4, tir 18.</td><td>Kairo</td><td>Moskeene og basaren i gamlebyen, koptisk Kairo og kongemumiene</td><td>Giza</td></tr>
+    <tr><td>5, ons 19.</td><td>Til Aswan</td><td>Morgenfly (1 t 25). Båt til Philae-tempelet, seilbåt på Nilen i solnedgang</td><td>Aswan</td></tr>
+    <tr><td>6, tor 20.</td><td>Abu Simbel</td><td>Avreise før soloppgang, 3,5 t hver vei. Tilbake til sen lunsj og basseng</td><td>Aswan</td></tr>
+    <tr><td>7, fre 21.</td><td>Langs Nilen</td><td>Bil med sjåfør til Luxor, med stopp ved templene i Kom Ombo og Edfu</td><td>Luxor</td></tr>
+    <tr><td>8, lør 22.</td><td>Vestbredden</td><td>Kongenes dal, Hatshepsuts tempel og Memnon-kolossene. Luxor-tempelet opplyst om kvelden</td><td>Luxor</td></tr>
+    <tr><td>9, søn 23.</td><td>Karnak</td><td>Søylehallen ved soloppgang, Luxor-museet, fri ettermiddag. Valgfritt: luftballong</td><td>Luxor</td></tr>
+    <tr><td>10, man 24.</td><td>Til Rødehavet</td><td>Buss eller bil over ørkenen til Hurghada (ca. 4 t). Rett i sjøen</td><td>Hurghada</td></tr>
+    <tr><td>11, tir 25.</td><td>Korallrevene</td><td>Båttur med snorkling ved Giftun-øyene, lunsj om bord</td><td>Hurghada</td></tr>
+    <tr><td>12, ons 26.</td><td>Stranda</td><td>Fridag. Strand, basseng og snorkling fra hotellets brygge</td><td>Hurghada</td></tr>
+    <tr><td>13, tor 27.</td><td>Stranda</td><td>Rommet beholdes til kvelden. Kveldsfly til Kairo (1 t) og venting på flyplassen</td><td>Fly</td></tr>
+    <tr class="fly"><td>14, fre 28.</td><td>Kairo til Trondheim</td><td>Business 03:25 til Paris, videre via København, Værnes 14:30</td><td></td></tr>
+  </table>
+</section>
+
+<!-- 5 -->
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m4"><img loading="lazy" src="bilder/kameler.jpg" alt="Kameler foran pyramidene"><img loading="lazy" src="bilder/gem2.jpg" alt="Grand Egyptian Museum"><img loading="lazy" src="bilder/saqqara.jpg" alt="Trappepyramiden i Saqqara"><img loading="lazy" src="bilder/dahshur.jpg" alt="Den knekte pyramiden i Dahshur"></div>
+  <div class="panel">
+    <span class="dag">Dag 2 og 3</span>
+    <h2>Giza: pyramidene og stormuseet</h2>
+    <p class="ingress">Vi bor i Giza, med pyramidene i gangavstand og utsikt fra takterrassen. Første dag er rolig etter sen ankomst.</p>
+    <ul>
+      <li><b>Grand Egyptian Museum:</b> verdens største arkeologiske museum. Alle de 5&nbsp;000 tingene fra Tutankhamons grav, og en elleve meter høy Ramses i hallen. Sett av fire timer.</li>
+      <li><b>Giza-platået:</b> vi står ved porten kl. 07, før bussene og varmen. Kheopspyramiden og Sfinksen. Selgerne er pågående, et vennlig nei holder.</li>
+      <li><b>Saqqara:</b> trappepyramiden til Djoser, verdens eldste store steinbygg, og graver med fargerike relieffer.</li>
+      <li><b>Dahshur:</b> den knekte og den røde pyramiden, nesten uten turister. Her kan vi gå inn i kammeret.</li>
+    </ul>
+    <div class="fakta"><span><b>Museet:</b> ca. 340 kr, bestilles på nett</span><span><b>Pyramidene:</b> ca. 120 kr</span></div>
+  </div>
+</div></section>
+
+<!-- 6 -->
+<section class="side"><div class="delt">
+  <div class="panel">
+    <span class="dag">Dag 4</span>
+    <h2>Kairo: tusen minareter</h2>
+    <p class="ingress">Tjue millioner mennesker, tutende biler og en gamleby fra middelalderen som fortsatt er i bruk.</p>
+    <ul>
+      <li><b>Sultan Hassan-moskeen:</b> enorm og stille, fra 1300-tallet. Rett ved ligger Ibn Tulun fra år 879, med spiraltårn vi kan gå opp i.</li>
+      <li><b>Al-Muizz-gata og Khan el-Khalili:</b> den gamle hovedgata med moskeer og palasser, og basaren med krydder, lamper og kobber.</li>
+      <li><b>Koptisk Kairo:</b> Den hengende kirken og smugene der den hellige familie etter tradisjonen søkte tilflukt.</li>
+      <li><b>Kongemumiene:</b> Ramses II og tjueén andre faraoer og dronninger ligger i Nasjonalmuseet for egyptisk sivilisasjon.</li>
+      <li><b>Kvelden:</b> myntete og vannpipe på El Fishawy, kafeen som har holdt åpent i over 200 år.</li>
+    </ul>
+    <div class="fakta"><span><b>Rundt i byen:</b> Uber, 20 til 60 kr per tur</span><span><b>Moskeene:</b> dekk skuldre og knær</span></div>
+  </div>
+  <div class="mosaikk m3"><img loading="lazy" src="bilder/tulun.jpg" alt="Ibn Tulun-moskeen"><img loading="lazy" src="bilder/khan.jpg" alt="Basaren Khan el-Khalili"><img loading="lazy" src="bilder/koptisk.jpg" alt="Den hengende kirken"></div>
+</div></section>
+
+<!-- 7 -->
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m4"><img loading="lazy" src="bilder/abusimbel2.jpg" alt="Abu Simbel"><img loading="lazy" src="bilder/philae.jpg" alt="Philae-tempelet"><img loading="lazy" src="bilder/nubisk.jpg" alt="Nubisk hus"><img loading="lazy" src="bilder/aswan2.jpg" alt="Nilen ved Aswan"></div>
+  <div class="panel">
+    <span class="dag">Dag 5 og 6</span>
+    <h2>Aswan og Abu Simbel</h2>
+    <p class="ingress">Lengst sør er Nilen på sitt vakreste, mellom granittblokker og sanddyner. Herfra går turen til Ramses' store tempel.</p>
+    <ul>
+      <li><b>Philae:</b> Isis-tempelet ligger på en øy, og vi kommer dit i liten båt. Flyttet fra en naboøy da demningen kom.</li>
+      <li><b>Seilbåt i solnedgang:</b> en time i felukk rundt Elefantine-øya. Te hos en nubisk familie i de blå og gule husene.</li>
+      <li><b>Abu Simbel:</b> bil med sjåfør kl. 04:30, gjennom ørkenen ved soloppgang. To templer hugget rett inn i fjellet, ved bredden av Nassersjøen.</li>
+      <li><b>Tilbake kl. 14:</b> basseng og skygge resten av dagen. Krydderbasaren når det er kveld og kjøligere.</li>
+    </ul>
+    <div class="sitat">Aswan er turens varmeste sted, rundt 40 grader midt på dagen. Alt vi skal se, ser vi før kl. 11 eller etter kl. 17.</div>
+  </div>
+</div></section>
+
+<!-- 8 -->
+<section class="side"><div class="delt">
+  <div class="panel">
+    <span class="dag">Dag 7</span>
+    <h2>Langs Nilen til Luxor</h2>
+    <p class="ingress">Veien følger elva nordover gjennom palmelunder, sukkerrør og landsbyer. To templer ligger rett ved ruta.</p>
+    <ul>
+      <li><b>Kom Ombo:</b> dobbelttempelet på elvebredden, viet krokodilleguden Sobek og falkeguden Horus. Ved siden av ligger et lite museum med mumifiserte krokodiller.</li>
+      <li><b>Edfu:</b> Horus-tempelet er det best bevarte i hele Egypt, med taket på og en 36 meter høy portal.</li>
+      <li><b>Framme i Luxor</b> midt på ettermiddagen. Kvelden på takterrassen med utsikt over Nilen mot fjellene på vestbredden.</li>
+    </ul>
+    <div class="fakta"><span><b>Kjøretid:</b> ca. 4 t pluss stopp</span><span><b>Bil med sjåfør:</b> ca. 1&nbsp;300 kr for bilen</span></div>
+    <div class="sitat">Mange tar denne strekningen med cruisebåt på tre netter. Det er fint, men koster rundt 12&nbsp;000 kr mer for tre. Bil gir samme templer på én dag.</div>
+  </div>
+  <div class="mosaikk m2"><img loading="lazy" src="bilder/edfu.jpg" alt="Horus-tempelet i Edfu"><img loading="lazy" src="bilder/komombo.jpg" alt="Tempelet i Kom Ombo"></div>
+</div></section>
+
+<!-- 9 -->
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m4"><img loading="lazy" src="bilder/karnak.jpg" alt="Søylehallen i Karnak"><img loading="lazy" src="bilder/hatshepsut.jpg" alt="Hatshepsuts tempel"><img loading="lazy" src="bilder/kongedal.jpg" alt="Kongenes dal"><img loading="lazy" src="bilder/luxor.jpg" alt="Luxor-tempelet om kvelden"></div>
+  <div class="panel">
+    <span class="dag">Dag 8 og 9</span>
+    <h2>Luxor: faraoenes hovedstad</h2>
+    <p class="ingress">Oldtidens Theben. De levendes by med templene på østbredden, de dødes by med gravene i vest.</p>
+    <ul>
+      <li><b>Kongenes dal:</b> billetten gir tre graver, og vi kjøper Ramses V og VI i tillegg for det malte himmelhvelvet. Åpner kl. 06.</li>
+      <li><b>Hatshepsuts tempel:</b> tre terrasser inn mot en loddrett fjellvegg, bygd for dronningen som styrte som farao.</li>
+      <li><b>Karnak:</b> 134 søyler på opptil 21 meter i den store hallen. Verdens største tempelområde, bygd på i 2&nbsp;000 år.</li>
+      <li><b>Luxor-tempelet</b> er åpent til kl. 20 og er finest opplyst etter mørkets frambrudd.</li>
+      <li><b>Valgfritt:</b> luftballong over vestbredden ved soloppgang, rundt 800 kr per person.</li>
+    </ul>
+    <div class="fakta"><span><b>Vestbredden:</b> drosje hele formiddagen, ca. 350 kr</span><span><b>Bo:</b> lite hotell med basseng</span></div>
+  </div>
+</div></section>
+
+<!-- 10 -->
+<section class="side"><div class="delt">
+  <div class="panel">
+    <span class="dag">Dag 10 til 13</span>
+    <h2>Rødehavet: rev og ro</h2>
+    <p class="ingress">Etter ni dager med templer og tidlige morgener lander vi mykt ved sjøen. Her er det noen grader kjøligere og alltid litt vind.</p>
+    <ul>
+      <li><b>Korallrevene:</b> klart vann, og revet begynner ofte noen meter fra brygga. Papegøyefisk, klovnefisk og skilpadder.</li>
+      <li><b>Båttur til Giftun-øyene:</b> heldagstur med to snorklestopp, hvit sandstrand og lunsj om bord.</li>
+      <li><b>Hotell med halvpensjon</b> og eget rev er det enkleste. Det er lavsesong for europeere i mai, og prisene er lave.</li>
+      <li><b>Siste dag:</b> rommet til kvelden, så flyr vi til Kairo og går rett på nattflyet hjem.</li>
+    </ul>
+    <div class="fakta"><span><b>Sjøen:</b> ca. 25 grader</span><span><b>Lufta:</b> ca. 33 grader</span><span><b>Båttur:</b> ca. 350 kr per person</span></div>
+    <div class="sitat">Roligere og penere enn selve Hurghada by: Makadi Bay eller Soma Bay sør for byen, eller El Gouna i nord. Samme flyplass.</div>
+  </div>
+  <div class="mosaikk m3"><img loading="lazy" src="bilder/rev2.jpg" alt="Korallrev i Rødehavet"><img loading="lazy" src="bilder/hurghada.jpg" alt="Strand ved Hurghada"><img loading="lazy" src="bilder/giftun.jpg" alt="Giftun-øyene"></div>
+</div></section>
+
+<!-- 11 -->
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m3"><img loading="lazy" src="bilder/koshari.jpg" alt="Koshari"><img loading="lazy" src="bilder/falafel.jpg" alt="Egyptisk falafel"><img loading="lazy" src="bilder/karkade.jpg" alt="Hibiskuste"></div>
+  <div class="panel">
+    <div class="merke">Maten</div>
+    <h2>Billig, mettende og god</h2>
+    <p class="ingress">Egyptisk hverdagsmat er stort sett vegetarisk, laget av bønner, linser og brød, og koster nesten ingenting.</p>
+    <ul>
+      <li><b>Koshari:</b> nasjonalretten. Ris, linser, pasta og kikerter med tomatsaus og sprøstekt løk.</li>
+      <li><b>Ta'ameya:</b> egyptisk falafel av bondebønner, grønn inni. Spises til frokost med <b>ful</b>, bønnestuing med olje og lime.</li>
+      <li><b>Grillet kofta og due:</b> kjøttspyd over kull, og fylt due for de som vil prøve.</li>
+      <li><b>Fisk og sjømat</b> ved Rødehavet og i Aswan, der nilabboren kommer rett fra sjøen.</li>
+      <li><b>Karkade:</b> iskald hibiskuste, og fersk sukkerrørjuice og mango fra gateboder.</li>
+      <li><b>Om Ali og basbousa:</b> varm brødpudding med nøtter, og søt semulekake til teen.</li>
+    </ul>
+    <div class="fakta"><span><b>Koshari:</b> 10 til 20 kr</span><span><b>Restaurant:</b> 70 til 150 kr</span></div>
+  </div>
+</div></section>
+
+<!-- 12 -->
+<section class="side heltekst">
+  <div class="merke">Været</div>
+  <h2>Mai: varmt, tørt og få turister</h2>
+  <div class="tre">
+    <div class="kort"><h3>Temperaturene</h3><div class="tid">33 til 40 grader</div>Kairo og Rødehavet ligger rundt 33 grader. Luxor og Aswan når 39 til 41 midt på dagen. Lufta er helt tørr, og det regner aldri.</div>
+    <div class="kort"><h3>Fordelene</h3><div class="tid">God plass og lave priser</div>Høysesongen er over. Det er kortere køer i gravene, billigere hoteller og lange, lyse dager. Sjøen er varm nok til timevis med snorkling.</div>
+    <div class="kort"><h3>Slik løser vi varmen</h3><div class="tid">Tidlig opp, lang pause</div>Severdighetene åpner kl. 06 eller 07. Vi er ferdige til lunsj, hviler ved bassenget og går ut igjen om kvelden. Alle rom har aircondition.</div>
+  </div>
+  <div class="tre">
+    <div class="kort"><h3>Hvis vi vil ha det kjøligere</h3>Januar til mars er 20 til 28 grader. Da fantes business ut på mange dager, men hjem bare i økonomi. Oktober er ikke lagt ut ennå.</div>
+    <div class="kort"><h3>Offerfesten</h3>Id al-adha faller trolig 16. til 19. mai 2027. Egypterne har fri, så det blir folksomt ved pyramidene og litt stengte butikker første dag.</div>
+    <div class="kort"><h3>Mer strand?</h3>Kutt en dag i Kairo eller Luxor og legg den til ved Rødehavet. Flyene innenlands går daglig.</div>
+  </div>
+  <div class="fot">Temperaturene er normaltall. Vi er borte på 17. mai. Vil vi feire hjemme, finnes det tre businessseter fra Paris tirsdag 18. mai, men da må vi til Paris på egen billett.</div>
+</section>
+
+<!-- 13 -->
+<section class="side heltekst">
+  <div class="merke">Praktisk</div>
+  <h2>Greit å vite</h2>
+  <div class="tre">
+    <div class="kort"><h3>Innreise</h3><div class="tid">Visum, ca. 290 kr</div>Kjøpes ved ankomst eller som e-visum på forhånd, 30 dollar per person. Prisen kan øke litt i 2027. Passet må være gyldig i seks måneder.</div>
+    <div class="kort"><h3>Helse</h3><div class="tid">Ingen malaria</div>Ingen påbudte vaksiner. Hepatitt A anbefales. Drikk flaskevann, og vær forsiktig med salat og isbiter de første dagene.</div>
+    <div class="kort"><h3>Tid og penger</h3><div class="tid">Én time foran Norge</div>Egyptiske pund. 100 pund er rundt 17 kroner. De store severdighetene tar bare kort. Kontanter trengs til drosje, mat og tips.</div>
+  </div>
+  <div class="tre">
+    <div class="kort"><h3>Komme seg rundt</h3>Uber i Kairo, fly til Aswan og fra Hurghada, bil med sjåfør langs Nilen og buss over ørkenen. Alt er lett å bestille selv.</div>
+    <div class="kort"><h3>Skikk og tips</h3>Tips, baksheesh, forventes for det meste. Ha småsedler klare. Landet er muslimsk. Dekk skuldre og knær utenfor strandhotellet.</div>
+    <div class="kort"><h3>Bestill tidlig</h3>Flysetene først. Deretter innenriksflyene og billetter til stormuseet, som bare selges på nett. Hotellene kan avbestilles gratis.</div>
+  </div>
+  <div class="fot">UD fraråder reiser til Nord-Sinai og grensa mot Libya. Ruta ligger langt unna begge. Reiseråd og visumregler sjekkes på nytt før bestilling, siden det er uro i regionen.</div>
+</section>
+
+<!-- kostnad -->
+<section class="side heltekst">
+  <div class="merke">Hva koster det</div>
+  <h2 style="margin-bottom:6px">Billigste totalpris for tre</h2>
+  <table class="tab kost">
+    <tr><th>Post</th><th>Slik holder vi det nede</th><th style="text-align:right">Kroner</th></tr>
+    <tr class="fly"><td>Fly, business</td><td>195&nbsp;000 poeng med to CT, helt fra og til Trondheim. Avgifter anslått til 2&nbsp;000 kr per person</td><td style="text-align:right"><b>6&nbsp;000</b></td></tr>
+    <tr class="fly"><td>Innenriksfly</td><td>Kairo til Aswan og Hurghada til Kairo, ca. 1&nbsp;600 kr per person for begge</td><td style="text-align:right"><b>4&nbsp;800</b></td></tr>
+    <tr><td>Visum</td><td>30 dollar per person ved ankomst</td><td style="text-align:right"><b>900</b></td></tr>
+    <tr><td>Hotell</td><td>12 netter i ett tremannsrom med frokost: Giza 600 kr, Aswan 500 kr, Luxor 450 kr og Rødehavet 700 kr per natt med halvpensjon, og sen utsjekk siste dag</td><td style="text-align:right"><b>7&nbsp;200</b></td></tr>
+    <tr><td>Bil, buss og båt</td><td>Bil med sjåfør til Abu Simbel og fra Aswan til Luxor, dagstur til Saqqara, drosje på vestbredden, Uber, buss til Hurghada, båt til Philae og seilbåt</td><td style="text-align:right"><b>6&nbsp;000</b></td></tr>
+    <tr><td>Inngang og utflukt</td><td>Stormuseet, pyramidene, Saqqara, Abu Simbel, Philae, Kom Ombo, Edfu, Kongenes dal, Karnak og resten, ca. 1&nbsp;900 kr per person, pluss snorkletur</td><td style="text-align:right"><b>6&nbsp;800</b></td></tr>
+    <tr><td>Mat</td><td>Lokale restauranter og gatemat, 150 kr per person per dag i 13 dager</td><td style="text-align:right"><b>5&nbsp;900</b></td></tr>
+    <tr><td>Tips</td><td>Sjåfører, båtførere, vakter og hotell</td><td style="text-align:right"><b>1&nbsp;000</b></td></tr>
+    <tr class="fly"><td>Sum for tre</td><td>Rundt 12&nbsp;900 kr per person, pluss 195&nbsp;000 poeng</td><td style="text-align:right"><b style="font-size:19px">38&nbsp;600</b></td></tr>
+  </table>
+  <div class="tre" style="margin-top:14px">
+    <div class="kort" style="padding:12px 20px;font-size:15px"><h3 style="font-size:18px">Ikke med i summen</h3>Guide (ca. 400 til 600 kr per halve dag der vi vil ha det), luftballong, shopping og reiseforsikring.</div>
+    <div class="kort" style="padding:12px 20px;font-size:15px"><h3 style="font-size:18px">Vil dere bo bedre?</h3>Gode hoteller med basseng hele veien og alt inkludert ved Rødehavet legger rundt 10&nbsp;000 til 15&nbsp;000 kr på summen for tre.</div>
+    <div class="kort" style="padding:12px 20px;font-size:15px"><h3 style="font-size:18px">Kurs</h3>Norges Bank 13. november 2026: én dollar er 9,56 kr. Ett egyptisk pund er rundt 0,17 kr, med 55,5 pund per dollar.</div>
+  </div>
+  <div class="fot">Alle beløp er anslag, ikke hentede priser. Flyavgiftene, innenriksflyene og billettprisene på severdighetene er de mest usikre postene og sjekkes ved bestilling.</div>
+</section>
+
+<!-- bilder -->
+<section class="side heltekst">
+  <div class="merke">Bilder</div>
+  <h2 style="font-size:30px">Bildekreditt</h2>
+  <div style="font-size:14px">Alle bilder er hentet fra Wikimedia Commons. Filnavn, fotograf og lisens:</div>
+  <div class="kr"><div>Giza Pyramids Egypt Camels Desert Landscape Photo by Ludovic Delot Bravo.jpg, Ludovic Delot, CC BY 4.0</div><div>Feluccas and The Nile at sunset (14284288808).jpg, Jorge Láscar from Melbourne, Australia, CC BY 2.0</div><div>Camels resting at the Pyramids of Giza.jpg, Caoimheen3, CC BY-SA 4.0</div><div>Great Sphinx of Giza (أبو الهول).jpg, Petar Milošević, CC BY-SA 4.0</div><div>Grand Egyptian Museum 2025.jpg, Amr F.Nagy, Public domain</div><div>The bright central atrium and entrance hall inside the Grand Egyptian Museum (GEM) located near the Giza Pyramids in Egypt.jpg, NileReference, CC BY-SA 4.0</div><div>Pyramid of Djoser 2010.jpg, Wknight94 talk, CC BY-SA 3.0</div><div>Bent Pyramid of Snofru.jpg, Darer101, CC BY-SA 4.0</div><div>Kairo Ibn Tulun Moschee BW 5.jpg, Berthold Werner, CC BY 3.0</div><div>Khan el-Khalili, Cairo Egypt - panoramio (7).jpg, The Erica Chang, CC BY 3.0</div><div>The Hanging Church, Old Cairo.jpg, Keith Reyd, CC BY-SA 4.0</div><div>Philae Temple R05.jpg, Marc Ryckaert, CC BY 3.0</div><div>Aswan Nile R03.jpg, Marc Ryckaert (MJJR), CC BY 3.0</div><div>El Nilo a su paso por Asuán, Egipto, 2022-04-01, DD 175-177 HDR.jpg, Diego Delso, CC BY-SA 4.0</div><div>Nubian House, Nagaa Suhayl Gharb, AG, EGY (48026709012).jpg, Warren LeMay from Chicago, IL, United States, CC0</div><div>Großer Tempel (Abu Simbel) 01.jpg, Olaf Tausch, CC BY 3.0</div><div>Kom Ombo 20.jpg, Olaf Tausch, CC BY 3.0</div><div>Temple of Edfu, Pylon, Egypt.jpg, Vyacheslav Argenberg, CC BY 4.0</div><div>Thebes, Luxor, Egypt, Panoramic view of the Valley of the Kings.jpg, Vyacheslav Argenberg, CC BY 4.0</div><div>Tumba de Ramsés V y de Ramsés VI, Valle de las Reyes, Luxor, Egipto, 2022-04-03, DD 48.jpg, Diego Delso, CC BY-SA 4.0</div><div>Templo funerario de Hatshepsut, Luxor, Egipto, 2022-04-03, DD 13.jpg, Diego Delso, CC BY-SA 4.0</div><div>Karnak Temple Great Hypostyle Hall 2014.jpg, Tsyganov Sergey, CC0</div><div>Luxor Temple at night, Luxor, Egypt.jpg, Vyacheslav Argenberg, CC BY 4.0</div><div>Red Sea Corals and Fish.JPG, Wusel007, CC BY-SA 3.0</div><div>Coral reef near Marsa Alam.jpg, Thomas Hubauer, CC BY-SA 2.0</div><div>Hurghada Beach Albatros 04.jpg, Olaf Tausch, CC BY 3.0</div><div>Beach of the Paradise Island of Hurghada.jpg, kallerna, CC BY-SA 3.0</div><div>Egyptian food Koshary.jpg, Dina Said, CC BY-SA 4.0</div><div>Fool and falafel.jpg, Hosary, CC BY-SA 4.0</div><div>A glass of hibiscus tea 02.jpg, claralieu, CC BY 2.0</div><div>Air France Boeing 787-9 (F-HRBA) at Paris-Charles de Gaulle Airport.jpg, ERIC SALARD from PARIS, FRANCE, CC BY-SA 2.0</div><div>Charles de Gaulle Airport terminal 2E.jpg, Syced, CC0</div></div>
+</section>
+
+<!-- slutt -->
+<section class="side forside slutt">
+  <img loading="lazy" class="full" src="bilder/slutt.jpg" alt="Solnedgang over Nilen">
+  <div class="dekk"></div>
+  <div class="tekst">
+    <div class="merke">Neste steg</div>
+    <h1>Skal vi ta setene?</h1>
+    <p>Tre businessseter ut 15. mai og fem hjem 28. mai lå ledige 14. november 2026. Bestilles hos SAS med to CT, helt fra og til Trondheim.</p>
+    <p>Reserve: ut 7. mai, hjem 24. mai eller 6. juni. Hjem i business finnes nesten bare disse dagene.</p>
+  </div>
+</section>
+</body></html>
