@@ -1,0 +1,417 @@
+<!doctype html><html lang="nb"><head><meta charset="utf-8"><title>Ghana, 15 dager</title><style>
+@page { size: 1280px 720px; margin: 0 }
+* { box-sizing: border-box }
+html, body { margin: 0; padding: 0 }
+body { font-family: 'Noto Sans','DejaVu Sans',sans-serif; color: #1d2733; font-size: 17px; line-height: 1.42; -webkit-print-color-adjust: exact; print-color-adjust: exact }
+.side { width: 1280px; height: 720px; overflow: hidden; position: relative; page-break-after: always; break-after: page; background: #f6f1e7 }
+.side:last-child { page-break-after: auto; break-after: auto }
+img { display: block; object-fit: cover }
+.full { position: absolute; inset: 0; width: 100%; height: 100% }
+.dekk { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,14,26,.20) 0%, rgba(6,14,26,.25) 40%, rgba(6,14,26,.88) 100%) }
+.forside .tekst { position: absolute; left: 70px; right: 70px; bottom: 58px; color: #fff }
+.merke { letter-spacing: .22em; text-transform: uppercase; font-size: 15px; font-weight: 600; color: #f0c878 }
+.forside h1 { font-size: 112px; line-height: .98; margin: 10px 0 18px; font-weight: 800; letter-spacing: -.02em }
+.forside p { font-size: 24px; max-width: 900px; margin: 0 }
+.piller { display: flex; gap: 10px; margin-top: 24px; flex-wrap: wrap }
+.pille { background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.4); border-radius: 30px; padding: 6px 18px; font-size: 16px }
+
+.delt { display: grid; grid-template-columns: 560px 1fr; height: 100% }
+.delt.snu { grid-template-columns: 1fr 560px }
+.panel { padding: 44px 46px 40px; position: relative }
+.panel .merke, .heltekst .merke { color: #a8742a }
+h2 { font-size: 43px; line-height: 1.05; margin: 8px 0 14px; font-weight: 800; letter-spacing: -.01em; color: #16283c }
+.ingress { font-size: 18.5px; margin: 0 0 14px }
+ul { margin: 0; padding-left: 20px }
+li { margin-bottom: 8px }
+li b, td b { color: #8a5a17 }
+.mosaikk { display: grid; height: 720px; gap: 6px; background: #f6f1e7 }
+.mosaikk img { width: 100%; height: 100%; min-height: 0; min-width: 0 }
+.m3 { grid-template-columns: 1fr 1fr; grid-template-rows: 1.35fr 1fr }
+.m3 img:first-child { grid-column: 1 / 3 }
+.m3h { grid-template-columns: 1fr 1.25fr; grid-template-rows: 1fr 1fr }
+.m3h img:first-child { grid-row: 1 / 3 }
+.m2 { grid-template-rows: 1.3fr 1fr }
+.m4 { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr }
+.dag { display: inline-block; background: #16283c; color: #f0c878; border-radius: 30px; padding: 4px 16px; font-size: 15px; font-weight: 600; margin-bottom: 4px }
+.fakta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px }
+.fakta span { background: #e9dfc9; border-radius: 8px; padding: 6px 12px; font-size: 15px }
+.fakta b { color: #8a5a17 }
+.sitat { position: absolute; left: 46px; right: 46px; bottom: 30px; font-size: 15px; color: #6a6557; border-top: 1px solid #d9cdb3; padding-top: 10px }
+
+.heltekst { padding: 44px 60px }
+.grunner { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px }
+.grunn { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 10px rgba(20,30,50,.10) }
+.grunn img { width: 100%; height: 146px }
+.grunn div { padding: 10px 16px 12px; font-size: 15px; line-height: 1.35 }
+.grunn h3 { margin: 0 0 4px; font-size: 19px; color: #8a5a17 }
+
+.tab { border-collapse: collapse; width: 100%; font-size: 15px; margin-top: 10px }
+.tab th { text-align: left; background: #16283c; color: #f0c878; padding: 6px 12px; font-weight: 600 }
+.tab td { border-bottom: 1px solid #ded3bb; padding: 4.5px 12px; vertical-align: top }
+.tab td:first-child { white-space: nowrap; font-weight: 700; color: #8a5a17 }
+.tab td:nth-child(2) { white-space: nowrap; font-weight: 600 }
+.tab tr.fly td { background: #ece2cc }
+.kost td:nth-child(2) { white-space: normal; font-weight: 400 }
+.kost td:nth-child(n+3) { white-space: nowrap }
+.tre { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 22px }
+.fire { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 16px }
+.kort { background: #fff; border-radius: 14px; padding: 22px 24px; box-shadow: 0 2px 10px rgba(20,30,50,.10); font-size: 17px; line-height: 1.45 }
+.kort h3 { margin: 0 0 6px; font-size: 21px; color: #8a5a17 }
+.kort .tid { font-size: 28px; font-weight: 800; letter-spacing: -.01em; margin: 4px 0 4px; color: #16283c }
+.kort small { color: #6a6557; font-size: 14.5px }
+.kort ul { padding-left: 18px } .kort li { margin-bottom: 5px }
+.rute { display: flex; align-items: center; gap: 14px; margin: 18px 0 4px; font-size: 22px; font-weight: 800; color: #16283c }
+.rute span { background: #16283c; color: #fff; border-radius: 10px; padding: 8px 16px }
+.rute i { font-style: normal; color: #a8742a; font-size: 15px; font-weight: 600 }
+.fot { position: absolute; left: 60px; right: 60px; bottom: 24px; font-size: 13.5px; color: #6a6557 }
+.kr { font-size: 11px; line-height: 1.35; columns: 2; column-gap: 30px; color: #55504a; margin-top: 12px }
+.slutt .tekst { position: absolute; left: 70px; right: 70px; bottom: 64px; color: #fff }
+.slutt h1 { font-size: 76px; line-height: 1; margin: 8px 0 14px; font-weight: 800 }
+.slutt p { font-size: 22px; max-width: 900px; margin: 0 0 8px }
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<style>
+@media screen {
+  html { background: #16130f }
+  body { background: #16130f !important; padding: 56px 0 24px !important }
+  .lysbilde { margin: 0 auto 14px; box-shadow: 0 6px 30px rgba(0,0,0,.45) }
+  #topp { position: fixed; inset: 0 0 auto 0; height: 44px; z-index: 1000; display: flex; align-items: center; gap: 14px;
+    padding: 0 16px; background: rgba(22,19,15,.94); color: #f3ead9; font: 15px/1 system-ui, sans-serif }
+  #topp a { color: #f3ead9; text-decoration: none; padding: 8px 12px; border: 1px solid rgba(243,234,217,.35); border-radius: 999px }
+  #topp a:hover, #topp a:focus-visible { background: rgba(243,234,217,.14) }
+  #topp span { opacity: .75; white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
+}
+@media screen and (max-width: 820px) {
+  body { padding: 44px 0 0 !important; font-size: 16px !important }
+  .lysbilde { width: auto !important; height: auto !important; overflow: visible !important; margin: 0 0 8px !important; box-shadow: none !important }
+  table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch }
+  #topp { font-size: 14px; gap: 10px; padding: 0 10px }
+  #topp a { white-space: nowrap }
+  [style*="grid-template-columns"] { grid-template-columns: 1fr !important }
+  [style*="right:750px"] { right: 12px !important }
+
+  .side.forside, .side.slutt { min-height: min(82vh, 680px); display: flex; align-items: flex-end }
+  .forside .tekst, .slutt .tekst { position: relative; left: auto; right: auto; bottom: auto; padding: 140px 22px 34px }
+  .forside h1 { font-size: clamp(46px, 15vw, 84px) }
+  .slutt h1 { font-size: 42px }
+  .forside p, .slutt p { font-size: 18px }
+  .merke { font-size: 13px }
+  .pille { font-size: 14px; padding: 5px 13px }
+  .delt, .delt.snu { display: flex; flex-direction: column; height: auto }
+  .delt > .mosaikk, .delt > .bilder { order: -1 }
+  .bilder { height: auto }
+  .mosaikk { height: auto; gap: 4px; grid-template-columns: 1fr 1fr !important; grid-template-rows: none !important }
+  .mosaikk img { height: auto; aspect-ratio: 4 / 3; grid-row: auto !important; grid-column: auto }
+  .mosaikk img:first-child, .mosaikk img:last-child:nth-child(even) { grid-column: 1 / -1 !important; aspect-ratio: 16 / 10 }
+  .panel { padding: 22px 20px 26px }
+  .heltekst { padding: 26px 20px 28px }
+  h2 { font-size: 29px }
+  .ingress { font-size: 17px }
+  .sitat, .merk, .fot { position: static; margin-top: 18px }
+  .grunner, .fly2, .to, .stripe, .tre, .fire, .steg { grid-template-columns: 1fr; gap: 12px }
+  .grunn img { height: 46vw }
+  .kr { columns: 1 }
+  .tab { font-size: 13.5px }
+  .tab td, .tab th { padding: 6px 5px }
+  .tab td:first-child, .tab td:nth-child(2) { white-space: normal }
+  .kost td:nth-child(3):not(:last-child), .kost th:nth-child(3):not(:last-child) { display: none }  /* dirham skjules, kroner er det som teller */
+  .rute { flex-wrap: wrap; font-size: 18px; gap: 8px }
+  .kort { padding: 16px 18px }
+  .kort .tid { font-size: 22px }
+}
+@media print { #topp { display: none } }
+</style>
+<script>
+addEventListener('DOMContentLoaded', () => {
+  const sider = [...document.querySelectorAll('body > section, body > .side, body > .forside')];
+  sider.forEach(s => s.classList.add('lysbilde'));
+  const grunn = 1280;
+  const tilpass = () => {
+    const smal = matchMedia('(max-width: 820px)').matches;  // på mobil flyter innholdet fritt i stedet
+    const z = smal ? '' : Math.min(1, document.documentElement.clientWidth / grunn);
+    sider.forEach(s => s.style.zoom = z);
+  };
+  if (!matchMedia('print').matches) { tilpass(); addEventListener('resize', tilpass); }
+  addEventListener('beforeprint', () => sider.forEach(s => s.style.zoom = ''));
+  addEventListener('afterprint', tilpass);
+});
+</script>
+</head><body><nav id="topp"><a href="../">← Alle turene</a><span>Ghana: Slavefort, regnskog og elefanter til fots</span></nav>
+
+<!-- 1 -->
+<section class="side forside">
+  <img class="full" src="bilder/forside.jpg" alt="Hengebru i trekronene i Kakum nasjonalpark">
+  <div class="dekk"></div>
+  <div class="tekst">
+    <div class="merke">Ferieforslag, 7. til 21. oktober 2027</div>
+    <h1>Ghana</h1>
+    <p>Slavefortene ved Gullkysten, hengebruer i regnskogen, ashantienes kongeby, elefanter til fots i Mole og Vest-Afrikas høyeste foss. Business med EuroBonus-poeng.</p>
+    <div class="piller"><span class="pille">3 reisende</span><span class="pille">15 dager, 12 netter i Ghana</span><span class="pille">Business via Lisboa</span><span class="pille">Seter funnet 14. november 2026</span></div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="side heltekst">
+  <div class="merke">Hvorfor Ghana</div>
+  <h2>Seks grunner til å bruke to uker her</h2>
+  <div class="grunner">
+    <div class="grunn"><img loading="lazy" src="bilder/elmina.jpg" alt=""><div><h3>Slavefortene</h3>Hvite festninger rett på stranda, med fangehull under. Historie som sitter i kroppen lenge etterpå.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/kakum2.jpg" alt=""><div><h3>Hengebruer i trekronene</h3>Sju bruer 40 meter over bakken i regnskogen i Kakum. Vi går over mens tåka letter.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/elefant.jpg" alt=""><div><h3>Elefanter til fots</h3>I Mole går vi safari med vokter, uten bil. Få steder i Afrika slipper deg så nær for så lite.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/kente.jpg" alt=""><div><h3>Ashantiriket</h3>Kongepalass, gullvekter og kentestoff vevd på smale vever i landsbyene rundt Kumasi.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/wli.jpg" alt=""><div><h3>Wli-fossen</h3>Rundt 80 meter fritt fall i grønne åser mot Togo, med tusenvis av flaggermus i fjellveggen.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/kiste.jpg" alt=""><div><h3>Folkene og fargene</h3>Engelsk overalt, musikk fra hver bod og kister formet som fisker og fly. Lett å komme i prat.</div></div>
+  </div>
+  <div class="fot">Ghana regnes som et av de tryggeste og enkleste landene å reise i sør for Sahara. Engelsk er offisielt språk.</div>
+</section>
+
+<!-- 3 -->
+<section class="side"><div class="delt">
+  <div class="panel">
+    <div class="merke">Flyet</div>
+    <h2>Business via Lisboa</h2>
+    <p class="ingress" style="margin-bottom:6px">TAP flyr oss til Accra med en kveld og en natt i Lisboa på veien ned. Hjem går det over natta til Oslo.</p>
+    <div class="rute" style="margin-top:10px;gap:9px;font-size:19px;white-space:nowrap"><span>TRD</span><i>2 t 15</i><span>AMS</span><i>3 t</i><span>LIS</span><i>6 t</i><span>ACC</span></div>
+    <ul style="margin-top:12px;font-size:16px">
+      <li><b>Ut torsdag 7. oktober:</b> KLM fra Værnes 12:10, Amsterdam 19:40 med TP673, natt i Lisboa. Fredag 09:55 med TP1527, framme i Accra 14:55. Sju ledige businessseter.</li>
+      <li><b>Hjem onsdag 20. oktober:</b> Accra 22:15 med TP1528 og TP762, Oslo torsdag 12:00. Tre ledige businessseter, akkurat nok.</li>
+      <li><b>Poeng for tre: 195 000</b> med to CT. To reiser på én CT for 130 000, den tredje på egen CT for 65 000.</li>
+      <li><b>Tilbringer:</b> KLM Trondheim til Amsterdam og SAS Oslo til Trondheim kjøpes som vanlige billetter.</li>
+    </ul>
+    <div class="sitat">Fire etapper ut, tre hjem. KLM flyr direkte fra Amsterdam til Accra, men hadde ikke tre businessseter disse dagene.</div>
+  </div>
+  <div class="mosaikk m2"><img loading="lazy" src="bilder/tap.jpg" alt="Fly fra TAP Air Portugal"><img loading="lazy" src="bilder/lisboa.jpg" alt="Lisboa"></div>
+</div></section>
+
+<!-- 4 -->
+<section class="side heltekst" style="padding-top:34px">
+  <div class="merke">Ruta</div>
+  <h2 style="margin-bottom:4px;font-size:38px">15 dager i ett blikk</h2>
+  <table class="tab" style="font-size:15px;margin-top:8px">
+    <tr><th>Dag</th><th>Sted</th><th>Hva skjer</th><th>Natt</th></tr>
+    <tr class="fly"><td>1, tor 7.</td><td>Trondheim til Lisboa</td><td>KLM 12:10 til Amsterdam, business videre 19:40. Sen kveldsmat i Lisboa</td><td>Lisboa</td></tr>
+    <tr class="fly"><td>2, fre 8.</td><td>Lisboa til Accra</td><td>Avgang 09:55, framme 14:55. Første kveld i bydelen Osu</td><td>Accra</td></tr>
+    <tr><td>3, lør 9.</td><td>Accra</td><td>Jamestown, Makola-markedet, Nkrumah-mausoleet og kisteverkstedene i Teshie</td><td>Accra</td></tr>
+    <tr><td>4, søn 10.</td><td>Til Cape Coast</td><td>Buss langs kysten (3 t), omvisning i Cape Coast-fortet, solnedgang på stranda</td><td>Cape Coast</td></tr>
+    <tr><td>5, man 11.</td><td>Kakum og Elmina</td><td>Hengebruene tidlig om morgenen, Elmina-fortet og fiskehavna etter lunsj</td><td>Cape Coast</td></tr>
+    <tr><td>6, tir 12.</td><td>Til Kumasi</td><td>Buss inn i landet (4 til 5 t), Manhyia-palasset på ettermiddagen</td><td>Kumasi</td></tr>
+    <tr><td>7, ons 13.</td><td>Kumasi</td><td>Kejetia-markedet, kenteveverne i Adanwomase og adinkratrykk i Ntonso</td><td>Kumasi</td></tr>
+    <tr><td>8, tor 14.</td><td>Til Mole</td><td>Bil med sjåfør nordover (ca. 8 t), pause ved Kintampo-fossen</td><td>Mole</td></tr>
+    <tr><td>9, fre 15.</td><td>Mole</td><td>Safari til fots ved soloppgang, jeep på ettermiddagen, utsikt til vannhullet</td><td>Mole</td></tr>
+    <tr><td>10, lør 16.</td><td>Mole til Accra</td><td>Morgensafari, leirmoskeen i Larabanga, bil til Tamale og kveldsfly sørover</td><td>Accra</td></tr>
+    <tr><td>11, søn 17.</td><td>Til Volta</td><td>Buss østover (4 t), de hellige apene i Tafi Atome på veien</td><td>Wli</td></tr>
+    <tr><td>12, man 18.</td><td>Wli</td><td>Fottur til fossen, bad under fallet, øvre foss for de spreke</td><td>Wli</td></tr>
+    <tr><td>13, tir 19.</td><td>Til Accra</td><td>Tilbake via Voltasjøen og demningen i Akosombo, kveld i Osu</td><td>Accra</td></tr>
+    <tr><td>14, ons 20.</td><td>Accra</td><td>Kunstmarkedet, Labadi-stranda, dagrom til kl. 19, til flyplassen</td><td>Fly</td></tr>
+    <tr class="fly"><td>15, tor 21.</td><td>Accra til Trondheim</td><td>Business 22:15 via Lisboa, Oslo 12:00, SAS videre hjem på ettermiddagen</td><td></td></tr>
+  </table>
+</section>
+
+<!-- 5 -->
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m4"><img loading="lazy" src="bilder/jamestown.jpg" alt="Fyret i Jamestown"><img loading="lazy" src="bilder/makola.jpg" alt="Makola-markedet"><img loading="lazy" src="bilder/nkrumah.jpg" alt="Nkrumah-mausoleet"><img loading="lazy" src="bilder/kiste2.jpg" alt="Fantasikister"></div>
+  <div class="panel">
+    <span class="dag">Dag 2 og 3</span>
+    <h2>Accra: fyr, marked og kister</h2>
+    <p class="ingress">Vi lander fredag ettermiddag og har hele lørdagen. Hovedstaden er varm, bråkete og vennlig.</p>
+    <ul>
+      <li><b>Jamestown:</b> den gamle fiskerbydelen med rødt og hvitt fyr, bokseklubber og fargerike kanoer på stranda.</li>
+      <li><b>Makola-markedet:</b> stoffer, krydder, tørket fisk og snegler på størrelse med en knyttneve.</li>
+      <li><b>Nkrumah-mausoleet:</b> minneparken over mannen som gjorde Ghana til det første frie landet sør for Sahara i 1957.</li>
+      <li><b>Kisteverkstedene i Teshie:</b> her snekres kister som fisker, fly, kakaofrukter og mobiltelefoner.</li>
+      <li><b>Osu om kvelden:</b> grillspyd, stekt kokebanan og levende highlife-musikk.</li>
+    </ul>
+    <div class="fakta"><span><b>Bo:</b> Osu, kort vei til alt</span><span><b>Flyplassen:</b> 20 min</span><span><b>Taxi:</b> Bolt og Uber</span></div>
+  </div>
+</div></section>
+
+<!-- 6 -->
+<section class="side"><div class="delt">
+  <div class="panel">
+    <span class="dag">Dag 4 og 5</span>
+    <h2>Cape Coast, Elmina og Kakum</h2>
+    <p class="ingress">Tre timer vest for Accra ligger fortene der millioner av mennesker ble sendt over Atlanteren.</p>
+    <ul>
+      <li><b>Cape Coast-fortet:</b> britenes hovedkvarter. Guiden tar oss ned i fangehullene og ut gjennom «døra uten vei tilbake».</li>
+      <li><b>Elmina-fortet:</b> bygd av portugiserne i 1482, den eldste europeiske bygningen sør for Sahara. Begge står på UNESCOs liste.</li>
+      <li><b>Fiskehavna i Elmina:</b> hundrevis av malte kanoer, og fangsten selges rett på kaia.</li>
+      <li><b>Kakum:</b> sju hengebruer, 350 meter til sammen, opptil 40 meter over skogbunnen. Vær der når porten åpner, før busslastene kommer.</li>
+    </ul>
+    <div class="fakta"><span><b>Bo:</b> enkelt strandhotell mellom de to byene</span><span><b>Kakum:</b> 45 min fra kysten</span></div>
+    <div class="sitat">Omvisningene i fortene tar en god time hver og er sterke. Ta ett fort per dag.</div>
+  </div>
+  <div class="mosaikk m4"><img loading="lazy" src="bilder/capecoast.jpg" alt="Cape Coast-fortet"><img loading="lazy" src="bilder/kakum.jpg" alt="Hengebru i Kakum"><img loading="lazy" src="bilder/elmina2.jpg" alt="Elmina-fortet"><img loading="lazy" src="bilder/elminabat.jpg" alt="Fiskebåter i Elmina"></div>
+</div></section>
+
+<!-- 7 -->
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m4"><img loading="lazy" src="bilder/kejetia.jpg" alt="Kejetia-markedet"><img loading="lazy" src="bilder/manhyia.jpg" alt="Manhyia-palasset"><img loading="lazy" src="bilder/kentevev.jpg" alt="Kentevever i Bonwire"><img loading="lazy" src="bilder/adinkra.jpg" alt="Adinkratrykk"></div>
+  <div class="panel">
+    <span class="dag">Dag 6 og 7</span>
+    <h2>Kumasi: gull og kente</h2>
+    <p class="ingress">Ashantiriket styrte det meste av dagens Ghana i to hundre år. Kongen, asantehene, holder fortsatt hoff her.</p>
+    <ul>
+      <li><b>Manhyia-palasset:</b> museum i det gamle kongepalasset, med troner, gullsmykker og historien om Den gylne stol.</li>
+      <li><b>Kejetia-markedet:</b> et av Vest-Afrikas største, med over ti tusen boder. Ta med en lokal guide, det er lett å gå seg bort.</li>
+      <li><b>Kente:</b> i landsbyene Adanwomase og Bonwire veves stoffet i smale striper som sys sammen. Vi får prøve veven.</li>
+      <li><b>Adinkra i Ntonso:</b> symboler trykkes på stoff med stempler skåret av kalebass og farge kokt av bark.</li>
+    </ul>
+    <div class="fakta"><span><b>Buss fra Cape Coast:</b> 4 til 5 t</span><span><b>Kjøp:</b> kente rett fra veveren</span></div>
+  </div>
+</div></section>
+
+<!-- 8 -->
+<section class="side"><div class="delt">
+  <div class="panel">
+    <span class="dag">Dag 8 til 10</span>
+    <h2>Mole: safari uten bil</h2>
+    <p class="ingress">Ghanas største nasjonalpark ligger på savannen i nord. Her går vi til fots med væpnet vokter.</p>
+    <ul>
+      <li><b>Safari til fots:</b> to timer ved soloppgang, ofte tett på elefanter ved vannhullene. Jeep på ettermiddagen.</li>
+      <li><b>Dyrene:</b> elefanter, antiloper, vortesvin, bavianer og over 300 fuglearter. Ingen garanti for store katter.</li>
+      <li><b>Hotellet på kanten:</b> Mole Motel ligger på en skrent med utsikt rett ned på to vannhull.</li>
+      <li><b>Larabanga:</b> hvitkalket leirmoské i sahelstil, regnet som en av de eldste i Vest-Afrika.</li>
+      <li><b>Veien opp:</b> åtte timer i bil fra Kumasi, med bad og lunsj ved Kintampo-fossen halvveis.</li>
+    </ul>
+    <div class="fakta"><span><b>Hjem:</b> fly Tamale til Accra, 1 t 15</span></div>
+    <div class="sitat">Ærlig talt: oktober er slutten på regntiden. Gresset er høyt og dyrene spredt, så elefantene er lettere å se fra desember til april. De fleste ser dem likevel.</div>
+  </div>
+  <div class="mosaikk m4"><img loading="lazy" src="bilder/elefant2.jpg" alt="Elefanter i Mole"><img loading="lazy" src="bilder/mole.jpg" alt="Savannen i Mole"><img loading="lazy" src="bilder/larabanga.jpg" alt="Moskeen i Larabanga"><img loading="lazy" src="bilder/kob.jpg" alt="Dyreliv i Mole"></div>
+</div></section>
+
+<!-- 9 -->
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m3"><img loading="lazy" src="bilder/volta.jpg" alt="Åsene i Volta-regionen"><img loading="lazy" src="bilder/wli.jpg" alt="Wli-fossen"><img loading="lazy" src="bilder/tafi.jpg" alt="Apereservatet i Tafi Atome"></div>
+  <div class="panel">
+    <span class="dag">Dag 11 til 13</span>
+    <h2>Volta: foss, aper og grønne åser</h2>
+    <p class="ingress">Øst for Voltasjøen stiger landet mot Togo. Kjøligere, grønnere og roligere enn resten av turen.</p>
+    <ul>
+      <li><b>Wli-fossen:</b> 45 minutter flat sti gjennom skogen og over ni små bruer. Fossen er på sitt største rett etter regntiden, og vi kan bade under den.</li>
+      <li><b>Øvre foss:</b> to bratte timer til for de som vil ha utsikt og ha fallet for seg selv.</li>
+      <li><b>Tafi Atome:</b> landsbyen har fredet monaapene sine i generasjoner. De spiser banan rett fra hånda.</li>
+      <li><b>Voltasjøen:</b> en av verdens største kunstige innsjøer. Vi stopper ved demningen i Akosombo på vei tilbake.</li>
+    </ul>
+    <div class="fakta"><span><b>Bo:</b> enkel lodge med utsikt mot fossen</span><span><b>Buss fra Accra:</b> ca. 4 t</span></div>
+  </div>
+</div></section>
+
+<!-- 10 -->
+<section class="side"><div class="delt">
+  <div class="panel">
+    <span class="dag">Dag 13 og 14</span>
+    <h2>Siste døgn i Accra</h2>
+    <p class="ingress">En kveld og en hel dag før nattflyet. Tid til å handle, bade og spise godt.</p>
+    <ul>
+      <li><b>Kunstmarkedet:</b> masker, trommer, perler og kurver ved Arts Centre. Prut med et smil, start på halv pris.</li>
+      <li><b>Uavhengighetsplassen</b> med Black Star Gate, symbolet på det frie Ghana.</li>
+      <li><b>Labadi-stranda:</b> byens strand med trommer, hester og grillet fisk. Havet har sterke strømmer, så bad der de lokale bader.</li>
+      <li><b>Dagrom til kl. 19:</b> dusj og hvile før vi drar. Flyplassen ligger 20 minutter unna.</li>
+      <li><b>Avgang 22:15:</b> flat seng til Lisboa, frokost der og videre til Oslo.</li>
+    </ul>
+    <div class="fakta"><span><b>Ta med hjem:</b> kente, sheasmør, sjokolade og glassperler</span></div>
+  </div>
+  <div class="mosaikk m3"><img loading="lazy" src="bilder/blackstar.jpg" alt="Black Star Gate"><img loading="lazy" src="bilder/labadi.jpg" alt="Labadi-stranda"><img loading="lazy" src="bilder/accra.jpg" alt="Strand ved Accra"></div>
+</div></section>
+
+<!-- 11 -->
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m4"><img loading="lazy" src="bilder/jollof.jpg" alt="Jollofris"><img loading="lazy" src="bilder/fufu.jpg" alt="Fufu med suppe"><img loading="lazy" src="bilder/kelewele.jpg" alt="Kelewele"><img loading="lazy" src="bilder/banku.jpg" alt="Banku med tilapia"></div>
+  <div class="panel">
+    <div class="merke">Maten</div>
+    <h2>Sterkt, mettende og billig</h2>
+    <p class="ingress">Gryter og supper med mye chili, spist med hendene på små steder som kalles chop bars.</p>
+    <ul>
+      <li><b>Jollof:</b> ris kokt i tomat og krydder, med kylling eller fisk. Ghana og Nigeria krangler om hvem som lager den best.</li>
+      <li><b>Fufu:</b> stampet kassava og kokebanan i suppe av peanøtter eller palmenøtter.</li>
+      <li><b>Banku og tilapia:</b> syrlig maisdeig med grillet fisk og chilisaus.</li>
+      <li><b>Kelewele:</b> kokebanan stekt med ingefær og chili, solgt i papirpose om kvelden.</li>
+      <li><b>Waakye:</b> ris og bønner til frokost, med egg, spagetti og alt annet boden har.</li>
+      <li><b>Å drikke:</b> kald Club-øl, fersk kokosnøtt og hibiskussaften sobolo.</li>
+    </ul>
+    <div class="fakta"><span><b>Et måltid i chop bar:</b> 30 til 50 kr</span><span><b>Restaurant:</b> 80 til 150 kr</span></div>
+  </div>
+</div></section>
+
+<!-- 12 -->
+<section class="side heltekst">
+  <div class="merke">Været</div>
+  <h2>Oktober: grønt, varmt og litt regn</h2>
+  <div class="tre">
+    <div class="kort"><h3>Kysten og Accra</h3><div class="tid">24 til 31 grader</div>Den lille regntiden i sør går mot slutten. Vi må regne med noen byger, helst på ettermiddagen, og høy luftfuktighet.</div>
+    <div class="kort"><h3>Kumasi og Volta</h3><div class="tid">Frodig og fuktig</div>Skogbeltet får mest regn. Til gjengjeld er alt grønt, og Wli-fossen går for fullt. Stiene kan være glatte.</div>
+    <div class="kort"><h3>Mole i nord</h3><div class="tid">Regntiden slutter</div>Savannen er grønn og gresset høyt. Fint landskap, men dyrene er vanskeligere å finne enn i tørketiden.</div>
+  </div>
+  <div class="tre">
+    <div class="kort"><h3>Beste tid for dyrene</h3>Desember til april er tørketid. Da samler elefantene seg ved vannhullene i Mole, men lufta er full av støv fra Sahara.</div>
+    <div class="kort"><h3>Vil dere ha mer strand?</h3>Dropp Volta og legg tre netter på Busua eller Kokrobite. Husk at Atlanterhavet her har kraftige strømmer.</div>
+    <div class="kort"><h3>Roligere tempo?</h3>Dropp Mole. Da forsvinner den lange bildagen og innenriksflyet, og vi får en ekstra natt på kysten og i Volta.</div>
+  </div>
+  <div class="fot">Veiene tåler regn dårlig. Bildagen til Mole kan ta lengre tid enn planlagt, så vi legger ikke noe annet inn den dagen.</div>
+</section>
+
+<!-- 13 -->
+<section class="side heltekst">
+  <div class="merke">Praktisk</div>
+  <h2>Greit å vite</h2>
+  <div class="tre">
+    <div class="kort"><h3>Innreise</h3><div class="tid">Visum må søkes</div>Norske pass trenger visum. Ghana innførte ny ordning med elektronisk visum i 2026. Pris og behandlingstid sjekkes hos ambassaden i Oslo før bestilling.</div>
+    <div class="kort"><h3>Gulfeber</h3><div class="tid">Attest er påkrevd</div>Alle må vise gyldig gulfeberattest ved innreise. Vaksinen settes på reiseklinikk senest ti dager før avreise og varer livet ut.</div>
+    <div class="kort"><h3>Tid og penger</h3><div class="tid">To timer bak Norge</div>Valutaen er cedi. Minibanker i alle byer, kort på hotell, kontanter ellers. Ta med dollar eller euro i reserve til Mole og Volta.</div>
+  </div>
+  <div class="tre">
+    <div class="kort"><h3>Malaria</h3>Folkehelseinstituttet anbefaler malariatabletter og myggmiddel i hele landet. Snakk med fastlege eller reiseklinikk i god tid.</div>
+    <div class="kort"><h3>Komme seg rundt</h3>Bolt og Uber i Accra og Kumasi. Mellom byene går store busser med aircondition og minibusser, tro-tro. Bil med sjåfør der bussen ikke rekker.</div>
+    <div class="kort"><h3>Bestill tidlig</h3>Flysetene først, det er bare tre hjem. Deretter rom i Mole, som har få senger, og innenriksflyet fra Tamale. Resten kan avbestilles gratis.</div>
+  </div>
+  <div class="fot">Visumregler, vaksineråd, rutetider og reiserådene til UD sjekkes på nytt før bestilling.</div>
+</section>
+
+<!-- kostnad -->
+<section class="side heltekst">
+  <div class="merke">Hva koster det</div>
+  <h2 style="margin-bottom:6px">Billigste totalpris for tre</h2>
+  <table class="tab kost">
+    <tr><th>Post</th><th>Slik holder vi det nede</th><th style="text-align:right">Kroner</th></tr>
+    <tr class="fly"><td>Fly, business</td><td>195 000 poeng med to CT. Avgifter anslått til 2 500 kr per person</td><td style="text-align:right"><b>7 500</b></td></tr>
+    <tr class="fly"><td>Tilbringer</td><td>KLM Trondheim til Amsterdam og SAS Oslo til Trondheim, vanlige billetter</td><td style="text-align:right"><b>6 500</b></td></tr>
+    <tr><td>Lisboa</td><td>Ett rom for tre nær flyplassen og metro inn til byen og ut igjen</td><td style="text-align:right"><b>1 300</b></td></tr>
+    <tr><td>Visum</td><td>Elektronisk visum, anslått til 1 000 kr per person. Den mest usikre posten</td><td style="text-align:right"><b>3 000</b></td></tr>
+    <tr><td>Hotell</td><td>10 netter i Accra, Cape Coast, Kumasi og Wli, pluss dagrom siste dag. Ett rom for tre, 480 til 580 kr per natt</td><td style="text-align:right"><b>5 800</b></td></tr>
+    <tr><td>Mole</td><td>2 netter på Mole Motel, ett rom for tre med utsikt til vannhullet</td><td style="text-align:right"><b>2 000</b></td></tr>
+    <tr><td>Buss og taxi</td><td>Buss Accra, Cape Coast, Kumasi og til Volta. Taxi til Kakum, Elmina og kentelandsbyene, Bolt i byene</td><td style="text-align:right"><b>3 300</b></td></tr>
+    <tr><td>Bil med sjåfør</td><td>Kumasi til Mole på én dag, og Mole til flyplassen i Tamale</td><td style="text-align:right"><b>2 500</b></td></tr>
+    <tr><td>Innenriksfly</td><td>Tamale til Accra med bagasje, 1 100 kr per person</td><td style="text-align:right"><b>3 300</b></td></tr>
+    <tr><td>Inngang og guider</td><td>To fort, Kakum, Mole med to safarier, palasset, Wli, apene og kentelandsbyen, 1 250 kr per person</td><td style="text-align:right"><b>3 700</b></td></tr>
+    <tr><td>Mat</td><td>Chop bars og enkle restauranter, 180 kr per person per dag i 13 dager</td><td style="text-align:right"><b>7 000</b></td></tr>
+    <tr class="fly"><td>Sum for tre</td><td>Rundt 15 300 kr per person, pluss 195 000 poeng</td><td style="text-align:right"><b style="font-size:19px">45 900</b></td></tr>
+  </table>
+  <div class="tre" style="margin-top:12px">
+    <div class="kort" style="padding:11px 20px;font-size:15px"><h3 style="font-size:18px">Ikke med i summen</h3>Gulfebervaksine og malariatabletter (rundt 1 500 kr per person), shopping og reiseforsikring.</div>
+    <div class="kort" style="padding:11px 20px;font-size:15px"><h3 style="font-size:18px">Vil dere ha det enklere?</h3>Bil med sjåfør hele veien i stedet for buss legger rundt 8 000 til 10 000 kr på summen for tre.</div>
+    <div class="kort" style="padding:11px 20px;font-size:15px"><h3 style="font-size:18px">Kurs</h3>Norges Bank 13. november 2026: én dollar er 9,56 kr. Prisene i Ghana er regnet fra dollar.</div>
+  </div>
+  <div class="fot">Alle beløp er anslag, ikke hentede priser. Visum, flyavgifter og rom i Mole er de mest usikre postene og sjekkes ved bestilling.</div>
+</section>
+
+<!-- bilder -->
+<section class="side heltekst">
+  <div class="merke">Bilder</div>
+  <h2 style="font-size:30px">Bildekreditt</h2>
+  <div style="font-size:14px">Alle bilder er hentet fra Wikimedia Commons. Filnavn, fotograf og lisens:</div>
+  <div class="kr"><div>Canopy walkway at Kakum National Park.jpg, daSupremo, CC BY-SA 4.0</div><div>Fishing Day at shores of Elmina.jpg, Isaac Ayensu, CC BY-SA 4.0</div><div>Elmina Castle - Ghana.jpg, Damien Halleux Radermecker, CC BY-SA 2.0</div><div>Canopy walkway at the Kakum National Park.jpg, daSupremo, CC BY-SA 4.0</div><div>Mole National Park, West Gonja (P1100448).jpg, Matti Blume, CC BY-SA 4.0</div><div>Kente 75.jpg, Amuzujoe, CC BY-SA 4.0</div><div>Wli waterfalls peak.jpg, AbbeythanAnai, CC BY-SA 4.0</div><div>Accra (Ghana) - Fantasy coffins (adebuu adekai) - 3.jpg, René Edward Knupfer-Müller, CC BY-SA 4.0</div><div>TAP Air Portugal Airbus A321-251NX (A321LR) CS-TXF approaching EWR Airport.jpg, Adam Moreira (AEMoreira042281), CC BY-SA 4.0</div><div>Tram Line 28 in Alfama (50662582522).jpg, Sonse, CC BY 2.0</div><div>Jamestown Lighthouse 20170122.jpg, Gereon K., CC BY-SA 4.0</div><div>Street Outside Makola Market, Accra, Ghana.JPG, Benggriff, CC BY-SA 3.0</div><div>Kwame Nkrumah mausoleum - panoramio.jpg, Simon Ontoyin, CC BY-SA 3.0</div><div>Accra (Ghana) - Fantasy coffins (adebuu adekai) - 8.jpg, René Edward Knupfer-Müller, CC BY-SA 4.0</div><div>Castle, Cape Coast (P1100223).jpg, Matti Blume, CC BY-SA 4.0</div><div>Canopy walkway in Kakum National Park 6.jpg, Ibnali1, CC BY-SA 4.0</div><div>Castle, Elmina (P1100187).jpg, Matti Blume, CC BY-SA 4.0</div><div>Boats at Elmina Port.JPG, Benggriff, CC BY-SA 3.0</div><div>Kumasi Market.jpg, Lattitude Canada, CC BY-SA 3.0</div><div>Manhyia Palace Ambassador Sullivan Kumasi Tour 1.jpg, U.S. Embassy Ghana, Public domain</div><div>Bonwire man weaving.jpg, Sadads, CC BY-SA 4.0</div><div>Adinkra printing.jpg, ZSM, CC BY 3.0</div><div>Mole National Park, West Gonja (P1100443).jpg, Matti Blume, CC BY-SA 4.0</div><div>Mole National Park, West Gonja (P1100359).jpg, Matti Blume, CC BY-SA 4.0</div><div>Larabanga Mosque 0.jpg, Amuzujoe, CC BY-SA 4.0</div><div>An Antelope at the Mole National Park in Savannah Region - Northern Ghana.jpg, Sheihu Salawatia, CC BY-SA 4.0</div><div>Tafi Atome Monkey Sanctuary 6.jpg, Selorm18, CC BY-SA 3.0</div><div>Mountains of Amedzofe.jpg, Williams Penuku, CC BY-SA 4.0</div><div>Black Star Gate in Accra.jpg, Kwameghana(Bright Kwame Ayisi), CC BY-SA 4.0</div><div>Labadi beach 3.jpg, Cca Raheem, CC BY 4.0</div><div>Kokrobite Beach - Ghana.jpg, User: (WT-shared) Mouse at wts wikivoyage, Public domain</div><div>JOLLOF RICE WITH CHICKEN.jpg, DromoTetteh, CC BY-SA 4.0</div><div>Fufu 06.jpg, Amuzujoe, CC BY-SA 4.0</div><div>A taste of Fried Plantain.jpg, OnyekeEjike, CC BY-SA 4.0</div><div>Grilled tilapia with banku.jpg, sshreeves, CC BY 2.0</div></div>
+</section>
+
+<!-- slutt -->
+<section class="side forside slutt">
+  <img loading="lazy" class="full" src="bilder/slutt.jpg" alt="Fiskebåter på stranda i Ghana">
+  <div class="dekk"></div>
+  <div class="tekst">
+    <div class="merke">Neste steg</div>
+    <h1>Skal vi ta setene?</h1>
+    <p>Sju businessseter ut 7. oktober og tre hjem 20. oktober lå ledige 14. november 2026. Bestilles hos SAS med to CT. Hjemreisen har ingen å gå på, så den bør tas først.</p>
+    <p>Reserve: ut fra København 6. oktober, hjem 17. eller 24. oktober til Amsterdam eller København.</p>
+  </div>
+</section>
+</body></html>

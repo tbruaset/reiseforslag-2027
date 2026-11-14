@@ -1,0 +1,414 @@
+<!doctype html><html lang="nb"><head><meta charset="utf-8"><title>Senegal, 15 dager</title><style>
+@page { size: 1280px 720px; margin: 0 }
+* { box-sizing: border-box }
+html, body { margin: 0; padding: 0 }
+body { font-family: 'Noto Sans','DejaVu Sans',sans-serif; color: #1d2733; font-size: 17px; line-height: 1.42; -webkit-print-color-adjust: exact; print-color-adjust: exact }
+.side { width: 1280px; height: 720px; overflow: hidden; position: relative; page-break-after: always; break-after: page; background: #f6f1e7 }
+.side:last-child { page-break-after: auto; break-after: auto }
+img { display: block; object-fit: cover }
+.full { position: absolute; inset: 0; width: 100%; height: 100% }
+.dekk { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,14,26,.20) 0%, rgba(6,14,26,.25) 40%, rgba(6,14,26,.88) 100%) }
+.forside .tekst { position: absolute; left: 70px; right: 70px; bottom: 58px; color: #fff }
+.merke { letter-spacing: .22em; text-transform: uppercase; font-size: 15px; font-weight: 600; color: #f0c878 }
+.forside h1 { font-size: 112px; line-height: .98; margin: 10px 0 18px; font-weight: 800; letter-spacing: -.02em }
+.forside p { font-size: 24px; max-width: 900px; margin: 0 }
+.piller { display: flex; gap: 10px; margin-top: 24px; flex-wrap: wrap }
+.pille { background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.4); border-radius: 30px; padding: 6px 18px; font-size: 16px }
+
+.delt { display: grid; grid-template-columns: 560px 1fr; height: 100% }
+.delt.snu { grid-template-columns: 1fr 560px }
+.panel { padding: 44px 46px 40px; position: relative }
+.panel .merke, .heltekst .merke { color: #a8742a }
+h2 { font-size: 43px; line-height: 1.05; margin: 8px 0 14px; font-weight: 800; letter-spacing: -.01em; color: #16283c }
+.ingress { font-size: 18.5px; margin: 0 0 14px }
+ul { margin: 0; padding-left: 20px }
+li { margin-bottom: 8px }
+li b, td b { color: #8a5a17 }
+.mosaikk { display: grid; height: 720px; gap: 6px; background: #f6f1e7 }
+.mosaikk img { width: 100%; height: 100%; min-height: 0; min-width: 0 }
+.m3 { grid-template-columns: 1fr 1fr; grid-template-rows: 1.35fr 1fr }
+.m3 img:first-child { grid-column: 1 / 3 }
+.m3h { grid-template-columns: 1fr 1.25fr; grid-template-rows: 1fr 1fr }
+.m3h img:first-child { grid-row: 1 / 3 }
+.m2 { grid-template-rows: 1.3fr 1fr }
+.m4 { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr }
+.dag { display: inline-block; background: #16283c; color: #f0c878; border-radius: 30px; padding: 4px 16px; font-size: 15px; font-weight: 600; margin-bottom: 4px }
+.fakta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px }
+.fakta span { background: #e9dfc9; border-radius: 8px; padding: 6px 12px; font-size: 15px }
+.fakta b { color: #8a5a17 }
+.sitat { position: absolute; left: 46px; right: 46px; bottom: 30px; font-size: 15px; color: #6a6557; border-top: 1px solid #d9cdb3; padding-top: 10px }
+
+.heltekst { padding: 44px 60px }
+.grunner { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px }
+.grunn { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 10px rgba(20,30,50,.10) }
+.grunn img { width: 100%; height: 146px }
+.grunn div { padding: 10px 16px 12px; font-size: 15px; line-height: 1.35 }
+.grunn h3 { margin: 0 0 4px; font-size: 19px; color: #8a5a17 }
+
+.tab { border-collapse: collapse; width: 100%; font-size: 15px; margin-top: 10px }
+.tab th { text-align: left; background: #16283c; color: #f0c878; padding: 6px 12px; font-weight: 600 }
+.tab td { border-bottom: 1px solid #ded3bb; padding: 4.5px 12px; vertical-align: top }
+.tab td:first-child { white-space: nowrap; font-weight: 700; color: #8a5a17 }
+.tab td:nth-child(2) { white-space: nowrap; font-weight: 600 }
+.tab tr.fly td { background: #ece2cc }
+.kost td:nth-child(2) { white-space: normal; font-weight: 400 }
+.kost td:nth-child(n+3) { white-space: nowrap }
+.tre { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 22px }
+.fire { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 16px }
+.kort { background: #fff; border-radius: 14px; padding: 22px 24px; box-shadow: 0 2px 10px rgba(20,30,50,.10); font-size: 17px; line-height: 1.45 }
+.kort h3 { margin: 0 0 6px; font-size: 21px; color: #8a5a17 }
+.kort .tid { font-size: 28px; font-weight: 800; letter-spacing: -.01em; margin: 4px 0 4px; color: #16283c }
+.kort small { color: #6a6557; font-size: 14.5px }
+.kort ul { padding-left: 18px } .kort li { margin-bottom: 5px }
+.rute { display: flex; align-items: center; gap: 14px; margin: 18px 0 4px; font-size: 22px; font-weight: 800; color: #16283c }
+.rute span { background: #16283c; color: #fff; border-radius: 10px; padding: 8px 16px }
+.rute i { font-style: normal; color: #a8742a; font-size: 15px; font-weight: 600 }
+.fot { position: absolute; left: 60px; right: 60px; bottom: 24px; font-size: 13.5px; color: #6a6557 }
+.kr { font-size: 11px; line-height: 1.35; columns: 2; column-gap: 30px; color: #55504a; margin-top: 12px }
+.slutt .tekst { position: absolute; left: 70px; right: 70px; bottom: 64px; color: #fff }
+.slutt h1 { font-size: 76px; line-height: 1; margin: 8px 0 14px; font-weight: 800 }
+.slutt p { font-size: 22px; max-width: 900px; margin: 0 0 8px }
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<style>
+@media screen {
+  html { background: #16130f }
+  body { background: #16130f !important; padding: 56px 0 24px !important }
+  .lysbilde { margin: 0 auto 14px; box-shadow: 0 6px 30px rgba(0,0,0,.45) }
+  #topp { position: fixed; inset: 0 0 auto 0; height: 44px; z-index: 1000; display: flex; align-items: center; gap: 14px;
+    padding: 0 16px; background: rgba(22,19,15,.94); color: #f3ead9; font: 15px/1 system-ui, sans-serif }
+  #topp a { color: #f3ead9; text-decoration: none; padding: 8px 12px; border: 1px solid rgba(243,234,217,.35); border-radius: 999px }
+  #topp a:hover, #topp a:focus-visible { background: rgba(243,234,217,.14) }
+  #topp span { opacity: .75; white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
+}
+@media screen and (max-width: 820px) {
+  body { padding: 44px 0 0 !important; font-size: 16px !important }
+  .lysbilde { width: auto !important; height: auto !important; overflow: visible !important; margin: 0 0 8px !important; box-shadow: none !important }
+  table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch }
+  #topp { font-size: 14px; gap: 10px; padding: 0 10px }
+  #topp a { white-space: nowrap }
+  [style*="grid-template-columns"] { grid-template-columns: 1fr !important }
+  [style*="right:750px"] { right: 12px !important }
+
+  .side.forside, .side.slutt { min-height: min(82vh, 680px); display: flex; align-items: flex-end }
+  .forside .tekst, .slutt .tekst { position: relative; left: auto; right: auto; bottom: auto; padding: 140px 22px 34px }
+  .forside h1 { font-size: clamp(46px, 15vw, 84px) }
+  .slutt h1 { font-size: 42px }
+  .forside p, .slutt p { font-size: 18px }
+  .merke { font-size: 13px }
+  .pille { font-size: 14px; padding: 5px 13px }
+  .delt, .delt.snu { display: flex; flex-direction: column; height: auto }
+  .delt > .mosaikk, .delt > .bilder { order: -1 }
+  .bilder { height: auto }
+  .mosaikk { height: auto; gap: 4px; grid-template-columns: 1fr 1fr !important; grid-template-rows: none !important }
+  .mosaikk img { height: auto; aspect-ratio: 4 / 3; grid-row: auto !important; grid-column: auto }
+  .mosaikk img:first-child, .mosaikk img:last-child:nth-child(even) { grid-column: 1 / -1 !important; aspect-ratio: 16 / 10 }
+  .panel { padding: 22px 20px 26px }
+  .heltekst { padding: 26px 20px 28px }
+  h2 { font-size: 29px }
+  .ingress { font-size: 17px }
+  .sitat, .merk, .fot { position: static; margin-top: 18px }
+  .grunner, .fly2, .to, .stripe, .tre, .fire, .steg { grid-template-columns: 1fr; gap: 12px }
+  .grunn img { height: 46vw }
+  .kr { columns: 1 }
+  .tab { font-size: 13.5px }
+  .tab td, .tab th { padding: 6px 5px }
+  .tab td:first-child, .tab td:nth-child(2) { white-space: normal }
+  .kost td:nth-child(3):not(:last-child), .kost th:nth-child(3):not(:last-child) { display: none }  /* dirham skjules, kroner er det som teller */
+  .rute { flex-wrap: wrap; font-size: 18px; gap: 8px }
+  .kort { padding: 16px 18px }
+  .kort .tid { font-size: 22px }
+}
+@media print { #topp { display: none } }
+</style>
+<script>
+addEventListener('DOMContentLoaded', () => {
+  const sider = [...document.querySelectorAll('body > section, body > .side, body > .forside')];
+  sider.forEach(s => s.classList.add('lysbilde'));
+  const grunn = 1280;
+  const tilpass = () => {
+    const smal = matchMedia('(max-width: 820px)').matches;  // på mobil flyter innholdet fritt i stedet
+    const z = smal ? '' : Math.min(1, document.documentElement.clientWidth / grunn);
+    sider.forEach(s => s.style.zoom = z);
+  };
+  if (!matchMedia('print').matches) { tilpass(); addEventListener('resize', tilpass); }
+  addEventListener('beforeprint', () => sider.forEach(s => s.style.zoom = ''));
+  addEventListener('afterprint', tilpass);
+});
+</script>
+</head><body><nav id="topp"><a href="../">← Alle turene</a><span>Senegal: Gorée, Saint-Louis og Saloum-deltaet</span></nav>
+
+<!-- 1 -->
+<section class="side forside">
+  <img class="full" src="bilder/goree.jpg" alt="Øya Gorée utenfor Dakar">
+  <div class="dekk"></div>
+  <div class="tekst">
+    <div class="merke">Ferieforslag, 9. til 23. oktober 2027</div>
+    <h1>Senegal</h1>
+    <p>Dakar og slaveøya Gorée, kolonibyen Saint-Louis, pirog gjennom mangroven i Saloum-deltaet, og safari og strand til slutt. Business med EuroBonus-poeng.</p>
+    <div class="piller"><span class="pille">3 reisende</span><span class="pille">15 dager, 13 netter i Senegal</span><span class="pille">Business via Lisboa</span><span class="pille">Seter funnet 14. november 2026</span></div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="side heltekst">
+  <div class="merke">Hvorfor Senegal</div>
+  <h2>Seks grunner til å bruke to uker her</h2>
+  <div class="grunner">
+    <div class="grunn"><img loading="lazy" src="bilder/goree.jpg" alt=""><div><h3>Gorée</h3>Bilfri øy med pastellfargede hus og en tung historie. Tjue minutter med ferge fra Dakar.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/faidherbe.jpg" alt=""><div><h3>Saint-Louis</h3>Fransk Vest-Afrikas første hovedstad, på en øy i elva. Hestekjerrer, balkonger og fiskebåter.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/saloum.jpg" alt=""><div><h3>Saloum-deltaet</h3>Mangrove, skjelløyer og baobabtrær. Vi glir stille gjennom kanalene i pirog.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/bandia.jpg" alt=""><div><h3>Safari på en formiddag</h3>Sjiraffer, neshorn og sebraer mellom baobabene i Bandia, en halvtime fra stranda.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/thieb.jpg" alt=""><div><h3>Maten</h3>Thieboudienne, fisk og ris fra samme fat, står på UNESCOs liste. Grillet fisk rett fra båten.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/somone.jpg" alt=""><div><h3>Strand til slutt</h3>Fire rolige dager ved Atlanterhavet, med 28 grader i sjøen og kort vei til flyet.</div></div>
+  </div>
+  <div class="fot">Senegal er kjent for teranga, gjestfrihet, og er et av de mest stabile landene i Vest-Afrika. Fire timer med fly fra Lisboa.</div>
+</section>
+
+<!-- 3 -->
+<section class="side"><div class="delt">
+  <div class="panel">
+    <div class="merke">Flyet</div>
+    <h2>Business via Lisboa</h2>
+    <p class="ingress" style="margin-bottom:6px">TAP flyr oss fra Oslo til Dakar på én dag. Hjem går nattflyet, og vi er i Trondheim samme kveld.</p>
+    <div class="rute" style="margin-top:10px;gap:9px;font-size:19px;white-space:nowrap"><span>TRD</span><i>55 min</i><span>OSL</span><i>4 t</i><span>LIS</span><i>4 t 10</i><span>DSS</span></div>
+    <ul style="margin-top:12px;font-size:16px">
+      <li><b>Ut lørdag 9. oktober:</b> SAS fra Værnes om morgenen, Oslo 12:50 med TP763, Lisboa 20:45 med TP1483, framme i Dakar 23:55. Tre ledige businessseter.</li>
+      <li><b>Hjem lørdag 23. oktober:</b> Dakar 00:55 med TP1484 og TP668, Amsterdam 12:50, KLM til Værnes 22:50. Fire ledige businessseter.</li>
+      <li><b>Poeng for tre: 195&nbsp;000</b> med to CT. To reiser på én CT for 130&nbsp;000, den tredje på egen CT for 65&nbsp;000.</li>
+      <li><b>Tilbringer:</b> Trondheim til Oslo og Amsterdam til Trondheim kjøpes som egne billetter hvis SAS ikke legger dem på poengbilletten.</li>
+    </ul>
+    <div class="sitat">Tre etapper hver vei. Ventetiden i Amsterdam på hjemveien er lang, så det blir tid til en tur inn til byen.</div>
+  </div>
+  <div class="mosaikk m2"><img loading="lazy" src="bilder/tapfly.jpg" alt="TAP Air Portugal"><img loading="lazy" src="bilder/lisboa.jpg" alt="Lisboa"></div>
+</div></section>
+
+<!-- 4 -->
+<section class="side heltekst" style="padding-top:34px">
+  <div class="merke">Ruta</div>
+  <h2 style="margin-bottom:4px;font-size:38px">15 dager i ett blikk</h2>
+  <table class="tab" style="font-size:15px;margin-top:8px">
+    <tr><th>Dag</th><th>Sted</th><th>Hva skjer</th><th>Natt</th></tr>
+    <tr class="fly"><td>1, lør 9.</td><td>Trondheim til Dakar</td><td>SAS til Oslo, business 12:50 via Lisboa, framme 23:55</td><td>Dakar</td></tr>
+    <tr><td>2, søn 10.</td><td>Gorée</td><td>Ferge til slaveøya, Slavehuset og smugene. Museet for svarte sivilisasjoner</td><td>Dakar</td></tr>
+    <tr><td>3, man 11.</td><td>Dakar</td><td>Plateau og Kermel-markedet, Renessansemonumentet, fyret og Ngor</td><td>Dakar</td></tr>
+    <tr><td>4, tir 12.</td><td>Lac Rose</td><td>Bil med sjåfør. Saltsjøen, sanddynene og stranda der Dakar-rallyet endte</td><td>Lac Rose</td></tr>
+    <tr><td>5, ons 13.</td><td>Til Saint-Louis</td><td>Nordover langs kysten (ca. 4 t). Solnedgang over Faidherbe-brua</td><td>Saint-Louis</td></tr>
+    <tr><td>6, tor 14.</td><td>Saint-Louis</td><td>Kolonibyen på øya med hestekjerre, fiskerbydelen Guet Ndar</td><td>Saint-Louis</td></tr>
+    <tr><td>7, fre 15.</td><td>Langue de Barbarie</td><td>Pirog blant pelikaner og terner i nasjonalparken, rolig ettermiddag</td><td>Saint-Louis</td></tr>
+    <tr><td>8, lør 16.</td><td>Til Saloum</td><td>Lang kjøredag (ca. 7 t) via stormoskeen i Touba</td><td>Saloum</td></tr>
+    <tr><td>9, søn 17.</td><td>Saloum-deltaet</td><td>Pirog gjennom mangroven, skjelløy med baobabtrær, fugleøya i solnedgang</td><td>Saloum</td></tr>
+    <tr><td>10, man 18.</td><td>Saloum-deltaet</td><td>Kajakk eller fottur til en landsby, østersplukkerne, hengekøye</td><td>Saloum</td></tr>
+    <tr><td>11, tir 19.</td><td>Joal-Fadiouth</td><td>Skjelløya med trebrua og gravlunden, videre til Petite Côte (2 t)</td><td>Somone</td></tr>
+    <tr><td>12, ons 20.</td><td>Bandia</td><td>Safari i åpen bil om morgenen, lagunen i Somone på ettermiddagen</td><td>Somone</td></tr>
+    <tr><td>13, tor 21.</td><td>Stranda</td><td>Fridag. Bading, fiskemarkedet i Mbour når båtene kommer inn</td><td>Somone</td></tr>
+    <tr><td>14, fre 22.</td><td>Stranda</td><td>Rommet beholdes til kvelden, avskjedsmiddag, flyplassen kl. 22</td><td>Fly</td></tr>
+    <tr class="fly"><td>15, lør 23.</td><td>Dakar til Trondheim</td><td>Business 00:55 via Lisboa, Amsterdam 12:50, Værnes 22:50</td><td></td></tr>
+  </table>
+</section>
+
+<!-- 5 -->
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m3"><img loading="lazy" src="bilder/goree2.jpg" alt="Gorée sett fra sjøen"><img loading="lazy" src="bilder/esclaves.jpg" alt="Slavehuset på Gorée"><img loading="lazy" src="bilder/goree3.jpg" alt="Gate på Gorée"></div>
+  <div class="panel">
+    <span class="dag">Dag 2</span>
+    <h2>Gorée: øya ingen glemmer</h2>
+    <p class="ingress">Fra denne lille øya ble mennesker sendt over Atlanteren i tre hundre år. I dag er den stille, bilfri og full av bougainvillea.</p>
+    <ul>
+      <li><b>Ferga</b> går fra havna i Dakar omtrent hver time og bruker tjue minutter.</li>
+      <li><b>Slavehuset:</b> cellene og «døren uten retur» ut mot havet. Lite, men sterkt. Stengt mandager, derfor drar vi søndag.</li>
+      <li><b>Smugene:</b> okergule og rosa hus, kunstnere som maler med sand, og utsikt fra festningen på toppen.</li>
+      <li><b>Lunsj</b> på stranda ved kaia, med grillet fisk.</li>
+      <li><b>Tilbake i byen:</b> Museet for svarte sivilisasjoner ligger noen minutter fra fergeleiet.</li>
+    </ul>
+    <div class="fakta"><span><b>Ferge:</b> ca. 90 kr tur og retur</span><span><b>UNESCO:</b> verdensarv siden 1978</span></div>
+  </div>
+</div></section>
+
+<!-- 6 -->
+<section class="side"><div class="delt">
+  <div class="panel">
+    <span class="dag">Dag 3</span>
+    <h2>Dakar: Afrikas vestligste by</h2>
+    <p class="ingress">Hovedstaden ligger på en halvøy rett ut i Atlanteren. Travel, fargerik og full av musikk.</p>
+    <ul>
+      <li><b>Plateau:</b> sentrum fra kolonitiden, med presidentpalasset, katedralen og den runde markedshallen Kermel fra 1910.</li>
+      <li><b>Renessansemonumentet:</b> 49 meter bronse på en vulkanhaug, høyere enn Frihetsgudinnen. Heis til toppen.</li>
+      <li><b>Fyret på Mamelles</b> rett ved, med byens beste utsikt i solnedgang.</li>
+      <li><b>Ngor og Almadies:</b> fiskerlandsby, surfere og Afrikas vestligste punkt. Pirog over til Ngor-øya tar fem minutter.</li>
+      <li><b>Kvelden:</b> fiskemarkedet Soumbédioune, eller levende mbalax-musikk på en klubb.</li>
+    </ul>
+    <div class="fakta"><span><b>Bo:</b> Plateau eller Ngor</span><span><b>Flyplassen:</b> 50 min på motorvei</span></div>
+  </div>
+  <div class="mosaikk m4"><img loading="lazy" src="bilder/renessanse.jpg" alt="Renessansemonumentet"><img loading="lazy" src="bilder/kermel.jpg" alt="Kermel-markedet"><img loading="lazy" src="bilder/mamelles.jpg" alt="Fyret på Mamelles"><img loading="lazy" src="bilder/ngor.jpg" alt="Stranda i Ngor"></div>
+</div></section>
+
+<!-- 7 -->
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m3"><img loading="lazy" src="bilder/lacrose.jpg" alt="Lac Rose"><img loading="lazy" src="bilder/salt.jpg" alt="Saltbåt på Lac Rose"><img loading="lazy" src="bilder/salt2.jpg" alt="Salthauger ved Lac Rose"></div>
+  <div class="panel">
+    <span class="dag">Dag 4</span>
+    <h2>Lac Rose: saltsjøen og sanddynene</h2>
+    <p class="ingress">En time nord for Dakar ligger en sjø som er saltere enn Dødehavet, skilt fra Atlanteren av høye sanddyner.</p>
+    <ul>
+      <li><b>Saltsankerne</b> står i vann til livet og fyller båtene med salt fra bunnen. Vi kan bli med ut.</li>
+      <li><b>Dynene og stranda:</b> med firehjulstrekker eller til fots over sanda til havet, der Paris-Dakar-rallyet hadde målgang.</li>
+      <li><b>Bade:</b> man flyter som en kork. Dusj etterpå.</li>
+      <li><b>Natt i leir</b> ved sjøen, med middag ute og stjernehimmel.</li>
+    </ul>
+    <div class="fakta"><span><b>Fra Dakar:</b> ca. 1 t</span><span><b>Videre til Saint-Louis:</b> ca. 4 t</span></div>
+    <div class="sitat">Ærlig talt: fargen er sterkest i tørketiden. Sjøen mistet rosafargen etter flommen i 2022 og fikk den tilbake i 2025, men rett etter regntiden kan den være blek.</div>
+  </div>
+</div></section>
+
+<!-- 8 -->
+<section class="side"><div class="delt">
+  <div class="panel">
+    <span class="dag">Dag 5 til 7</span>
+    <h2>Saint-Louis: byen på øya</h2>
+    <p class="ingress">Den gamle hovedstaden ligger på en smal øy i Senegalelva. Slitt, vakker og helt uten hastverk.</p>
+    <ul>
+      <li><b>Faidherbe-brua:</b> en halv kilometer jern fra 1897 knytter øya til fastlandet.</li>
+      <li><b>Kolonibyen:</b> rette gater med balkonger i tre og smijern. Best fra en hestekjerre, eller til fots tidlig om morgenen.</li>
+      <li><b>Guet Ndar:</b> fiskerbydelen på sandtunga, med hundrevis av malte piroger. Kom når fangsten bæres i land sent på ettermiddagen.</li>
+      <li><b>Langue de Barbarie:</b> nasjonalpark en halvtime sør for byen. Halvannen time i pirog blant pelikaner, hegrer og terner.</li>
+    </ul>
+    <div class="fakta"><span><b>Bo:</b> gammelt handelshus på øya</span><span><b>UNESCO:</b> siden 2000</span></div>
+    <div class="sitat">Fugleparken Djoudj er som regel stengt i regntiden og åpner rundt 1. november. Derfor tar vi Langue de Barbarie.</div>
+  </div>
+  <div class="mosaikk m4"><img loading="lazy" src="bilder/stlouis.jpg" alt="Kolonihus i Saint-Louis"><img loading="lazy" src="bilder/faidherbe.jpg" alt="Faidherbe-brua"><img loading="lazy" src="bilder/guetndar.jpg" alt="Piroger i Guet Ndar"><img loading="lazy" src="bilder/pelikan.jpg" alt="Pelikaner"></div>
+</div></section>
+
+<!-- 9 -->
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m3"><img loading="lazy" src="bilder/saloum2.jpg" alt="Pirog i Saloum-deltaet"><img loading="lazy" src="bilder/touba.jpg" alt="Stormoskeen i Touba"><img loading="lazy" src="bilder/mangrove.jpg" alt="Mangrove i Saloum"></div>
+  <div class="panel">
+    <span class="dag">Dag 8 til 10</span>
+    <h2>Saloum: mangrove og stillhet</h2>
+    <p class="ingress">Der elvene Sine og Saloum møter havet ligger to hundre øyer mellom kanaler av brakkvann. Verdensarv og fuglereservat.</p>
+    <ul>
+      <li><b>Veien dit:</b> stopp i Touba, den hellige byen til muridene, med en av Afrikas største moskeer. Besøk med guide.</li>
+      <li><b>Pirog i mangroven:</b> trange kanaler, østers på røttene og isfugler. Kvinnene som plukker østers viser hvordan.</li>
+      <li><b>Skjelløyene:</b> hauger av skjell fra tusen års måltider, med baobabtrær og gamle graver på toppen.</li>
+      <li><b>Fugleøya i solnedgang:</b> tusenvis av hegrer, pelikaner og skarver kommer inn for natten.</li>
+    </ul>
+    <div class="fakta"><span><b>Bo:</b> enkel lodge ved vannet, middag inkludert</span><span><b>Mygg:</b> ta med middel</span></div>
+  </div>
+</div></section>
+
+<!-- 10 -->
+<section class="side"><div class="delt">
+  <div class="panel">
+    <span class="dag">Dag 11 til 14</span>
+    <h2>Petite Côte: safari og strand</h2>
+    <p class="ingress">Kysten sør for Dakar har landets roligste strender. Her lander vi mykt de siste dagene.</p>
+    <ul>
+      <li><b>Joal-Fadiouth:</b> en hel øy bygd av skjell, med lang trebru og en gravlund der kristne og muslimer ligger side om side.</li>
+      <li><b>Bandia:</b> privat reservat med sjiraffer, hvite neshorn, sebraer, bøfler og antiloper. To timer i åpen bil med guide.</li>
+      <li><b>Somone-lagunen:</b> pirog eller padlebrett mellom mangrove og sandbanker, og østers til lunsj.</li>
+      <li><b>Mbour:</b> et av Vest-Afrikas største fiskemarkeder når båtene kommer inn rundt kl. 17.</li>
+      <li><b>Siste dag:</b> strand og basseng. Flyplassen ligger en halvtime unna.</li>
+    </ul>
+    <div class="fakta"><span><b>Bo:</b> lite hotell ved stranda i Somone</span><span><b>Sjøen:</b> ca. 28 grader</span></div>
+  </div>
+  <div class="mosaikk m4"><img loading="lazy" src="bilder/fadiouth.jpg" alt="Joal-Fadiouth"><img loading="lazy" src="bilder/sjiraff.jpg" alt="Sjiraff i Bandia"><img loading="lazy" src="bilder/neshorn.jpg" alt="Neshorn i Bandia"><img loading="lazy" src="bilder/strand.jpg" alt="Strand på Petite Côte"></div>
+</div></section>
+
+<!-- 11 -->
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m3"><img loading="lazy" src="bilder/thieb2.jpg" alt="Thieboudienne"><img loading="lazy" src="bilder/yassa.jpg" alt="Yassa"><img loading="lazy" src="bilder/bissap.jpg" alt="Bissap"></div>
+  <div class="panel">
+    <div class="merke">Maten</div>
+    <h2>Fra samme fat</h2>
+    <p class="ingress">Senegalesisk mat regnes som den beste i Vest-Afrika. Mye fisk, ris, løk og lime, og sterk chili ved siden av.</p>
+    <ul>
+      <li><b>Thieboudienne:</b> nasjonalretten. Fisk, ris og grønnsaker kokt i tomat, servert på ett stort fat.</li>
+      <li><b>Yassa:</b> kylling eller fisk marinert i løk, sitron og sennep.</li>
+      <li><b>Mafé:</b> gryte med peanøttsaus, og <b>dibi</b>, grillet lam fra gatekjøkkenet.</li>
+      <li><b>Fersk fisk og sjømat</b> langs hele kysten, og østers i Saloum og Somone.</li>
+      <li><b>Bissap</b> av hibiskus, og saft av baobabfrukt og ingefær.</li>
+      <li><b>Ataya:</b> søt myntete i tre runder. Sier noen ja til te, blir man sittende en time.</li>
+    </ul>
+    <div class="fakta"><span><b>Lokalt måltid:</b> 30 til 60 kr</span><span><b>Restaurant:</b> 100 til 160 kr</span></div>
+  </div>
+</div></section>
+
+<!-- 12 -->
+<section class="side heltekst">
+  <div class="merke">Været</div>
+  <h2>Oktober: varmt, fuktig og grønt</h2>
+  <div class="tre">
+    <div class="kort"><h3>Slutten på regntiden</h3><div class="tid">28 til 32 grader</div>Regnet kommer fra juli til tidlig i oktober. Midt i måneden er det stort sett over, men lufta er fortsatt fuktig og nettene varme.</div>
+    <div class="kort"><h3>Fordelene</h3><div class="tid">Grønt og få turister</div>Landet er på sitt grønneste, baobabene har blader, og høysesongen har ikke startet. Sjøen holder rundt 28 grader.</div>
+    <div class="kort"><h3>Ulempene</h3><div class="tid">Mygg og klam varme</div>Det er mest mygg rett etter regnet. En og annen byge kan komme i sør, og trekkfuglene fra Europa er bare så vidt på vei.</div>
+  </div>
+  <div class="tre">
+    <div class="kort"><h3>Hvis vi kan flytte turen</h3>November til februar er best: tørt, 25 til 30 grader, og fugleparken Djoudj er åpen med millioner av trekkfugler.</div>
+    <div class="kort"><h3>Roligere tempo?</h3>Dropp Saint-Louis og bruk dagene i Saloum og på stranda. Da forsvinner begge de lange kjøredagene.</div>
+    <div class="kort"><h3>Mer strand?</h3>Kutt Lac Rose og en natt i Saint-Louis, og legg to dager til på Petite Côte.</div>
+  </div>
+  <div class="fot">Temperaturene er normaltall. Rom med aircondition er verdt pengene i oktober, og det er lagt inn i budsjettet der det finnes.</div>
+</section>
+
+<!-- 13 -->
+<section class="side heltekst">
+  <div class="merke">Praktisk</div>
+  <h2>Greit å vite</h2>
+  <div class="tre">
+    <div class="kort"><h3>Innreise</h3><div class="tid">Trolig uten visum</div>Kildene spriker for norske pass: visumfritt i 90 dager eller visum ved ankomst. Sjekkes hos UD før bestilling. Passet bør være gyldig i seks måneder.</div>
+    <div class="kort"><h3>Helse</h3><div class="tid">Malariatabletter</div>Malaria finnes i hele landet, og oktober er høysesong for mygg. Gulfebervaksine anbefales. Ta en time hos reisevaksinekontor i god tid.</div>
+    <div class="kort"><h3>Tid og penger</h3><div class="tid">To timer bak Norge</div>Valutaen er CFA-franc, låst til euro. 10&nbsp;000 franc er rundt 160 kroner. Minibank i byene, kontanter ellers.</div>
+  </div>
+  <div class="tre">
+    <div class="kort"><h3>Komme seg rundt</h3>Bil med sjåfør fra dag 4 til 12 er det enkleste og koster lite delt på tre. I Dakar bruker vi taxi, og prisen avtales før turen.</div>
+    <div class="kort"><h3>Språk og skikk</h3>Fransk og wolof, lite engelsk utenfor hotellene. Landet er muslimsk og avslappet. Dekk skuldre og knær i Touba og i landsbyene.</div>
+    <div class="kort"><h3>Bestill tidlig</h3>Flysetene først. Deretter bil med sjåfør og lodgen i Saloum. Hotellene kan bestilles med gratis avbestilling.</div>
+  </div>
+  <div class="fot">Ruta holder seg langt unna Casamance i sør og grensa mot Mali i øst. Reiseråd, visumregler og åpningstider sjekkes på nytt før bestilling.</div>
+</section>
+
+<!-- kostnad -->
+<section class="side heltekst">
+  <div class="merke">Hva koster det</div>
+  <h2 style="margin-bottom:6px">Billigste totalpris for tre</h2>
+  <table class="tab kost">
+    <tr><th>Post</th><th>Slik holder vi det nede</th><th style="text-align:right">Kroner</th></tr>
+    <tr class="fly"><td>Fly, business</td><td>195&nbsp;000 poeng med to CT. Avgifter anslått til 2&nbsp;000 kr per person</td><td style="text-align:right"><b>6&nbsp;000</b></td></tr>
+    <tr class="fly"><td>Tilbringer</td><td>Trondheim til Oslo og Amsterdam til Trondheim, kjøpt som vanlige billetter. Faller bort hvis SAS legger dem på samme poengbillett</td><td style="text-align:right"><b>7&nbsp;500</b></td></tr>
+    <tr><td>Hotell</td><td>10 netter i Dakar, Saint-Louis og Somone. Ett familierom med frokost, 650 til 730 kr per natt, og sen utsjekk siste dag</td><td style="text-align:right"><b>7&nbsp;000</b></td></tr>
+    <tr><td>Leir og lodge</td><td>1 natt ved Lac Rose og 3 netter i Saloum, med middag og frokost, ca. 340 kr per person per natt</td><td style="text-align:right"><b>4&nbsp;100</b></td></tr>
+    <tr><td>Bil med sjåfør</td><td>9 dager fra Dakar til Somone, ca. 800 kr per dag, pluss drivstoff til rundt 900 kilometer</td><td style="text-align:right"><b>8&nbsp;400</b></td></tr>
+    <tr><td>Taxi</td><td>Fra og til flyplassen og rundt i Dakar</td><td style="text-align:right"><b>1&nbsp;200</b></td></tr>
+    <tr><td>Inngang og båt</td><td>Ferge til Gorée, museer, pirog i Langue de Barbarie og Saloum, guide i Touba og Fadiouth, Bandia med guide, 1&nbsp;400 kr per person</td><td style="text-align:right"><b>4&nbsp;200</b></td></tr>
+    <tr><td>Mat</td><td>Lokale restauranter og fisk på stranda, 175 kr per person per dag i 13 dager</td><td style="text-align:right"><b>6&nbsp;800</b></td></tr>
+    <tr class="fly"><td>Sum for tre</td><td>Rundt 15&nbsp;100 kr per person, pluss 195&nbsp;000 poeng</td><td style="text-align:right"><b style="font-size:19px">45&nbsp;200</b></td></tr>
+  </table>
+  <div class="tre" style="margin-top:14px">
+    <div class="kort" style="padding:12px 20px;font-size:15px"><h3 style="font-size:18px">Ikke med i summen</h3>Vaksiner og malariatabletter (ca. 1&nbsp;500 til 2&nbsp;500 kr per person), eventuelt visum, shopping og reiseforsikring.</div>
+    <div class="kort" style="padding:12px 20px;font-size:15px"><h3 style="font-size:18px">Vil dere bo bedre?</h3>Gode hoteller med basseng hele veien og en finere lodge i Saloum legger rundt 12&nbsp;000 til 18&nbsp;000 kr på summen for tre.</div>
+    <div class="kort" style="padding:12px 20px;font-size:15px"><h3 style="font-size:18px">Kurs</h3>Norges Bank 13. november 2026: én euro er 10,57 kr og én dollar 9,56 kr. 1&nbsp;000 CFA-franc er 16,10 kr.</div>
+  </div>
+  <div class="fot">Alle beløp er anslag, ikke hentede priser. Flyavgiftene, tilbringerne og bilen med sjåfør er de mest usikre postene og sjekkes ved bestilling.</div>
+</section>
+
+<!-- bilder -->
+<section class="side heltekst">
+  <div class="merke">Bilder</div>
+  <h2 style="font-size:30px">Bildekreditt</h2>
+  <div style="font-size:14px">Alle bilder er hentet fra Wikimedia Commons. Filnavn, fotograf og lisens:</div>
+  <div class="kr"><div>Coucher du soleil du quai de pêche du delta du sine saloum.jpg, By cheikh pic, CC BY-SA 4.0</div><div>Island of Gorée, Senegal.jpg, Nextdrop, CC BY-SA 2.0</div><div>Île de Gorée vue de la chaloupe 15.jpg, Fawaz.tairou, CC BY-SA 4.0</div><div>Gorée Sénégal.jpg, Issiaga0, CC BY-SA 4.0</div><div>Gorée 2024 - Maison des esclaves - 08.jpg, Fawaz.tairou, CC BY 4.0</div><div>African Renaissance Monument (5502494604).jpg, Jeff Attaway, CC BY 2.0</div><div>SN-dakar-marche-kermel-1.jpg, Balou46, CC BY-SA 4.0</div><div>Mamelles lighthouse - Dakar.jpg, Jeff Attaway uploaded and derivative work: MrPanyGoff, CC BY 2.0</div><div>Ngor Beach.jpg, Jeff Attaway from Abuja, Nigeria, CC BY 2.0</div><div>Lac Rose - Sénégal.jpg, Issiaga0, CC BY-SA 4.0</div><div>Bateau chargé de sel au lac rose.jpg, Pitele, CC BY-SA 4.0</div><div>Le sel du Lac rose.JPG, MyriamLouviot, CC BY-SA 3.0</div><div>Pont Faidherbe à Saint-Louis au Sénégal 02.jpg, Fawaz.tairou, CC BY 4.0</div><div>Saint-Louis - 02 Maison coloniale.JPG, HaguardDuNord, CC BY-SA 3.0</div><div>Pirogues Guet ndar.jpg, Ibfal, CC BY-SA 4.0</div><div>A la rencontre des oiseaux (ile des oiseaux) au Parc national de la Langue de Barbarie (PNLB) 02.jpg, 6artphotographie, CC BY-SA 4.0</div><div>Mosquée Touba (senegal) 2006.JPG, zivax, CC BY-SA 3.0</div><div>Mangrove lagoon ,reserve du delta (sine saloum du senegal).jpg, Oumi diop, CC BY-SA 4.0</div><div>Pirogue au delta du Saloum 03.jpg, Mouhamadoulmansour, CC BY-SA 4.0</div><div>Mangrove du parc de delta du SINE-SALOUM.jpg, By cheikh pic, CC BY-SA 4.0</div><div>Fadiouth from cemetery island, Senegal.jpg, John Atherton, CC BY-SA 2.0</div><div>20231111 Réserve de Bandia girafe 2.jpg, Tbo47, CC BY 4.0</div><div>Girafe dans la réserve de Bandia Sénégal 01.jpg, Josi Salgado, CC BY-SA 4.0</div><div>Rhinoceros blanc- réserve de Bandia - panoramio.jpg, Corine REZEL, CC BY-SA 3.0</div><div>La Lagune de la Somone 01.jpg, Andersonphotography, CC BY 2.0</div><div>Plage de Saly (Sénégal).jpg, Davric, CC BY-SA 4.0</div><div>Thieboudienne.JPG, KVDP, Public domain</div><div>Ceebu jen, Senegalese cuisine.JPG, Alweaver2, CC BY-SA 4.0</div><div>Poulet yassa 01.jpg, Arnaud 25, CC0</div><div>Bissap &amp; Ginger Juice (7558541174).jpg, Jen Arrr, CC BY-SA 2.0</div><div>TAP Air Portugal Airbus A321-251NX (A321LR) CS-TXF approaching EWR Airport.jpg, Adam Moreira (AEMoreira042281), CC BY-SA 4.0</div><div>Lisbon Portela Airport Terminal 1, May 2017 (01).JPG, Ardfern, CC BY-SA 4.0</div></div>
+</section>
+
+<!-- slutt -->
+<section class="side forside slutt">
+  <img loading="lazy" class="full" src="bilder/slutt.jpg" alt="Solnedgang i Senegal">
+  <div class="dekk"></div>
+  <div class="tekst">
+    <div class="merke">Neste steg</div>
+    <h1>Skal vi ta setene?</h1>
+    <p>Tre businessseter ut 9. oktober og fire hjem 23. oktober lå ledige 14. november 2026. Bestilles hos SAS med to CT, og tilbringerne fra og til Trondheim legges på samtidig.</p>
+    <p>Reserve: ut fra Amsterdam 6. til 10. oktober, hjem til Amsterdam 19. til 22. oktober eller til Oslo 20. oktober.</p>
+  </div>
+</section>
+</body></html>
