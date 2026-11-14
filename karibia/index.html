@@ -1,0 +1,449 @@
+<!doctype html><html lang="nb"><head><meta charset="utf-8"><title>Karibia, reisetips</title><style>
+@page { size: 1280px 720px; margin: 0 }
+* { box-sizing: border-box }
+html, body { margin: 0; padding: 0 }
+body { font-family: 'Noto Sans','DejaVu Sans',sans-serif; color: #1d2733; font-size: 17px; line-height: 1.42; -webkit-print-color-adjust: exact; print-color-adjust: exact }
+.side { width: 1280px; height: 720px; overflow: hidden; position: relative; page-break-after: always; break-after: page; background: #f6f1e7 }
+.side:last-child { page-break-after: auto; break-after: auto }
+img { display: block; object-fit: cover }
+.full { position: absolute; inset: 0; width: 100%; height: 100% }
+.dekk { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,14,26,.20) 0%, rgba(6,14,26,.25) 40%, rgba(6,14,26,.88) 100%) }
+.forside .tekst { position: absolute; left: 70px; right: 70px; bottom: 58px; color: #fff }
+.merke { letter-spacing: .22em; text-transform: uppercase; font-size: 15px; font-weight: 600; color: #f0c878 }
+.forside h1 { font-size: 112px; line-height: .98; margin: 10px 0 18px; font-weight: 800; letter-spacing: -.02em }
+.forside p { font-size: 24px; max-width: 900px; margin: 0 }
+.piller { display: flex; gap: 10px; margin-top: 24px; flex-wrap: wrap }
+.pille { background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.4); border-radius: 30px; padding: 6px 18px; font-size: 16px }
+
+.delt { display: grid; grid-template-columns: 560px 1fr; height: 100% }
+.delt.snu { grid-template-columns: 1fr 560px }
+.panel { padding: 44px 46px 40px; position: relative }
+.panel .merke, .heltekst .merke { color: #a8742a }
+h2 { font-size: 43px; line-height: 1.05; margin: 8px 0 14px; font-weight: 800; letter-spacing: -.01em; color: #16283c }
+.ingress { font-size: 18.5px; margin: 0 0 14px }
+ul { margin: 0; padding-left: 20px }
+li { margin-bottom: 8px }
+li b, td b { color: #8a5a17 }
+.mosaikk { display: grid; height: 720px; gap: 6px; background: #f6f1e7 }
+.mosaikk img { width: 100%; height: 100%; min-height: 0; min-width: 0 }
+.m3 { grid-template-columns: 1fr 1fr; grid-template-rows: 1.35fr 1fr }
+.m3 img:first-child { grid-column: 1 / 3 }
+.m3h { grid-template-columns: 1fr 1.25fr; grid-template-rows: 1fr 1fr }
+.m3h img:first-child { grid-row: 1 / 3 }
+.m2 { grid-template-rows: 1.3fr 1fr }
+.m4 { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr }
+.dag { display: inline-block; background: #16283c; color: #f0c878; border-radius: 30px; padding: 4px 16px; font-size: 15px; font-weight: 600; margin-bottom: 4px }
+.fakta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px }
+.fakta span { background: #e9dfc9; border-radius: 8px; padding: 6px 12px; font-size: 15px }
+.fakta b { color: #8a5a17 }
+.sitat { position: absolute; left: 46px; right: 46px; bottom: 30px; font-size: 15px; color: #6a6557; border-top: 1px solid #d9cdb3; padding-top: 10px }
+
+.heltekst { padding: 44px 60px }
+.grunner { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px }
+.grunn { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 10px rgba(20,30,50,.10) }
+.grunn img { width: 100%; height: 146px }
+.grunn div { padding: 10px 16px 12px; font-size: 15px; line-height: 1.35 }
+.grunn h3 { margin: 0 0 4px; font-size: 19px; color: #8a5a17 }
+
+.tab { border-collapse: collapse; width: 100%; font-size: 15px; margin-top: 10px }
+.tab th { text-align: left; background: #16283c; color: #f0c878; padding: 6px 12px; font-weight: 600 }
+.tab td { border-bottom: 1px solid #ded3bb; padding: 4.5px 12px; vertical-align: top }
+.tab td:first-child { white-space: nowrap; font-weight: 700; color: #8a5a17 }
+.tab td:nth-child(2) { white-space: nowrap; font-weight: 600 }
+.tab tr.fly td { background: #ece2cc }
+.kost td:nth-child(2) { white-space: normal; font-weight: 400 }
+.kost td:nth-child(n+3) { white-space: nowrap }
+.tre { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 22px }
+.fire { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 16px }
+.kort { background: #fff; border-radius: 14px; padding: 22px 24px; box-shadow: 0 2px 10px rgba(20,30,50,.10); font-size: 17px; line-height: 1.45 }
+.kort h3 { margin: 0 0 6px; font-size: 21px; color: #8a5a17 }
+.kort .tid { font-size: 28px; font-weight: 800; letter-spacing: -.01em; margin: 4px 0 4px; color: #16283c }
+.kort small { color: #6a6557; font-size: 14.5px }
+.kort ul { padding-left: 18px } .kort li { margin-bottom: 5px }
+.rute { display: flex; align-items: center; gap: 14px; margin: 18px 0 4px; font-size: 22px; font-weight: 800; color: #16283c }
+.rute span { background: #16283c; color: #fff; border-radius: 10px; padding: 8px 16px }
+.rute i { font-style: normal; color: #a8742a; font-size: 15px; font-weight: 600 }
+.fot { position: absolute; left: 60px; right: 60px; bottom: 24px; font-size: 13.5px; color: #6a6557 }
+.kr { font-size: 11px; line-height: 1.35; columns: 2; column-gap: 30px; color: #55504a; margin-top: 12px }
+.slutt .tekst { position: absolute; left: 70px; right: 70px; bottom: 64px; color: #fff }
+.slutt h1 { font-size: 76px; line-height: 1; margin: 8px 0 14px; font-weight: 800 }
+.slutt p { font-size: 22px; max-width: 900px; margin: 0 0 8px }
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<style>
+@media screen {
+  html { background: #16130f }
+  body { background: #16130f !important; padding: 56px 0 24px !important }
+  .lysbilde { margin: 0 auto 14px; box-shadow: 0 6px 30px rgba(0,0,0,.45) }
+  #topp { position: fixed; inset: 0 0 auto 0; height: 44px; z-index: 1000; display: flex; align-items: center; gap: 14px;
+    padding: 0 16px; background: rgba(22,19,15,.94); color: #f3ead9; font: 15px/1 system-ui, sans-serif }
+  #topp a { color: #f3ead9; text-decoration: none; padding: 8px 12px; border: 1px solid rgba(243,234,217,.35); border-radius: 999px }
+  #topp a:hover, #topp a:focus-visible { background: rgba(243,234,217,.14) }
+  #topp span { opacity: .75; white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
+}
+@media screen and (max-width: 820px) {
+  body { padding: 44px 0 0 !important; font-size: 16px !important }
+  .lysbilde { width: auto !important; height: auto !important; overflow: visible !important; margin: 0 0 8px !important; box-shadow: none !important }
+  table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch }
+  #topp { font-size: 14px; gap: 10px; padding: 0 10px }
+  #topp a { white-space: nowrap }
+  [style*="grid-template-columns"] { grid-template-columns: 1fr !important }
+  [style*="right:750px"] { right: 12px !important }
+
+  .side.forside, .side.slutt { min-height: min(82vh, 680px); display: flex; align-items: flex-end }
+  .forside .tekst, .slutt .tekst { position: relative; left: auto; right: auto; bottom: auto; padding: 140px 22px 34px }
+  .forside h1 { font-size: clamp(46px, 15vw, 84px) }
+  .slutt h1 { font-size: 42px }
+  .forside p, .slutt p { font-size: 18px }
+  .merke { font-size: 13px }
+  .pille { font-size: 14px; padding: 5px 13px }
+  .delt, .delt.snu { display: flex; flex-direction: column; height: auto }
+  .delt > .mosaikk, .delt > .bilder { order: -1 }
+  .bilder { height: auto }
+  .mosaikk { height: auto; gap: 4px; grid-template-columns: 1fr 1fr !important; grid-template-rows: none !important }
+  .mosaikk img { height: auto; aspect-ratio: 4 / 3; grid-row: auto !important; grid-column: auto }
+  .mosaikk img:first-child, .mosaikk img:last-child:nth-child(even) { grid-column: 1 / -1 !important; aspect-ratio: 16 / 10 }
+  .panel { padding: 22px 20px 26px }
+  .heltekst { padding: 26px 20px 28px }
+  h2 { font-size: 29px }
+  .ingress { font-size: 17px }
+  .sitat, .merk, .fot { position: static; margin-top: 18px }
+  .grunner, .fly2, .to, .stripe, .tre, .fire, .steg { grid-template-columns: 1fr; gap: 12px }
+  .grunn img { height: 46vw }
+  .kr { columns: 1 }
+  .tab { font-size: 13.5px }
+  .tab td, .tab th { padding: 6px 5px }
+  .tab td:first-child, .tab td:nth-child(2) { white-space: normal }
+  .kost td:nth-child(3):not(:last-child), .kost th:nth-child(3):not(:last-child) { display: none }  /* dirham skjules, kroner er det som teller */
+  .rute { flex-wrap: wrap; font-size: 18px; gap: 8px }
+  .kort { padding: 16px 18px }
+  .kort .tid { font-size: 22px }
+}
+@media print { #topp { display: none } }
+</style>
+<script>
+addEventListener('DOMContentLoaded', () => {
+  const sider = [...document.querySelectorAll('body > section, body > .side, body > .forside')];
+  sider.forEach(s => s.classList.add('lysbilde'));
+  const grunn = 1280;
+  const tilpass = () => {
+    const smal = matchMedia('(max-width: 820px)').matches;  // på mobil flyter innholdet fritt i stedet
+    const z = smal ? '' : Math.min(1, document.documentElement.clientWidth / grunn);
+    sider.forEach(s => s.style.zoom = z);
+  };
+  if (!matchMedia('print').matches) { tilpass(); addEventListener('resize', tilpass); }
+  addEventListener('beforeprint', () => sider.forEach(s => s.style.zoom = ''));
+  addEventListener('afterprint', tilpass);
+});
+</script>
+</head><body><nav id="topp"><a href="../">← Alle turene</a><span>Karibia: Reisetips, åtte øyer</span></nav>
+
+
+<!-- 1 -->
+<section class="side forside">
+  <img class="full" src="bilder/forside.jpg" alt="Stranden Grote Knip på Curaçao">
+  <div class="dekk"></div>
+  <div class="tekst">
+    <div class="merke">Reisetips, Karibia generelt</div>
+    <h1>Karibia</h1>
+    <p>Åtte øyer vi kan nå i business med EuroBonus-poeng: hva som skiller dem, når det er lurt å reise, og hva det koster. Velg øy først, så finner vi datoene.</p>
+    <div class="piller"><span class="pille">3 reisende</span><span class="pille">Business via Amsterdam eller Paris</span><span class="pille">270 000 poeng for tre, med to CT</span><span class="pille">Seter sjekket 14. november 2026</span></div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="side heltekst">
+  <div class="merke">Hvorfor Karibia</div>
+  <h2>Seks grunner til å krysse Atlanteren</h2>
+  <div class="grunner">
+    <div class="grunn"><img loading="lazy" src="bilder/knip.jpg" alt=""><div><h3>Strendene</h3>Hvit sand og turkist vann som holder 26 til 29 grader hele året. Mange er gratis og nesten tomme.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/turtle.jpg" alt=""><div><h3>Livet under vann</h3>Skilpadder og korallrev noen svømmetak fra land. Bonaire og Curaçao er best i klassen.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/handelskade.jpg" alt=""><div><h3>Europa i tropene</h3>Nederlandske gavlhus i pastell og franske bakerier. Trygt, ryddig og lett å reise i på egen hånd.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/soufriere.jpg" alt=""><div><h3>Vulkaner og regnskog</h3>Guadeloupe og Martinique har fosser, varme kilder og topper på over 1 400 meter.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/accras.jpg" alt=""><div><h3>Maten og rommen</h3>Kreolsk kjøkken, grillet fisk på stranda og rom rett fra destilleriet.</div></div>
+    <div class="grunn"><img loading="lazy" src="bilder/saintes.jpg" alt=""><div><h3>Øyhopping</h3>Ferge til småøyer som Les Saintes og Anguilla, eller dagstur med katamaran.</div></div>
+  </div>
+  <div class="fot">Ni til ti timer direkte fra Amsterdam eller Paris, og hele reisen fra Trondheim går på én billett.</div>
+</section>
+
+<!-- 3 -->
+<section class="side"><div class="delt">
+  <div class="panel">
+    <div class="merke">Flyet</div>
+    <h2>Business med KLM og Air France</h2>
+    <p class="ingress" style="margin-bottom:6px">Begge slipper ofte tre til ni businessseter per avgang til EuroBonus, og KLM tar oss helt fra Værnes.</p>
+    <div class="rute" style="margin-top:10px;gap:9px;font-size:19px;white-space:nowrap"><span>TRD</span><i>2 t 15</i><span>AMS</span><i>10 t</i><span>CUR</span></div>
+    <ul style="margin-top:12px;font-size:16px">
+      <li><b>KLM fra Amsterdam:</b> direkte til Curaçao, Aruba (samme fly går videre til Bonaire) og Saint Martin.</li>
+      <li><b>Air France fra Paris:</b> direkte til Saint Martin, Guadeloupe, Martinique og Punta Cana.</li>
+      <li><b>Poeng for tre: 270 000</b> tur og retur med CT. To reiser på én CT for 180 000, den tredje på egen CT for 90 000.</li>
+      <li><b>Setene kommer ca. 300 dager før.</b> 14. november 2026 lå business ute til 8. september 2027.</li>
+    </ul>
+    <div class="sitat">Fra Trondheim tar det 15 til 16 timer med ett bytte. Én vei i business koster 108 000 poeng, premium økonomi 72 000 og økonomi 48 000.</div>
+  </div>
+  <div class="mosaikk m2"><img loading="lazy" src="bilder/klmfly.jpg" alt="KLM Boeing 787"><img loading="lazy" src="bilder/klmsete.jpg" alt="Businesskabinen hos KLM"></div>
+</div></section>
+
+<!-- 4 -->
+<section class="side heltekst" style="padding-top:34px">
+  <div class="merke">Øyene</div>
+  <h2 style="margin-bottom:4px;font-size:38px">Åtte øyer i ett blikk</h2>
+  <table class="tab" style="font-size:15px;margin-top:8px">
+    <tr><th>Øy</th><th>Direktefly</th><th>Passer best for</th><th>Orkansesong</th><th>Prisnivå</th></tr>
+    <tr><td>Curaçao</td><td>KLM fra Amsterdam</td><td>Litt av alt: by, 35 strender, snorkling og leiebil på egen hånd</td><td>Utenfor beltet</td><td>Middels</td></tr>
+    <tr><td>Aruba</td><td>KLM fra Amsterdam</td><td>De lange, hvite strendene og mest sol. Lettvint og amerikansk preget</td><td>Utenfor beltet</td><td>Høyt</td></tr>
+    <tr><td>Bonaire</td><td>KLM via Aruba</td><td>Snorkling og dykking rett fra land, flamingoer og ro. Få strender</td><td>Utenfor beltet</td><td>Middels</td></tr>
+    <tr><td>Saint Martin</td><td>KLM og Air France</td><td>Én øy, to land, og ferge til Anguilla og Saint-Barthélemy</td><td>Utsatt</td><td>Høyt</td></tr>
+    <tr><td>Guadeloupe</td><td>Air France fra Paris</td><td>Natur: vulkan, fosser, regnskog og småøyene Les Saintes</td><td>Utsatt</td><td>Middels</td></tr>
+    <tr><td>Martinique</td><td>Air France fra Paris</td><td>Fransk hverdag i tropene, romdestillerier og strender i sør</td><td>Utsatt</td><td>Middels</td></tr>
+    <tr><td>Den dominikanske republikk</td><td>Air France til Punta Cana</td><td>Billigst på bakken. Alt inkludert, eller rundreise til Samaná og Santo Domingo</td><td>Utsatt</td><td>Lavt</td></tr>
+    <tr><td>Barbados og Jamaica</td><td>Virgin fra London</td><td>Engelskspråklig Karibia: reggae, cricket, surfing og rom</td><td>Barbados sjelden, Jamaica utsatt</td><td>Høyt</td></tr>
+  </table>
+  <div class="tre" style="margin-top:14px">
+    <div class="kort" style="padding:12px 20px;font-size:15px"><h3 style="font-size:18px">Første gang?</h3>Curaçao. Mest variasjon, direktefly, greie priser og trygt å kjøre rundt selv.</div>
+    <div class="kort" style="padding:12px 20px;font-size:15px"><h3 style="font-size:18px">Høstferie?</h3>Curaçao, Aruba eller Bonaire. De ligger sør for orkanbeltet og er tørre hele året.</div>
+    <div class="kort" style="padding:12px 20px;font-size:15px"><h3 style="font-size:18px">Mest natur?</h3>Guadeloupe, gjerne sammen med Martinique. Ferga mellom dem går via Dominica.</div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m4"><img loading="lazy" src="bilder/emmabro.jpg" alt="Handelskade i Willemstad"><img loading="lazy" src="bilder/knipstor.jpg" alt="Grote Knip"><img loading="lazy" src="bilder/kleincur.jpg" alt="Fyret på Klein Curaçao"><img loading="lazy" src="bilder/shete.jpg" alt="Shete Boka"></div>
+  <div class="panel">
+    <span class="dag">Curaçao</span>
+    <h2>Fargerik by og 35 strender</h2>
+    <p class="ingress">Den største av de tre nederlandske øyene utenfor Venezuela. Tørt, solrikt og lett å utforske med leiebil.</p>
+    <ul>
+      <li><b>Willemstad:</b> gavlhusene langs Handelskade står på UNESCOs verdensarvliste. Flytebroen svinger til side når skipene kommer.</li>
+      <li><b>Strendene i vest:</b> Grote Knip, Kleine Knip og Cas Abao. Små bukter mellom klipper, gratis eller noen få dollar.</li>
+      <li><b>Playa Piskado:</b> svøm med skilpadder ved fiskernes brygge.</li>
+      <li><b>Klein Curaçao:</b> dagstur med båt til en ubebodd øy med fyr, skipsvrak og kritthvit strand.</li>
+      <li><b>Christoffelparken og Shete Boka:</b> øyas høyeste topp på 372 meter, og bølger som slår inn i grotter.</li>
+    </ul>
+    <div class="fakta"><span><b>Bo:</b> leilighet i Jan Thiel eller vest på øya</span><span><b>Leiebil:</b> ja, hele uka</span></div>
+  </div>
+</div></section>
+
+<!-- 6 -->
+<section class="side"><div class="delt">
+  <div class="panel">
+    <span class="dag">Aruba</span>
+    <h2>Mest sol og bredest strender</h2>
+    <p class="ingress">Liten, flat og tørr, med kaktus i innlandet og kilometer med hvit sand på vestkysten. Minst regn i hele Karibia.</p>
+    <ul>
+      <li><b>Eagle Beach og Palm Beach:</b> de berømte strendene, med divi-divi-trærne som peker mot sørvest i passatvinden.</li>
+      <li><b>Arikok nasjonalpark:</b> en femdel av øya. Grotter med hulemalerier, og et naturlig basseng mellom lavaklippene.</li>
+      <li><b>Oranjestad:</b> pastellfarget hovedstad med gratis trikk, og San Nicolas med gatekunst.</li>
+      <li><b>Vind:</b> jevn passat gjør øya til et av verdens beste steder for kite og vindsurfing.</li>
+    </ul>
+    <div class="fakta"><span><b>Bo:</b> leilighet ved Eagle Beach</span><span><b>Leiebil:</b> to til tre dager holder</span></div>
+    <div class="sitat">Den dyreste av de tre nederlandske øyene. Palm Beach har høye hoteller, Eagle Beach er roligere.</div>
+  </div>
+  <div class="mosaikk m3"><img loading="lazy" src="bilder/eagle.jpg" alt="Divi-divi-tre på Eagle Beach"><img loading="lazy" src="bilder/arikok.jpg" alt="Arikok nasjonalpark"><img loading="lazy" src="bilder/oranjestad.jpg" alt="Oranjestad"></div>
+</div></section>
+
+<!-- 7 -->
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m4"><img loading="lazy" src="bilder/flamingo.jpg" alt="Flamingoer på Bonaire"><img loading="lazy" src="bilder/saltpan.jpg" alt="Saltbassengene"><img loading="lazy" src="bilder/slavehuts.jpg" alt="Slavehyttene"><img loading="lazy" src="bilder/lacbay.jpg" alt="Koraller i Lac Bay"></div>
+  <div class="panel">
+    <span class="dag">Bonaire</span>
+    <h2>Revet starter ved strandkanten</h2>
+    <p class="ingress">Den stilleste av de tre, med 25 000 innbyggere og hele kysten vernet som marin park siden 1979.</p>
+    <ul>
+      <li><b>Snorkling og dykking fra land:</b> gule steiner langs veien merker over 50 steder der vi bare går uti.</li>
+      <li><b>Klein Bonaire:</b> vanntaxi til en ubebodd øy med strand og skilpadder.</li>
+      <li><b>Saltbassengene i sør:</b> rosa vann, hvite saltfjell og de små slavehyttene fra 1850.</li>
+      <li><b>Flamingoer:</b> en av få hekkeplasser i Karibia. De står i lagunene året rundt.</li>
+      <li><b>Lac Bay:</b> grunn lagune med mangrove, vindsurfing og kajakk.</li>
+    </ul>
+    <div class="fakta"><span><b>Fly:</b> KLM via Aruba, eller småfly fra Curaçao på 25 min</span><span><b>Naturavgift:</b> 40 dollar per person</span></div>
+  </div>
+</div></section>
+
+<!-- 8 -->
+<section class="side"><div class="delt">
+  <div class="panel">
+    <span class="dag">Saint Martin</span>
+    <h2>Én øy, to land</h2>
+    <p class="ingress">Fransk i nord og nederlandsk i sør, uten grensekontroll. Den minste øya i verden som er delt mellom to stater.</p>
+    <ul>
+      <li><b>Maho Beach:</b> flyene kommer inn noen meter over hodet på badegjestene. KLM og Air France lander her.</li>
+      <li><b>Franske siden:</b> Marigot med marked og Fort Louis, Grand Case med øyas beste restauranter, og Orient Bay.</li>
+      <li><b>Nederlandske siden:</b> Philipsburg med strandpromenade, avgiftsfri handel og uteliv.</li>
+      <li><b>Dagsturer med ferge:</b> Anguilla på 25 minutter, med noen av Karibias fineste strender, og Saint-Barthélemy på 45. Ta med pass.</li>
+    </ul>
+    <div class="fakta"><span><b>Bo:</b> Grand Case eller Orient Bay</span><span><b>Leiebil:</b> øya rundt på en dag</span></div>
+    <div class="sitat">Orkanen Irma traff hardt i 2017. Det meste er bygd opp igjen, men unngå september og oktober her.</div>
+  </div>
+  <div class="mosaikk m3"><img loading="lazy" src="bilder/maho.jpg" alt="Fly over Maho Beach"><img loading="lazy" src="bilder/marigot.jpg" alt="Marigot"><img loading="lazy" src="bilder/orient.jpg" alt="Orient Bay"></div>
+</div></section>
+
+<!-- 9 -->
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m4"><img loading="lazy" src="bilder/soufriere2.jpg" alt="Vulkanen La Soufrière"><img loading="lazy" src="bilder/carbet.jpg" alt="Carbetfossene"><img loading="lazy" src="bilder/saintes2.jpg" alt="Les Saintes"><img loading="lazy" src="bilder/steanne.jpg" alt="Stranden i Sainte-Anne"></div>
+  <div class="panel">
+    <span class="dag">Guadeloupe</span>
+    <h2>Sommerfugløya med vulkan</h2>
+    <p class="ingress">To øyer formet som en sommerfugl. Basse-Terre i vest er regnskog og fjell, Grande-Terre i øst er strender og sukkerrør.</p>
+    <ul>
+      <li><b>La Soufrière, 1 467 meter:</b> aktiv vulkan og høyeste topp i De små Antillene. To timer opp fra parkeringen.</li>
+      <li><b>Carbetfossene:</b> tre fall i regnskogen, det høyeste på 115 meter.</li>
+      <li><b>Cousteau-reservatet:</b> snorkling med skilpadder ved Malendure og Pigeon-øyene.</li>
+      <li><b>Les Saintes:</b> ferge på 30 minutter til en bukt som regnes blant verdens vakreste.</li>
+      <li><b>Strendene:</b> Sainte-Anne og Caravelle på Grande-Terre, Grande Anse med gyllen sand i nord.</li>
+    </ul>
+    <div class="fakta"><span><b>Bo:</b> delt mellom Deshaies og Sainte-Anne</span><span><b>Språk:</b> fransk, lite engelsk</span></div>
+  </div>
+</div></section>
+
+<!-- 10 -->
+<section class="side"><div class="delt">
+  <div class="panel">
+    <span class="dag">Martinique</span>
+    <h2>Blomsterøya med rom</h2>
+    <p class="ingress">Et fransk fylke med gode veier, bakeri på hvert hjørne og euro. Grønt og bratt i nord, strender i sør.</p>
+    <ul>
+      <li><b>Saint-Pierre og Pelée:</b> byen som ble utslettet av vulkanutbruddet i 1902. Ruinene står der, og toppen kan bestiges.</li>
+      <li><b>Les Salines:</b> øyas fineste strand, en lang bue med palmer helt i sør.</li>
+      <li><b>Diamantklippen:</b> 175 meter rett opp av havet, med svart sandstrand på innsiden.</li>
+      <li><b>Romruta:</b> Clément, Depaz og Saint-James. Rom laget av fersk sukkerrørsaft, med gratis omvisning.</li>
+      <li><b>Jardin de Balata:</b> botanisk hage med hengebroer i tretoppene.</li>
+    </ul>
+    <div class="fakta"><span><b>Bo:</b> Sainte-Anne eller Trois-Îlets</span><span><b>Leiebil:</b> ja, hele uka</span></div>
+    <div class="sitat">Hurtigbåten til Guadeloupe går via Dominica og tar rundt fire timer. Da kan vi fly inn til den ene og hjem fra den andre.</div>
+  </div>
+  <div class="mosaikk m4"><img loading="lazy" src="bilder/pelee.jpg" alt="Saint-Pierre og Pelée"><img loading="lazy" src="bilder/salines.jpg" alt="Les Salines"><img loading="lazy" src="bilder/diamant.jpg" alt="Diamantklippen"><img loading="lazy" src="bilder/rhum.jpg" alt="Romdestilleri"></div>
+</div></section>
+
+<!-- 11 -->
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m3"><img loading="lazy" src="bilder/puntacana.jpg" alt="Stranden i Punta Cana"><img loading="lazy" src="bilder/zonacolonial.jpg" alt="Gamlebyen i Santo Domingo"><img loading="lazy" src="bilder/samana.jpg" alt="Samaná"></div>
+  <div class="panel">
+    <span class="dag">Den dominikanske republikk</span>
+    <h2>Mest ferie for pengene</h2>
+    <p class="ingress">Et stort land med elleve millioner innbyggere, fjell på over 3 000 meter og de laveste prisene av alle øyene her.</p>
+    <ul>
+      <li><b>Punta Cana og Bávaro:</b> 30 kilometer med palmestrand. Hotell med alt inkludert koster mindre enn en leilighet på Aruba.</li>
+      <li><b>Santo Domingo:</b> den eldste europeiske byen i Amerika, grunnlagt i 1496, med katedral og festning fra Columbus' tid.</li>
+      <li><b>Samaná:</b> grønn halvøy med fossen El Limón, strendene ved Las Terrenas og knølhval i bukta fra januar til mars.</li>
+    </ul>
+    <div class="fakta"><span><b>Språk:</b> spansk</span><span><b>Transport:</b> gode ekspressbusser mellom byene</span></div>
+    <div class="sitat">Trafikken er røffere enn på de andre øyene, så velg buss og sjåfør framfor leiebil.</div>
+  </div>
+</div></section>
+
+<!-- 12 -->
+<section class="side"><div class="delt">
+  <div class="panel">
+    <span class="dag">Barbados og Jamaica</span>
+    <h2>Via London med Virgin Atlantic</h2>
+    <p class="ingress">Det engelskspråklige Karibia nås med EuroBonus fra Heathrow. Én ekstra etappe, men samme poengpris.</p>
+    <ul>
+      <li><b>Barbados, vestkysten:</b> rolig sjø, skilpadder i Carlisle Bay og hovedstaden Bridgetown på UNESCO-lista.</li>
+      <li><b>Barbados, østkysten:</b> Bathsheba med store bølger og steinblokker i vannkanten. Surfernes side.</li>
+      <li><b>Rom:</b> Mount Gay fra 1703 er verdens eldste rommerke. Fredagskveld betyr fiskegrill i Oistins.</li>
+      <li><b>Jamaica:</b> Dunn's River Falls som man klatrer opp, Blue Mountains med kaffe, og reggaens hjemland.</li>
+      <li><b>Venstrekjøring</b> på begge øyene.</li>
+    </ul>
+    <div class="fakta"><span><b>Fly:</b> London til Barbados 8 t 45, Montego Bay 10 t</span></div>
+    <div class="sitat">Virgin viste tre til ni businessseter på enkelte datoer i november og desember 2026. Jamaica krever mer omtanke for sikkerhet enn de andre øyene.</div>
+  </div>
+  <div class="mosaikk m2"><img loading="lazy" src="bilder/bathsheba.jpg" alt="Bathsheba på Barbados"><img loading="lazy" src="bilder/dunns.jpg" alt="Dunn's River Falls"></div>
+</div></section>
+
+<!-- 13 -->
+<section class="side"><div class="delt snu">
+  <div class="mosaikk m4"><img loading="lazy" src="bilder/accras2.jpg" alt="Accras"><img loading="lazy" src="bilder/colombo.jpg" alt="Colombo"><img loading="lazy" src="bilder/marked.jpg" alt="Fruktbod på det flytende markedet i Willemstad"><img loading="lazy" src="bilder/tipunch.jpg" alt="Ti' punch"></div>
+  <div class="panel">
+    <div class="merke">Maten</div>
+    <h2>Kreolsk, fersk og sterk</h2>
+    <p class="ingress">Afrika, Europa, India og Latin-Amerika i samme gryte. Det beste spises ofte i en bod ved stranda.</p>
+    <ul>
+      <li><b>Accras:</b> frityrstekte boller av klippfisk, forretten på de franske øyene.</li>
+      <li><b>Colombo:</b> mild karrigryte med kylling eller geit, arven etter indiske arbeidere.</li>
+      <li><b>Keshi yena:</b> Curaçaos nasjonalrett, en ost fylt med krydret kjøtt og bakt i ovn.</li>
+      <li><b>Dagens fangst:</b> grillet mahi-mahi, snapper eller languster med ris, bønner og stekt kokebanan.</li>
+      <li><b>Truk'i pan:</b> matbilene på Curaçao og Aruba, åpne til langt på natt.</li>
+      <li><b>Ti' punch:</b> rom, lime og rørsukker. Hver gjest blander sin egen.</li>
+    </ul>
+    <div class="fakta"><span><b>Lunsj i bod:</b> 80 til 150 kr</span><span><b>Restaurant:</b> 250 til 450 kr</span></div>
+  </div>
+</div></section>
+
+<!-- 14 -->
+<section class="side heltekst">
+  <div class="merke">Været</div>
+  <h2>Når bør vi reise?</h2>
+  <div class="tre">
+    <div class="kort"><h3>Desember til april</h3><div class="tid">Tørketid</div>27 til 30 grader, lite regn og jevn passat. Beste vær på alle øyene, men også høyest priser, særlig jul, vinterferie og påske.</div>
+    <div class="kort"><h3>Mai og juni</h3><div class="tid">Gode kjøp</div>Like varmt, litt flere byger og langt færre folk. Overnatting koster ofte 20 til 40 prosent mindre enn om vinteren.</div>
+    <div class="kort"><h3>Juli til november</h3><div class="tid">Orkansesong</div>Varer fra 1. juni til 30. november, med flest stormer fra midten av august til midten av oktober. Fuktig, varmt og billig.</div>
+  </div>
+  <div class="tre">
+    <div class="kort"><h3>Unntaket: de tre i sør</h3>Curaçao, Aruba og Bonaire ligger sør for orkanbeltet og treffes nesten aldri. De er trygge valg også om høsten. Oktober til desember gir korte byger.</div>
+    <div class="kort"><h3>Tang på strendene</h3>Sargassum driver inn på kyster som vender mot Atlanterhavet, mest fra april til august. Verst på østsiden av de franske øyene og i Punta Cana.</div>
+    <div class="kort"><h3>Sjøen</h3>26 grader om vinteren og 29 om høsten. Badetemperatur hver dag i året, og sikten under vann er best i tørketiden.</div>
+  </div>
+  <div class="fot">Reiser vi til en utsatt øy i orkansesongen, bestiller vi overnatting med gratis avbestilling og sjekker at reiseforsikringen dekker uvær.</div>
+</section>
+
+<!-- 15 -->
+<section class="side heltekst">
+  <div class="merke">Praktisk</div>
+  <h2>Greit å vite</h2>
+  <div class="tre">
+    <div class="kort"><h3>Innreise</h3><div class="tid">Pass, ikke visum</div>Norske pass holder på alle øyene her. De nederlandske øyene og Den dominikanske republikk krever et digitalt innreiseskjema før avreise. De franske øyene er EU, men ikke Schengen.</div>
+    <div class="kort"><h3>Penger</h3><div class="tid">Dollar og euro</div>Euro på de franske øyene. Dollar går overalt på de nederlandske, selv om Aruba har florin og Curaçao gylden. Kort tas de fleste steder.</div>
+    <div class="kort"><h3>Tid</h3><div class="tid">Fem timer bak</div>Seks timer bak Norge når vi har sommertid. Lett å snu døgnet vestover: tidlig opp og tidlig i seng de første dagene.</div>
+  </div>
+  <div class="tre">
+    <div class="kort"><h3>Komme seg rundt</h3>Leiebil er nesten nødvendig på Curaçao, Guadeloupe og Martinique. Høyrekjøring, unntatt på Barbados og Jamaica. Mellom øyene går det ferger i nord og småfly i sør.</div>
+    <div class="kort"><h3>Helse</h3>Ingen malaria, men mygg kan bære dengue, så bruk myggmiddel morgen og kveld. Sola er sterk. Vannet i springen kan drikkes på de nederlandske og franske øyene.</div>
+    <div class="kort"><h3>Strøm</h3>Europeiske stikkontakter og 220 volt på de franske øyene. Amerikanske kontakter og 110 til 127 volt på de nederlandske, så ta med adapter.</div>
+  </div>
+  <div class="fot">Innreiseregler, avgifter og rutetider sjekkes på nytt før bestilling. Bonaire og Aruba tar en egen turistavgift ved innreise.</div>
+</section>
+
+<!-- kostnad -->
+<section class="side heltekst">
+  <div class="merke">Hva koster det</div>
+  <h2 style="margin-bottom:6px">Billigste totalpris for tre, to uker på Curaçao</h2>
+  <table class="tab kost">
+    <tr><th>Post</th><th>Slik holder vi det nede</th><th style="text-align:right">Kroner</th></tr>
+    <tr class="fly"><td>Fly, business</td><td>270 000 poeng med to CT, Trondheim til Curaçao via Amsterdam på én billett. Avgifter anslått til 3 000 kr per person</td><td style="text-align:right"><b>9 000</b></td></tr>
+    <tr><td>Overnatting</td><td>13 netter i leilighet med to soverom, kjøkken og basseng, rundt 1 000 kr per natt</td><td style="text-align:right"><b>13 000</b></td></tr>
+    <tr><td>Leiebil</td><td>Liten bil i 13 dager, 400 kr per dag med forsikring, pluss drivstoff</td><td style="text-align:right"><b>6 000</b></td></tr>
+    <tr><td>Mat</td><td>Frokost og noen middager i leiligheten, lunsj i bod og matbil, 200 kr per person per dag</td><td style="text-align:right"><b>7 800</b></td></tr>
+    <tr><td>Strender og parker</td><td>De fleste strender er gratis. Inngang til Christoffelparken, Shete Boka og et par strender med avgift</td><td style="text-align:right"><b>1 200</b></td></tr>
+    <tr><td>Snorkling</td><td>Egne masker hjemmefra, leie av finner et par dager</td><td style="text-align:right"><b>400</b></td></tr>
+    <tr class="fly"><td>Sum for tre</td><td>Rundt 12 500 kr per person, pluss 270 000 poeng</td><td style="text-align:right"><b style="font-size:19px">37 400</b></td></tr>
+  </table>
+  <div class="tre" style="margin-top:14px">
+    <div class="kort" style="padding:12px 20px;font-size:15px"><h3 style="font-size:18px">Ikke med i summen</h3>Båttur til Klein Curaçao (ca. 1 100 kr per person), dykking, shopping og reiseforsikring.</div>
+    <div class="kort" style="padding:12px 20px;font-size:15px"><h3 style="font-size:18px">Andre øyer</h3>Aruba og Saint Martin: legg på 8 000 til 12 000 kr for tre. Guadeloupe og Martinique: omtrent likt. Punta Cana med alt inkludert: omtrent likt, uten leiebil.</div>
+    <div class="kort" style="padding:12px 20px;font-size:15px"><h3 style="font-size:18px">Kurs og sesong</h3>Norges Bank 13. november 2026: én dollar er 9,56 kr og én euro 10,57 kr. Prisene gjelder utenom jul og vinterferie.</div>
+  </div>
+  <div class="fot">Alle beløp er anslag, ikke hentede priser. Flyavgiftene er den mest usikre posten og sjekkes ved bestilling.</div>
+</section>
+
+<!-- bilder -->
+<section class="side heltekst">
+  <div class="merke">Bilder</div>
+  <h2 style="font-size:30px">Bildekreditt</h2>
+  <div style="font-size:14px">Alle bilder er hentet fra Wikimedia Commons. Filnavn, fotograf og lisens:</div>
+  <div class="kr"><div>Curacao Grote Knip Kenepa Grandi beach (36530701322).jpg, dronepicr, CC BY 2.0</div><div>Grote Knip in Curacao.jpg, Matthew T Rader, CC BY-SA 4.0</div><div>Kleine Knip Curacao (34800925191).jpg, dronepicr, CC BY 2.0</div><div>Facades of Handelskade, Willemstad, Curaçao - February 2020.jpg, Martin Falbisoner, CC BY-SA 4.0</div><div>Queen Emma Bridge and Handelskade, Willemstad, Curaçao - February 2020 - 01.jpg, Martin Falbisoner, CC BY-SA 4.0</div><div>Lighthouse Klein Curacao (213574315).jpeg, Dronepicr, CC BY 3.0</div><div>Boka Tabla Curacao.jpg, AbigailLobato, CC BY-SA 4.0</div><div>Mangrove tree (Conocarpus erectus) at Eagle Beach, Aruba 2019.jpg, SIryn, CC BY-SA 4.0</div><div>Natural Pool in Arikok National Park, Aruba, Sep 2018.jpg, alljengi, CC BY-SA 2.0</div><div>Plaza Daniel Leo, Oranjestad, Aruba - February 2020.jpg, Martin Falbisoner, CC BY-SA 4.0</div><div>Bonaire Flamingos.jpg, Adamboluu, CC BY-SA 4.0</div><div>Bonaire salt flats.jpg, Adamboluu, CC BY-SA 4.0</div><div>Bonaire Red Slave Huts.jpg, David Burley - User: (WT-shared) Khemicals at wts wikivoyage, CC BY-SA 1.0</div><div>Snorkeling Lac Bay, Bonaire (12841832875).jpg, SNORKELINGDIVES.COM, CC BY 2.0</div><div>KLM Airplane Landing Passing Over Maho Bay Beach 1 (6544018145).jpg, Richie Diesterheft from Santa Barbara, CA, USA, CC BY-SA 2.0</div><div>Marigot Market with Fort Louis (6546067085).jpg, Richie Diesterheft from Chicago, IL, USA, CC BY-SA 2.0</div><div>Orient Bay, SXM island in the Caribbean.JPG, Clavius66, CC BY-SA 3.0</div><div>La Soufriere - vue du bas.JPG, Jean-François Grégoire, CC BY-SA 3.0</div><div>Guadeloupe 116 - Sommet de la Soufrière 1467m - Guadeloupe.jpg, No machine-readable author provided. Ofol assumed (based on copyright claims)., CC BY 2.5</div><div>Chutes du Carbet.jpg, Kevin Charpentier, CC BY-SA 4.0</div><div>Les Saintes, Terre-de-Haut 01.jpg, Filo gèn&#x27;, CC BY-SA 4.0</div><div>Terre de haut (Les saintes).jpg, Filo gèn&#x27;, CC BY-SA 4.0</div><div>Plage du Bourg St-Anne (2).jpg, Tournasol7, CC BY 4.0</div><div>Saint-Pierre (Martinique) avec Montage Pelée.JPG, lb:user:Zinneke, CC BY-SA 4.0</div><div>Martinique Beach (Salines).jpg, Barbacha|Nicolas BOUTHORS, Public domain</div><div>Rocher du Diamant (Le Diamant, Martinique) - 01.jpg, Thérèse Gaigé, CC0</div><div>Rhum Clément de l&#x27;Habitation Clément (Le François, Martinique) - 04.jpg, Thérèse Gaigé, CC0</div><div>2023 - Playa Bavaro Punta Cana - 01.jpg, Oleg Yunakov, CC BY-SA 4.0</div><div>Calle las Damas, Santo Domingo, Zona Colonial.jpg, Desox7x, CC0</div><div>DOM Las Terrenas, Playa Las Terrenas 0054.jpg, -wuppertaler, CC BY 4.0</div><div>Bathsheba, Barbados 08.jpg, Postdlf, CC BY-SA 3.0</div><div>Dunns River Falls climb.JPG, Breakyunit at English Wikipedia, CC BY-SA 3.0</div><div>Green Sea Turtle, Curaçao.jpg, Seasidesaltlife, CC BY-SA 4.0</div><div>Accras de morue 2.jpg, Fanny Schertzer, CC BY-SA 3.0</div><div>Accras, boudin créole, et Ti-punch 01.jpg, Arnaud 25, CC BY-SA 4.0</div><div>Colombo 004.jpg, Arnaud 25, CC BY-SA 4.0</div><div>Fresh Fruit at the Floating Market, Willemstad, Curaçao (4383533115).jpg, Charles Hoffman from New York, United States, CC BY-SA 2.0</div><div>Ti-punch 2.jpg, Marianne Casamance, CC BY-SA 3.0</div><div>KLM Boeing 787-9 PH-BHP at Schiphol 27-08-2021.jpg, Robbie Klinkenberg, CC BY-SA 4.0</div><div>KLM World Business Class Seat.jpg, GreenPanther1234, CC BY 3.0</div><div>Caribbean sunset - Seaquarium beach - Curacao.jpg, alyssa BLACK., CC BY-SA 2.0</div></div>
+</section>
+
+<!-- slutt -->
+<section class="side forside slutt">
+  <img loading="lazy" class="full" src="bilder/slutt.jpg" alt="Solnedgang i Karibia">
+  <div class="dekk"></div>
+  <div class="tekst">
+    <div class="merke">Neste steg</div>
+    <h1>Hvilken øy, og når?</h1>
+    <p>Velg en eller to øyer og en måned. Businesssetene legges ut rundt 300 dager før avreise, så høsten 2027 åpner fra desember 2026 til februar 2027.</p>
+    <p>Da søker vi hele reisen fra Trondheim for tre, og bestiller hos SAS med to CT så snart setene ligger ute.</p>
+  </div>
+</section>
+</body></html>
