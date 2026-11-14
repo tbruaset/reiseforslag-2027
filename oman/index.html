@@ -73,15 +73,45 @@ td:first-child { width: 56px; font-weight: 700; color: #a8632b; white-space: now
   #topp a:hover, #topp a:focus-visible { background: rgba(243,234,217,.14) }
   #topp span { opacity: .75; white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
 }
+@media screen and (max-width: 820px) {
+  body { padding: 44px 0 0 !important; font-size: 16px !important }
+  .lysbilde { width: auto !important; height: auto !important; overflow: visible !important; margin: 0 0 8px !important; box-shadow: none !important }
+  table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch }
+  #topp { font-size: 14px; gap: 10px; padding: 0 10px }
+  #topp a { white-space: nowrap }
+  [style*="grid-template-columns"] { grid-template-columns: 1fr !important }
+  [style*="right:750px"] { right: 12px !important }
+
+  .forside { min-height: min(82vh, 680px); display: flex; align-items: flex-end }
+  .forside::after { background: linear-gradient(180deg, rgba(20,16,12,.15) 0%, rgba(20,16,12,.45) 45%, rgba(20,16,12,.9) 100%) }
+  .forside div { position: relative; left: auto; top: auto; width: auto; padding: 150px 22px 36px }
+  h1 { font-size: clamp(44px, 14vw, 72px) }
+  h2 { font-size: 29px }
+  p, .stor p, .forside p { font-size: 17px }
+  section.delt { display: flex; flex-direction: column }
+  .delt .bilde { position: relative; order: -1; width: auto; height: 64vw; top: auto !important; left: auto; right: auto; border: 0 !important }
+  .delt .tekst { position: static; width: auto; padding: 22px 20px 28px }
+  .side { padding: 26px 20px 30px }
+  .kol { gap: 16px }
+  .kol2, .kol3, .topp { grid-template-columns: 1fr }
+  .topp li { font-size: 17px }
+  .tall { font-size: 42px }
+  .boks { padding: 16px 18px }
+  .boks h4 { font-size: 24px }
+  td, th { font-size: 15px; padding: 6px 8px }
+  .sidetall { display: none }
+  .kreditt { position: static; margin-top: 18px }
+}
 @media print { #topp { display: none } }
 </style>
 <script>
 addEventListener('DOMContentLoaded', () => {
   const sider = [...document.querySelectorAll('body > section, body > .side, body > .forside')];
   sider.forEach(s => s.classList.add('lysbilde'));
-  const grunn = sider[0].offsetWidth;
+  const grunn = 1280;
   const tilpass = () => {
-    const z = Math.min(1, document.documentElement.clientWidth / grunn);
+    const smal = matchMedia('(max-width: 820px)').matches;  // på mobil flyter innholdet fritt i stedet
+    const z = smal ? '' : Math.min(1, document.documentElement.clientWidth / grunn);
     sider.forEach(s => s.style.zoom = z);
   };
   if (!matchMedia('print').matches) { tilpass(); addEventListener('resize', tilpass); }

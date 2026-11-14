@@ -54,15 +54,55 @@ p { margin: 0 0 2mm }
   #topp a:hover, #topp a:focus-visible { background: rgba(243,234,217,.14) }
   #topp span { opacity: .75; white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
 }
+@media screen and (max-width: 820px) {
+  body { padding: 44px 0 0 !important; font-size: 16px !important }
+  .lysbilde { width: auto !important; height: auto !important; overflow: visible !important; margin: 0 0 8px !important; box-shadow: none !important }
+  table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch }
+  #topp { font-size: 14px; gap: 10px; padding: 0 10px }
+  #topp a { white-space: nowrap }
+  [style*="grid-template-columns"] { grid-template-columns: 1fr !important }
+  [style*="right:750px"] { right: 12px !important }
+
+  .side.forside { min-height: min(82vh, 680px); display: flex; align-items: flex-end }
+  .forsideTekst { position: relative; left: auto; right: auto; bottom: auto; padding: 150px 22px 36px }
+  .forsideTekst h1 { font-size: clamp(44px, 14vw, 72px); margin: 8px 0 12px }
+  .forsideTekst p { font-size: 18px }
+  .tekstside { padding: 26px 20px 28px }
+  .tekstside h1 { font-size: 28px; margin-bottom: 10px }
+  .ingress { font-size: 17px }
+  .hero { height: 64vw }
+  .heroTekst { padding: 60px 20px 14px }
+  .heroTekst h1 { font-size: 30px }
+  .heroTekst p { font-size: 15px }
+  .tags { padding: 14px 20px 0; gap: 6px }
+  .tag { font-size: 13px; padding: 5px 12px; border-radius: 99px }
+  .kol { padding: 8px 20px 0; grid-template-columns: 1fr; gap: 4px }
+  h2 { font-size: 18px; margin: 16px 0 6px }
+  ul { padding-left: 20px }
+  li { margin-bottom: 7px }
+  p { margin-bottom: 9px }
+  .små { position: static; padding: 18px 20px 24px; gap: 8px }
+  .liten img { height: 30vw; border-radius: 6px }
+  .liten span { font-size: 12px }
+  .tab { font-size: 14px; margin: 6px 0 14px }
+  .tab td, .tab th { padding: 6px 8px }
+  .liten2 { font-size: 13px }
+  .steg { font-size: 16px }
+  .rute { padding: 8px 14px; margin-bottom: 10px; border-radius: 8px }
+  .advarsel { padding: 8px 12px }
+  .plukk td:last-child { width: auto; font-size: 18px }
+  .kr { font-size: 11px }
+}
 @media print { #topp { display: none } }
 </style>
 <script>
 addEventListener('DOMContentLoaded', () => {
   const sider = [...document.querySelectorAll('body > section, body > .side, body > .forside')];
   sider.forEach(s => s.classList.add('lysbilde'));
-  const grunn = sider[0].offsetWidth;
+  const grunn = 794;
   const tilpass = () => {
-    const z = Math.min(1, document.documentElement.clientWidth / grunn);
+    const smal = matchMedia('(max-width: 820px)').matches;  // på mobil flyter innholdet fritt i stedet
+    const z = smal ? '' : Math.min(1, document.documentElement.clientWidth / grunn);
     sider.forEach(s => s.style.zoom = z);
   };
   if (!matchMedia('print').matches) { tilpass(); addEventListener('resize', tilpass); }
@@ -77,14 +117,14 @@ addEventListener('DOMContentLoaded', () => {
   <div class="forsideTekst">
     <small>OKTOBER 2027</small>
     <h1>Kina<br>i åtte dager</h1>
-    <p>Et reiseforslag til to, med plukk selv: byene, naturen og maten. Direkte business til Shanghai med EuroBonus.</p>
+    <p>Et reiseforslag til tre, med plukk selv: byene, naturen og maten. Direkte business til Shanghai med EuroBonus.</p>
   </div>
 </section>
 <section class="side tekstside">
   <h1>Slik leser dere dette</h1>
   <p class="ingress">Åtte hele dager er ikke nok til hele Kina. Derfor er forslaget bygd som byggeklosser: 8 steder, hver med
   hvor mange dager de trenger og hvordan dere kommer dit. Velg tre eller fire, og bruk de ferdige rutene bakerst som mal.</p>
-  <h2>Flyene (funnet med lagrede søk i AwardFares, EuroBonus, business, to personer)</h2>
+  <h2>Flyene (funnet med lagrede søk i AwardFares, EuroBonus, business, tre personer)</h2>
   <table class="tab">
     <tr><th>Reise</th><th>Dato</th><th>Fly</th><th>Seter og pris</th></tr>
     <tr><td>Ut: Amsterdam til Shanghai</td><td>13. til 21. oktober</td><td>MU772, direkte, 11 timer</td><td>5 til 9 seter, 108 000 poeng per person</td></tr>

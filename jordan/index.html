@@ -76,15 +76,54 @@ li b { color: #8d3d1c }
   #topp a:hover, #topp a:focus-visible { background: rgba(243,234,217,.14) }
   #topp span { opacity: .75; white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
 }
+@media screen and (max-width: 820px) {
+  body { padding: 44px 0 0 !important; font-size: 16px !important }
+  .lysbilde { width: auto !important; height: auto !important; overflow: visible !important; margin: 0 0 8px !important; box-shadow: none !important }
+  table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch }
+  #topp { font-size: 14px; gap: 10px; padding: 0 10px }
+  #topp a { white-space: nowrap }
+  [style*="grid-template-columns"] { grid-template-columns: 1fr !important }
+  [style*="right:750px"] { right: 12px !important }
+
+  .side.forside, .side.slutt { min-height: min(82vh, 680px); display: flex; align-items: flex-end }
+  .forside .tekst, .slutt .tekst { position: relative; left: auto; right: auto; bottom: auto; padding: 140px 22px 34px }
+  .forside h1 { font-size: clamp(46px, 15vw, 84px) }
+  .slutt h1 { font-size: 42px }
+  .forside p, .slutt p { font-size: 18px }
+  .merke { font-size: 13px }
+  .pille { font-size: 14px; padding: 5px 13px }
+  .delt, .delt.snu { display: flex; flex-direction: column; height: auto }
+  .delt > .mosaikk, .delt > .bilder { order: -1 }
+  .bilder { height: auto }
+  .mosaikk { height: auto; gap: 4px; grid-template-columns: 1fr 1fr !important; grid-template-rows: none !important }
+  .mosaikk img { height: auto; aspect-ratio: 4 / 3; grid-row: auto !important; grid-column: auto }
+  .mosaikk img:first-child, .mosaikk img:last-child:nth-child(even) { grid-column: 1 / -1 !important; aspect-ratio: 16 / 10 }
+  .panel { padding: 22px 20px 26px }
+  .heltekst { padding: 26px 20px 28px }
+  h2 { font-size: 29px }
+  .ingress { font-size: 17px }
+  .sitat, .merk, .fot { position: static; margin-top: 18px }
+  .grunner, .fly2, .to, .stripe, .tre, .fire, .steg { grid-template-columns: 1fr; gap: 12px }
+  .grunn img { height: 46vw }
+  .kr { columns: 1 }
+  .tab { font-size: 13.5px }
+  .tab td, .tab th { padding: 6px 5px }
+  .tab td:first-child, .tab td:nth-child(2) { white-space: normal }
+  .kost td:nth-child(3), .kost th:nth-child(3) { display: none }  /* dirham skjules, kroner er det som teller */
+  .rute { flex-wrap: wrap; font-size: 18px; gap: 8px }
+  .kort { padding: 16px 18px }
+  .kort .tid { font-size: 22px }
+}
 @media print { #topp { display: none } }
 </style>
 <script>
 addEventListener('DOMContentLoaded', () => {
   const sider = [...document.querySelectorAll('body > section, body > .side, body > .forside')];
   sider.forEach(s => s.classList.add('lysbilde'));
-  const grunn = sider[0].offsetWidth;
+  const grunn = 1280;
   const tilpass = () => {
-    const z = Math.min(1, document.documentElement.clientWidth / grunn);
+    const smal = matchMedia('(max-width: 820px)').matches;  // på mobil flyter innholdet fritt i stedet
+    const z = smal ? '' : Math.min(1, document.documentElement.clientWidth / grunn);
     sider.forEach(s => s.style.zoom = z);
   };
   if (!matchMedia('print').matches) { tilpass(); addEventListener('resize', tilpass); }
